@@ -1,0 +1,222 @@
+.above-footer-section {
+    .contact-form-wrap {
+        max-width: 950px;
+        margin: 0 auto;
+        z-index: 5;
+        position: relative;
+        padding: 80px 70px;
+        border-radius: 7px;
+        margin-bottom: -210px;
+        .section-title {
+            margin: 0 0 45px;
+        }
+        form {
+            .row {
+                .col-md-6,
+                .col-12 {
+                    margin: 0 0 20px;
+                }
+                .input-submit {
+                    margin: 0;
+                    .submit-inner {
+                        display: inline-block;
+                        position: relative;
+                        .wpcf7-spinner {
+                            margin: 0;
+                            position: absolute;
+                            top: 50%;
+                            left: calc(100% + 8px);
+                            transform: translateY(-50%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.site-footer {
+    background: $color_text;
+    padding-top: 250px;
+    padding-bottom: 25px;
+    .footer-wrap {
+        .footer-top {
+            padding-bottom: 40px;
+            text-align: center;
+            border-bottom: 1px solid rgba($white, 0.2);
+            .custom-logo-link {
+                max-width: 190px;
+                display: inline-block;
+            }           
+            .social-links {
+                margin: 20px 0 0;
+                padding: 0;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                li {
+                    list-style: none;
+                    margin: 0 11.5px;
+                    @media screen and (max-width: 330px) {
+                        margin: 0 8px;
+                    }
+                    @media screen and (max-width: 299px) {
+                        margin: 0 5px;
+                    }
+                    a {
+                        display: block;
+                        height: 40px;
+                        width: 40px;
+                        img {
+                            height: 100%;
+                            width: 100%;
+                        }                        
+                    }
+                }
+            }
+        }
+        .footer-center {
+            padding-top: 40px;
+            padding-bottom: 40px;
+            .footer-badge {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                .logo {
+                    padding: 0 8px;
+                    margin: 0 0 10px;
+                    img {
+                        max-width: 65px;
+                    }
+                }
+            }
+            .footer-links {
+                h3 {
+                    color: $white;
+                    margin: 0 0 35px;
+                    br {
+                        @include breakpoint(small) {
+                            display: none;
+                        }
+                    }
+                }
+                ul {
+                    margin: 0;
+                    padding: 0;
+                    li {
+                        display: block;
+                        list-style: none;
+                        margin: 0 0 10px;
+                        a {
+                            color: $white;
+                            &:hover {
+                                text-decoration: underline !important;
+                                text-underline-position: under;
+                            }
+                        }
+                    }
+                }                
+                p {
+                    color: $grey;
+                    width: 90%;
+                }
+            }
+            .footer-contact {
+                padding-top: 40px;
+                h3 {
+                    text-align: center;
+                    color: $white;
+                    margin: 0 0 25px;
+                }
+                .footer-contact-wrap {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    margin: 0 0 45px;
+                    .contact-block {
+                        padding: 0 15px;
+                        flex: 0 0 33%;
+                        max-width: 33%;
+                        .block-inner {
+                            border-radius: 10px;
+                            background: $white;
+                            padding: 0 0 20px;
+                            h4 {
+                                margin: 0 0 20px;
+                                padding: 7px 10px 10px;
+                                background: $red;
+                                border-radius: 10px 10px 0 0;
+                                text-align: center;
+                                font-family: $font_secondary;
+                                font-weight: 700;
+                                text-transform: uppercase;
+                                color: $white;
+                            }
+                            ul {
+                                margin: 0;
+                                padding: 0 20px;
+                                li {
+                                    padding-left: 30px;
+                                    list-style: none;
+                                    position: relative;
+                                    &:not(:last-child) {
+                                        margin: 0 0 10px;
+                                    }
+                                    a {
+                                        font-weight: 700;
+                                        color: $color_text;
+                                        @include transition(0.4s);
+                                        &:hover {
+                                            color: $red;
+                                        }
+                                    }
+                                    &:before {
+                                        content: '';
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 0;
+                                        transform: translateY(-50%);
+                                        height: 20px;
+                                        width: 20px;                                        
+                                        background-size: contain;
+                                        background-repeat: no-repeat;
+                                    }
+                                    &.address {
+                                        &:before {
+                                            top: 3px;
+                                            transform: unset;
+                                            background-image: url('../../images/icons/map-marker-alt.svg');
+                                        }
+                                    }
+                                    &.phone {
+                                        &:before {
+                                            background-image: url('../../images/icons/phone.svg');
+                                        }
+                                    }
+                                    &.email {
+                                        &:before {
+                                            height: 16px;
+                                            background-image: url('../../images/icons/envelope.svg');
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .footer-bottom {
+            border-top: 1px solid rgba($white, 0.2);
+            .copyright {
+                padding-top: 25px;
+                p {
+                    text-align: center;
+                    color: $white;
+                    margin: 0;
+                    font-family: $font_secondary;
+                }
+            }
+        }
+    }
+}

@@ -21,39 +21,50 @@
 </head>
 
 <body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'ztindia' ); ?></a>
-
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$ztindia_description = get_bloginfo( 'description', 'display' );
-			if ( $ztindia_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $ztindia_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'ztindia' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
+	<?php wp_body_open(); ?>
+	<div id="page" class="site">
+		<header id="masthead" class="site-header">
+			<div class="header-wrapper">
+				<div class="site-branding">
+					<?php
+					the_custom_logo();
+					if ( is_front_page() && is_home() ) :
+						?>
+					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+					<?php
+				else :
+					?>
+					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+					<?php
+				endif;
+				$ztindia_description = get_bloginfo( 'description', 'display' );
+				if ( $ztindia_description || is_customize_preview() ) :
+					?>
+					<p class="site-description"><?php echo $ztindia_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+				<?php endif; ?>
+			</div><!-- .site-branding -->
+			<div class="header-right">
+				<nav id="site-navigation" class="main-navigation">
+					<?php
+					wp_nav_menu(
+						array(
+							'theme_location' => 'menu-1',
+							'menu_id'        => 'primary-menu',
+						)
+					);
+					?>
+				</nav><!-- #site-navigation -->
+				<div class="hamburger-menu">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div><!-- hamburger-menu -->
+				<div class="header-button hide-mobile">
+					<div class="button-wrap ">
+						<a class="btn btn-red" href="#" target="_self">Request a Quote</a>
+					</div><!-- button-wrap -->
+				</div><!-- header-button -->
+			</div><!-- header-right -->
+		</div><!-- header-wrapper -->
 	</header><!-- #masthead -->

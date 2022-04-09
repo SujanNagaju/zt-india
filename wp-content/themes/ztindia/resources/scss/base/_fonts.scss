@@ -1,0 +1,37 @@
+// BROWN Font
+@font-face {
+    font-family: 'Brown';
+    src: url('../../fonts/Brown-Bold.woff2') format('woff2'),
+        url('../../fonts/Brown-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Brown';
+    src: url('../../fonts/Brown-Regular.woff2') format('woff2'),
+        url('../../fonts/Brown-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+// Bw Nista Grotesk DEMO
+@font-face {
+    font-family: 'Bw Nista Grotesk DEMO';
+    src: url('../../fonts/BwNistaGroteskDEMO-Bold.woff2') format('woff2'),
+        url('../../fonts/BwNistaGroteskDEMO-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bw Nista Grotesk DEMO';
+    src: url('../../fonts/BwNistaGroteskDEMO-Regular.woff2') format('woff2'),
+        url('../../fonts/BwNistaGroteskDEMO-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

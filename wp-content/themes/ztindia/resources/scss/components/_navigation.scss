@@ -1,100 +1,121 @@
 .main-navigation {
-  .menu-toggle {
-    cursor: pointer;
-    border: 1px solid;
-    background: none;
-    position: relative;
-    z-index: 20;
-    &:focus {
-      outline: none;
-    }
-    span {
-      height: 2px;
-      width: 20px;
-      background: #000;
-      border-radius: 2px;
-      display: block;
-      margin: 5px 0;
-      transition: 0.4s all;
-      transform-origin: 0;
-      cursor: pointer;
-    }
-    &:hover {
-      span:first-child {
-        transform: translateX(2px) rotate(45deg);
+  @include breakpoint(wide) {
+    position: fixed;
+    top: 0;
+    left: -350px;
+    height: 100vh;
+    max-height: -webkit-fill-available;
+    width: 350px;
+    z-index: 10;
+    @include transition(0.4s);
+    background: $white;
+    padding: 133px 38px 40px;
+  }  
+  @include breakpoint(small) {
+    padding-top: 123px;
+    width: 100%;
+    left: -100%;
+  }
+  .main-nav-inner {
+    overflow: auto;
+    height: 100%;
+  }
+  .menu {
+    padding: 0;
+    margin: 0;
+    li {
+      display: inline-block;
+      list-style: none;
+      margin-left: -3px;
+      &:first-child {
+        margin-left: 0;
       }
-      span:nth-child(2) {
-        opacity: 0;
-        transform: translateX(-100%);
+      @include breakpoint(wide) {
+        display: block;
+        padding: 0 0 22px;        
+        border-bottom: 1px solid $dark_blue;
       }
-      span:last-child {
-        transform: translateX(2px) rotate(-45deg);
+      &:not(:last-child) {
+        margin-right: 30px;
+        @media screen and (max-width: 1429px) {
+          margin-right: 20px;
+        }
+        @media screen and (max-width: 1299px) {
+          margin-right: 15px;
+        }
+        @include breakpoint(wide) {
+          margin-right: 0;
+          margin-left: 0;
+          margin: 0 0 30px;
+        }
+      }
+      a {
+        font-weight: 700;
+        color: $black;
+        @include transition(0.4s);
+        @media screen and (max-width: 1429px) {
+          font-size: 15px;
+        }
+        @include breakpoint(wide) {
+          font-size: 22px;
+          line-height: 1;
+          color: $red;
+          font-weight: 700;
+          font-family: $font_secondary;
+          position: relative;
+          display: block;
+        }
+        &:after {
+          @include breakpoint(wide) {
+            content: '';
+            position: absolute;
+            top: 11px;
+            right: 0;
+            width: 8px;
+            height: 14px;
+            background-image: url('../../images/icons/dropdown-arrow-right.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+          }
+        }
+      }
+      &:hover,
+      &.current-menu-item {
+        > a {
+          color: $red;
+        }
       }
     }
   }
 }
-
-.menu-primary-container {
-  @media screen and (max-width: 767px) {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    transition: 0.5s all;
-    transform: translateX(100%);
-    &.shown{
-      transform: translateX(0);
-    }
-  }
-  ul {
-    position: relative;
-    display: flex;
-    list-style: none;
-    padding: 0;
-    z-index: 1; /* required to activate sub-menuception */
-    @media screen and (max-width: 767px) {
-      flex-direction: column;
-      justify-content: center;
-      min-width: 250px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
-    }
-    /* first leve menu */
-    li {
-      margin-left: 20px;
-      position: relative;
-      &:first-child {
-        margin-left: 0;
-        @media screen and (max-width:767px) {
-          margin-left: 20px;
+body {
+  &.menu-opened {
+    overflow: hidden;
+    .site-header {
+      &.header-sticky {
+        height: 100%;
+      }
+      .header-wrapper {
+        .header-right {
+          .hamburger-menu {
+            span {
+              transform-origin: center;
+              opacity: 0;
+              background: $black;
+              &:nth-child(2) {
+                transform: rotate(45deg);
+                opacity: 1;
+              }
+              &:nth-child(3) {
+                transform: rotate(-45deg);
+                opacity: 1;
+              }
+            }
+          }
         }
       }
-      &.menu-item-has-children:hover,
-      &.menu-item-has-children a:hover {
-        & > ul.sub-menu {
-          display: block;
-          opacity: 1;
-        }
-      }
-      ul.sub-menu {
-        position: absolute;
-        opacity: 0;
-        display: none;
-        top: 100%;
+      .main-navigation {
         left: 0;
-      }
-    }
-    a {
-      display: block;
-      @media screen and (max-width:767px) {
-        color: #fff;
       }
     }
   }

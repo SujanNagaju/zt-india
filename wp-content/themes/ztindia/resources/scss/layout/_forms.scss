@@ -1,0 +1,84 @@
+input, select, textarea, .form-control {
+    width: 100%;
+    height: auto;
+    border: none;
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 700;
+    border-radius: 5px;
+    padding: 20px 30px;
+    color: $color_text;
+    background-color: $white;
+    outline: none;
+    border: 1px solid #eee;
+    &::-webkit-input-placeholder {
+        color: $color_text;
+    }
+    &::-moz-placeholder {
+        color: $color_text;
+    }
+    &:-ms-input-placeholder {
+        color: $color_text;
+    }
+    &:-moz-placeholder {
+        color: $color_text;
+    }
+}
+select {
+    appearance: none;
+    background-image: url('../../images/icons/arrow-down.svg');
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: calc(100% - 15px) 50%;
+}
+input[type=submit] {
+    height: 55px;
+    width: auto;
+    display: inline-block;
+    background: $red;
+    color: $white;
+    @include transition(0.4s);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 40px 2px;
+    &:hover {
+        background: $color_text;
+    }
+}
+
+.wpcf7-form {
+    .wpcf7-form-control-wrap {
+        display: block;
+        line-height: 1;
+    }
+}
+.wpcf7-not-valid-tip {
+    margin-top: 8px;
+    font-size: 15px;
+}
+
+form {
+    &.wpcf7-form {
+        .wpcf7-response-output {
+            color: $white;
+            padding: 8px 20px;
+            margin: 25px 0 0;
+            text-align: center;
+            font-size: 15px;
+        }
+        &.invalid,
+        &.failed {
+            .wpcf7-response-output {
+                border: 1px solid #dc3232;
+                background: #dc3232;
+            }
+        }
+        &.sent {
+            .wpcf7-response-output {
+                background: #008e0d;
+                border: 1px solid #008e0d;
+            }
+        }
+    }
+}
