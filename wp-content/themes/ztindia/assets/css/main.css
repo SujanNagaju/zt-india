@@ -8631,15 +8631,29 @@ a {
       left: 0;
       top: 0;
       border-radius: 3px; }
-  .btn.btn-black-outline {
-    background: transparent;
-    border: 2px solid #03030f;
+  .btn.btn-white {
+    background: #ffffff;
     color: #03030f; }
-    .btn.btn-black-outline:after {
+    .btn.btn-white:after {
+      background: rgba(3, 3, 15, 0.8); }
+    .btn.btn-white:hover {
+      color: #ffffff; }
+      .btn.btn-white:hover:after {
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        border-radius: 3px;
+        background: #03030f; }
+  .btn.btn-white-outline {
+    background: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff; }
+    .btn.btn-white-outline:after {
       content: none; }
-    .btn.btn-black-outline:hover {
-      color: #ffffff;
-      background: #03030f; }
+    .btn.btn-white-outline:hover {
+      color: #03030f;
+      background: #ffffff; }
   .btn.btn-link {
     min-width: unset;
     min-height: unset;
@@ -9391,16 +9405,19 @@ body.menu-opened {
     left: 0;
     height: 100%;
     width: 100%;
-    background: rgba(251, 190, 149, 0.8);
+    background: rgba(190, 19, 16, 0.8);
     z-index: 0; }
   .lets-discuss-section .section-title {
     position: relative;
     z-index: 1;
     padding: 20px 0;
     margin: 0 auto; }
+    .lets-discuss-section .section-title h2 {
+      color: #ffffff; }
     .lets-discuss-section .section-title p {
       font-size: 18px;
-      font-weight: 700; }
+      font-weight: 700;
+      color: #ffffff; }
     .lets-discuss-section .section-title .button-wrap {
       padding: 30px 0 0;
       display: -webkit-inline-box;

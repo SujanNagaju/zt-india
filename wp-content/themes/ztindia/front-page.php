@@ -169,8 +169,8 @@
 				Lorem ipsum dolor sit amet,At vero eos et accusam et justo duo dolores et ea rebum, no sea takimata sanctus est Lorem ipsum dolor sit amet. At vero eos et accusam.
 			</p>
 			<div class="button-wrap">
-				<a class="btn btn-red" href="#">Let's Get Started</a>
-				<a class="btn btn-black-outline" href="#">Learn More</a>
+				<a class="btn btn-white" href="#">Let's Get Started</a>
+				<a class="btn btn-white-outline" href="#">Learn More</a>
 			</div><!-- button-wrap -->
 		</div>
 	</div><!-- container -->

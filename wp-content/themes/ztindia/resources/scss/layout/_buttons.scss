@@ -44,16 +44,34 @@
             }
         }
     }
-    &.btn-black-outline {
-        background: transparent;
-        border: 2px solid $color_text;
+    &.btn-white {
+        background: $white;
         color: $color_text;
+        &:after {
+            background: rgba($color_text, 0.8);
+        }
+        &:hover {
+            color: $white;
+            &:after {
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                border-radius: 3px;
+                background: rgba($color_text, 1);
+            }
+        }
+    }
+    &.btn-white-outline {
+        background: transparent;
+        border: 2px solid $white;
+        color: $white;
         &:after {
             content: none;
         }
         &:hover {
-            color: $white;
-            background: $color_text;
+            color: $color_text;
+            background: $white;
         }
     }
     &.btn-link {
