@@ -8,43 +8,47 @@
  *
  * @package ztindia
  */
-
-?>
-
+global $post;
+$footer_form_display = get_field( '_form_footer', $post->ID );
+$form_display_class  = ( $footer_form_display ) ? '' : 'form-removed';
+if ( $footer_form_display ) : // Check form display condition on each page and display if set to true
+	?>
 <section class="above-footer-section pt-80">
 	<div class="container">
 		<div class="contact-form-wrap bg-light">
 			<div class="section-title">
-				<h5>Get In Touch</h5>
-				<h2>Need any Consultations?</h2>
+				<h5><?php echo __( 'Get In Touch', 'ztindia' ); ?></h5>
+				<h2><?php echo __( 'Need any Consultations?', 'ztindia' ); ?></h2>
 			</div>
-			<?php echo do_shortcode('[contact-form-7 id="39" title="Contact Form"]'); ?>
+			<?php echo do_shortcode( '[contact-form-7 id="39" title="Contact Form"]' ); ?>
 		</div><!-- contact-form-wrap -->
 	</div><!-- container -->
 </section><!-- above-footer -->
+<?php endif; ?>
 
-<footer id="colophon" class="site-footer">
+<footer id="colophon" class="site-footer <?php echo $form_display_class; ?>">
 	<div class="container">
 		<div class="footer-wrap">
 			<div class="footer-top">
-				<?php the_custom_logo(); ?>
+				<?php
+				the_custom_logo();
+
+				// Social Links
+				if ( have_rows( 'social_links', 'option' ) ) :
+					?>
 				<ul class="social-links">
+					<?php
+					while ( have_rows( 'social_links', 'option' ) ) :
+						the_row();
+						$social_link_url  = get_sub_field( 'social_link_url' );
+						$social_link_icon = get_sub_field( 'social_link_icon' );
+						?>
 					<li>
-						<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/facebook.svg"></a>
+						<a href="<?php echo $social_link_url; ?>" target="_blank"><img src="<?php echo $social_link_icon['url']; ?>" alt="<?php echo $social_link_icon['alt']; ?>"></a>
 					</li>
-					<li>
-						<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/instagram.svg"></a>
-					</li>
-					<li>
-						<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/linkedin.svg"></a>
-					</li>
-					<li>
-						<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/twitter.svg"></a>
-					</li>
-					<li>
-						<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/youtube.svg"></a>
-					</li>
+					<?php endwhile; ?>
 				</ul><!-- social-link -->
+				<?php endif; ?>
 			</div><!-- footer-top -->
 			<div class="footer-center">
 				<div class="row">
@@ -83,82 +87,66 @@
 						</div><!-- footer-links -->
 					</div><!-- col-lg-4 -->					
 				</div><!-- row -->
+
+				<?php
+				// Footer Contact Details
+				$footer_contact_heading = get_field( 'footer_contact_section_heading', 'option' );
+				if ( have_rows( 'contact_details', 'option' ) ) :
+					?>
 				<div class="footer-contact">
-					<h3>Our Locations</h3>
+					<h3><?php echo $footer_contact_heading; ?></h3>
 					<div class="footer-contact-wrap">
+						<?php
+						while ( have_rows( 'contact_details', 'option' ) ) :
+							the_row();
+							$country = get_sub_field( 'country' );
+							$address = get_sub_field( 'address' );
+							$phone   = get_sub_field( 'phone' );
+							$email   = get_sub_field( 'email' );
+							?>
 						<div class="contact-block">
 							<div class="block-inner">
-								<h4>India</h4>
+								<h4><?php echo $country; ?></h4>
 								<ul>
-									<li class="address"><a href="#">Debigarh 4th Lane, Madhyamgram<br> Kolkata (W.B) India – 700129</a></li>
-									<li class="phone"><a href="tel:+91-9804210198">+91-9804210198</a></li>
+									<?php if ( $address ) : ?>
+										<li class="address"><a href="#"><?php echo $address; ?></a></li>
+									<?php endif; ?>
+
+									<?php if( $phone ) : ?>
+									<li class="phone"><a href="tel:<?php echo $phone; ?>"><?php echo $phone; ?></a></li>
+									<?php endif; ?>
+
+									<?php if ( $email ) : ?>
+									<li class="email"><a href="mailo:<?php echo $email; ?>"><?php echo $email; ?></a></li>
+									<?php endif; ?>
 								</ul>
 							</div><!-- block-inner -->
 						</div><!-- contact-block -->
-						<div class="contact-block">
-							<div class="block-inner">
-								<h4>USA</h4>
-								<ul>
-									<li class="address"><a href="#">10685-B Hazelhurst Dr. #20871<br> Houston, TX 77043 USA</a></li>
-									<li class="phone"><a href="tel:+1-213-233-1633">+1-213-233-1633</a></li>
-									<li class="email"><a href="mailo:support@zebratechies.com">support@zebratechies.com</a></li>
-								</ul>
-							</div><!-- block-inner -->
-						</div><!-- contact-block -->					
+						<?php endwhile; ?>
+										
 					</div>
 				</div>
-				<div class="footer-badge">
-					<div class="logo">
-						<a href="#"><img src="<?php echo home_url(); ?>/wp-content/uploads/2022/04/copyspace-min.png" alt=""></a>
-					</div><!-- logo -->
-					<div class="logo">
-						<a href="#"><img src="<?php echo home_url(); ?>/wp-content/uploads/2022/04/DMCA-min.png" alt=""></a>
-					</div><!-- logo -->
-					<div class="logo">
-						<a href="#"><img src="<?php echo home_url(); ?>/wp-content/uploads/2022/04/clutch-min.png" alt=""></a>
-					</div><!-- logo -->
-					<div class="logo">
-						<a href="#"><img src="<?php echo home_url(); ?>/wp-content/uploads/2022/04/iso-min.png" alt=""></a>
-					</div><!-- logo -->
-					<div class="logo">
-						<a href="#"><img src="<?php echo home_url(); ?>/wp-content/uploads/2022/04/woorankfooter-min.png" alt=""></a>
-					</div><!-- logo -->
+				<?php endif;
 
+				// Footer Badge
+				if ( have_rows( 'footer_badge', 'option' ) ) :
+				?>
+				<div class="footer-badge">
+					<?php 
+					while( have_rows( 'footer_badge', 'option' ) ) : the_row(); 
+					$badge_url = ( get_sub_field( 'badge_link' ) ) ? get_sub_field( 'badge_link' ) : '#';
+					$badge_image = get_sub_field( 'badge' );
+					?>
 					<div class="logo">
-						<a href="#"><img src="<?php echo home_url(); ?>/wp-content/uploads/2022/04/best-search-min.png" alt=""></a>
+						<a href="<?php echo $badge_url; ?>"><img src="<?php echo $badge_image['url']; ?>" alt="<?php echo $badge_image['alt']; ?>"></a>
 					</div><!-- logo -->
-					<div class="logo">
-						<a href="#"><img src="<?php echo home_url(); ?>/wp-content/uploads/2022/04/google-partner-min.png" alt=""></a>
-					</div><!-- logo -->
-					<div class="logo">
-						<a href="#"><img src="<?php echo home_url(); ?>/wp-content/uploads/2022/04/google-bings-min.png" alt=""></a>
-					</div><!-- logo -->
-					<div class="logo">
-						<a href="#"><img src="<?php echo home_url(); ?>/wp-content/uploads/2022/04/top-seo-min.png" alt=""></a>
-					</div><!-- logo -->
-					<div class="logo">
-						<a href="#"><img src="<?php echo home_url(); ?>/wp-content/uploads/2022/04/seo-agencies2.svg" alt=""></a>
-					</div><!-- logo -->
-					<div class="logo">
-						<a href="#"><img src="<?php echo home_url(); ?>/wp-content/uploads/2022/04/hub-spot-logo-min.png" alt=""></a>
-					</div><!-- logo -->
-					<div class="logo">
-						<a href="#"><img src="<?php echo home_url(); ?>/wp-content/uploads/2022/04/CEOWORLD-min.png" alt=""></a>
-					</div><!-- logo -->
-					<div class="logo">
-						<a href="#"><img src="<?php echo home_url(); ?>/wp-content/uploads/2022/04/red-hiring-min.png" alt=""></a>
-					</div><!-- logo -->
-					<div class="logo">
-						<a href="#"><img src="<?php echo home_url(); ?>/wp-content/uploads/2022/04/paypal-min.png" alt=""></a>
-					</div><!-- logo -->
-					<div class="logo">
-						<a href="#"><img src="<?php echo home_url(); ?>/wp-content/uploads/2022/04/nasscomfooter-min.png" alt=""></a>
-					</div><!-- logo -->
+					<?php endwhile; ?>
 				</div><!-- footer-badge -->
+				<?php endif; ?>
 			</div><!-- footer-center -->
 			<div class="footer-bottom">
 				<div class="copyright">
-					<p>© Copyright 2016-2022 | All Rights Reserved.</p>
+					<p>© Copyright 2016-<?php echo date('Y'); ?> | All Rights Reserved.</p>
 				</div>
 			</div><!-- footer-bottom -->
 		</div><!-- footer-wrap -->

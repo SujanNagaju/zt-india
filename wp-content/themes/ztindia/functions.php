@@ -206,3 +206,28 @@ require get_template_directory() . '/inc/customizer.php';
 if (defined('JETPACK__VERSION')) {
     require get_template_directory() . '/inc/jetpack.php';
 }
+
+
+// Variables dump function 
+function print_pre( $var ){
+    if ( is_array( $var ) || is_object( $var ) ){
+        echo '<pre>';
+        print_r( $var );
+        echo '</pre>';
+    }
+    else{
+        var_dump( $var );
+    }
+}
+
+// ACF options page 
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page(array(
+		'page_title' 	=> 'Theme General Settings',
+		'menu_title'	=> 'Theme Settings',
+		'menu_slug' 	=> 'theme-general-settings',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false
+	));
+}
