@@ -50,7 +50,9 @@ function ztindia_setup()
     // This theme uses wp_nav_menu() in one location.
     register_nav_menus(
         array(
-            'menu-1' => esc_html__('Primary', 'ztindia'),
+            'menu-1'        => esc_html__('Primary', 'ztindia'),
+            'footer-menu-1' => esc_html__('Footer menu 1', 'ztindia'),
+            'footer-menu-2' => esc_html__('Footer menu 2', 'ztindia'),
         )
     );
 
@@ -134,6 +136,19 @@ function ztindia_widgets_init()
             'after_title'   => '</h2>',
         )
     );
+
+    // Footer Sidebar
+    register_sidebar(
+        array(
+            'name'          => esc_html__('Footer Sidebar', 'ztindia'),
+            'id'            => 'footer-sidebar-1',
+            'description'   => esc_html__('Add widgets here.', 'ztindia'),
+            'before_widget' => '<div class="col-lg-4 col-md-6"><div class="footer-links">',
+            'after_widget'  => '</div></div>',
+            'before_title'  => '<h3>',
+            'after_title'   => '</h3>',
+        )
+    );
 }
 add_action('widgets_init', 'ztindia_widgets_init');
 
@@ -206,6 +221,10 @@ require get_template_directory() . '/inc/customizer.php';
 if (defined('JETPACK__VERSION')) {
     require get_template_directory() . '/inc/jetpack.php';
 }
+/**
+ * Register Services post type
+ */
+require get_template_directory() . '/inc/zt-cpt.php';
 
 
 // Variables dump function 

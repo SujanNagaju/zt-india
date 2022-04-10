@@ -50,45 +50,16 @@ if ( $footer_form_display ) : // Check form display condition on each page and d
 				</ul><!-- social-link -->
 				<?php endif; ?>
 			</div><!-- footer-top -->
+			
+			
 			<div class="footer-center">
-				<div class="row">
-					<div class="col-lg-4 col-md-6">
-						<div class="footer-links">
-							<h3>About</h3>							
-							<p>
-								Zebra Techies Solution manage high definition web services for USA,UK,Canada,Australia,UAE,India base clientele.If you’d like to advance the way your business, website, or marketing looks and performance, drop us a line or pop in for a chat. The coffee’s on us.
-							</p>
-						</div><!-- footer-links -->
-					</div><!-- col-lg-4 -->
-					<div class="col-lg-4 col-md-6">
-						<div class="footer-links">
-							<h3>What We Offer</h3>
-							<ul>
-								<li><a href="#">Web Development</a></li>
-								<li><a href="#">Digital Marketing</a></li>
-								<li><a href="#">SEO Services</a></li>
-								<li><a href="#">PPC Services</a></li>
-								<li><a href="#">Email Marketing</a></li>
-								<li><a href="#">Lead Generation</a></li>
-							</ul>
-						</div><!-- footer-links -->
-					</div><!-- col-lg-4 -->
-					<div class="col-lg-4 col-md-6">
-						<div class="footer-links">
-							<h3>Quick Links</h3>
-							<ul>
-								<li><a href="#">About Company</a></li>
-								<li><a href="#">Case Studies</a></li>
-								<li><a href="#">What We Offer</a></li>
-								<li><a href="#">Why Choose Us</a></li>
-								<li><a href="#">Blog</a></li>
-								<li><a href="#">Contact</a></li>
-							</ul>
-						</div><!-- footer-links -->
-					</div><!-- col-lg-4 -->					
-				</div><!-- row -->
+				<?php if ( is_active_sidebar( 'footer-sidebar-1' ) ) : ?>
+					<div class="row">
+						<?php dynamic_sidebar( 'footer-sidebar-1' ); ?>
+					</div><!-- row -->
+				<?php 
+				endif;
 
-				<?php
 				// Footer Contact Details
 				$footer_contact_heading = get_field( 'footer_contact_section_heading', 'option' );
 				if ( have_rows( 'contact_details', 'option' ) ) :
