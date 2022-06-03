@@ -35,3 +35,57 @@ function zts_india_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'zts_india_pingback_header' );
+
+/**
+ * ACF Options page
+ */
+if ( function_exists( 'acf_add_options_page' ) ) {
+
+	acf_add_options_page(
+		array(
+			'page_title' => 'Theme General Settings',
+			'menu_title' => 'Theme Settings',
+			'menu_slug'  => 'theme-general-settings',
+			'capability' => 'edit_posts',
+			'redirect'   => false,
+		)
+	);
+
+	acf_add_options_sub_page(
+		array(
+			'page_title'  => 'Theme Header Settings',
+			'menu_title'  => 'Header',
+			'parent_slug' => 'theme-general-settings',
+		)
+	);
+
+	acf_add_options_sub_page(
+		array(
+			'page_title'  => 'Theme Footer Settings',
+			'menu_title'  => 'Footer',
+			'parent_slug' => 'theme-general-settings',
+		)
+	);
+
+	acf_add_options_sub_page(
+		array(
+			'page_title'  => 'Google Analytics Scripts',
+			'menu_title'  => 'Analytics',
+			'parent_slug' => 'theme-general-settings',
+		)
+	);
+}
+
+
+/**
+ * print pre function
+ */
+function print_pre( $var ) {
+	if ( is_array( $var ) || is_object( $var ) ) {
+		echo '<pre>';
+		print_r( $var );
+		echo '</pre>';
+	} else {
+		var_dump( $var );
+	}
+}
