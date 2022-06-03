@@ -86,19 +86,17 @@ Thumbs.db
 # "mu-plugins" directory
 # "plugins" directory
 # "themes" directory
-# wp-content/*
-# !wp-content/mu-plugins/
-# !wp-content/plugins/
-wp-content/themes/*
-!wp-content/uploads/*
+wp-content/*
+!wp-content/mu-plugins/
+!wp-content/plugins/
+!wp-content/themes/
 
 # add these plugins
-# wp-content/plugins/*
-#!wp-content/plugins/plugin-name
+wp-content/plugins/*
+#!wp-content/plugins/acf-wen-multistep-forms
 
 # ignore specific themes
 wp-content/themes/*
-!wp-content/themes/ztindia
 !wp-content/themes/zts-india
 
 # ignore node/grunt dependency directories
