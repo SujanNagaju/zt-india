@@ -1,0 +1,97 @@
+.btn {
+    display: inline-block;
+    text-align: center;
+    padding: 8px 40px;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 0;
+    color: $color_text;
+    letter-spacing: 0.42px;    
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    @include transition(all 0.4s ease);
+    &.btn-2x {
+        padding: 15px 40px;
+        font-size: 16px;
+    }
+    &.btn-red {
+        background: $red;
+        color: $white;
+        &:hover {
+            background: $navy_blue;
+        }
+    }
+    &.btn-purple {
+        background: $purple;
+        color: $white;
+        &:hover {
+            background: $color_text;
+        }
+    }
+    &.btn-white {
+        background: $white;
+        color: $color_text;
+        &:hover {
+            color: $white;
+        }
+    }
+    &.btn-white-outline {
+        background: transparent;
+        border: 2px solid $white;
+        color: $white;
+        &:after {
+            content: none;
+        }
+        &:hover {
+            color: $navy_blue;
+            background: $white;
+        }
+    }
+    &.btn-red-outline {
+        background: transparent;
+        color: $navy_blue;
+        border: 1px solid $navy_blue;
+        &:hover {
+            background: $red;
+            color: $white;
+            border-color: $red;
+        }
+    }
+    &.btn-link {
+        min-width: unset;
+        min-height: unset;
+        padding: 0;
+        display: inline-block;
+        font-size: 16px;
+        line-height: 1.12;
+        letter-spacing: 1px;
+        color: $red;
+        border: 0;
+        border-radius: 0;
+        position: relative;
+        overflow: unset;
+        &:before {
+            content: '';
+            height: 2px;
+            width: 100%;
+            background: $red;
+            position: absolute;
+            top: calc(100% + 1px);
+            left: 0;
+            @include transition(0.4s);
+        }
+        &:after {
+            content: none;
+        }
+        &:hover {
+            color: $grey;
+            &:before {
+                background: $grey;
+            }
+        }
+    }
+}
