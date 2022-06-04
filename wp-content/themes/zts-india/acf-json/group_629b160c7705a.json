@@ -1,0 +1,41 @@
+{
+    "key": "group_629b160c7705a",
+    "title": "Global Attachment Links",
+    "fields": [
+        {
+            "key": "field_629b1617e7634",
+            "label": "Attachment Link",
+            "name": "attachment_link",
+            "type": "url",
+            "instructions": "Add custom field link to image attachments.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "attachment",
+                "operator": "==",
+                "value": "image"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1654330961
+}
