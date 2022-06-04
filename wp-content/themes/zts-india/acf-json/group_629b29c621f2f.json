@@ -1,0 +1,519 @@
+{
+    "key": "group_629b29c621f2f",
+    "title": "ZTS Flexible Modules",
+    "fields": [
+        {
+            "key": "field_629b29d0acc84",
+            "label": "Zts Modules",
+            "name": "zts_modules",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_629b29d85f0fb": {
+                    "key": "layout_629b29d85f0fb",
+                    "name": "common_banner",
+                    "label": "Common Banner",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_629b2c4b85bfa",
+                            "label": "Banner Title",
+                            "name": "banner_title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_629b2c5585bfb",
+                            "label": "Typewriter Text",
+                            "name": "typewriter_text",
+                            "type": "text",
+                            "instructions": "Separate each typewriter text with , (comma).",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_629b2c8485bfc",
+                            "label": "Banner Image",
+                            "name": "banner_image",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_629b3050ab35d": {
+                    "key": "layout_629b3050ab35d",
+                    "name": "awards_section",
+                    "label": "Awards Section",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_629b3064ab35e",
+                            "label": "Awards Section Pre Title",
+                            "name": "awards_section_pre_title",
+                            "type": "text",
+                            "instructions": "Appears above the title. Appears in h5 tag.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_629b3077ab35f",
+                            "label": "Awards Section Main Title",
+                            "name": "awards_section_main_title",
+                            "type": "text",
+                            "instructions": "Main title of the section. Appears in h2 tag.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_629b3087ab360",
+                            "label": "Awards Images",
+                            "name": "awards_images",
+                            "type": "gallery",
+                            "instructions": "Awards image gallery.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "thumbnail",
+                            "insert": "append",
+                            "library": "all",
+                            "min": "",
+                            "max": "",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_629b3453626c5": {
+                    "key": "layout_629b3453626c5",
+                    "name": "two_col_about_section",
+                    "label": "Two Col About Section",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_629b345f626c6",
+                            "label": "Section Pre Title",
+                            "name": "section_pre_title",
+                            "type": "text",
+                            "instructions": "Appears above the title. Appears in h5 tag.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_629b34a7626c7",
+                            "label": "Section Main Title",
+                            "name": "section_main_title",
+                            "type": "text",
+                            "instructions": "Main title of the section. Appears in h2 tag.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_629b34ba626c8",
+                            "label": "Section Description Content",
+                            "name": "section_description_content",
+                            "type": "wysiwyg",
+                            "instructions": "Main description content of the section.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_629b34d9626c9",
+                            "label": "Section CTA Link",
+                            "name": "section_cta_link",
+                            "type": "link",
+                            "instructions": "CTA link for the section.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array"
+                        },
+                        {
+                            "key": "field_629b34f6626ca",
+                            "label": "Right Column Content (Stat Box)",
+                            "name": "right_column_content",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "row",
+                            "button_label": "Add Stats Box",
+                            "sub_fields": [
+                                {
+                                    "key": "field_629b353c626cb",
+                                    "label": "Stats Box Heading",
+                                    "name": "stats_box_heading",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_629b356f626cc",
+                                    "label": "Stats Box Counter Text",
+                                    "name": "stats_box_counter_text",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_629b3b5f53599",
+                                    "label": "Counter suffix",
+                                    "name": "counter_suffix",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_629b359e626cd",
+                                    "label": "Stats Box Description",
+                                    "name": "stats_box_description",
+                                    "type": "textarea",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "maxlength": "",
+                                    "rows": "",
+                                    "new_lines": "wpautop"
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_629b3d463f028": {
+                    "key": "layout_629b3d463f028",
+                    "name": "our_clients",
+                    "label": "Our Clients",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_629b3d5b3f029",
+                            "label": "Section Title",
+                            "name": "section_title",
+                            "type": "text",
+                            "instructions": "Main Section Title.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_629b3d713f02a",
+                            "label": "Client Logo Slider Gallery",
+                            "name": "client_logo_slider_gallery",
+                            "type": "gallery",
+                            "instructions": "Clients Logo Gallery Images. Displayed In Slider.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "thumbnail",
+                            "insert": "append",
+                            "library": "all",
+                            "min": "",
+                            "max": "",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_629b40ca45598": {
+                    "key": "layout_629b40ca45598",
+                    "name": "why_choose_us",
+                    "label": "Why Choose us",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_629b41cdd57f4",
+                            "label": "Section Image",
+                            "name": "section_image",
+                            "type": "image",
+                            "instructions": "Section Display Image.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_629b40ff45599",
+                            "label": "Section Pre Title",
+                            "name": "section_pre_title",
+                            "type": "text",
+                            "instructions": "Appears above the title. Appears in h5 tag.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_629b411d4559a",
+                            "label": "Section Main Title",
+                            "name": "section_main_title",
+                            "type": "text",
+                            "instructions": "Main title of the section. Appears in h2 tag.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_629b414c4559b",
+                            "label": "Section Content",
+                            "name": "section_content",
+                            "type": "wysiwyg",
+                            "instructions": "Section Descriptive content.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "button_label": "Add New Module",
+            "min": "",
+            "max": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1654342124
+}
