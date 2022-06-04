@@ -93,7 +93,7 @@ wp-content/*
 
 # add these plugins
 wp-content/plugins/*
-#!wp-content/plugins/acf-wen-multistep-forms
+!wp-content/plugins/zts-cpt
 
 # ignore specific themes
 wp-content/themes/*
