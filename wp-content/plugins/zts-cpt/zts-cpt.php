@@ -4,18 +4,14 @@
  * Description: For custom post types used in site.
  * Version: 1.0.0
  * Author: ZTS
+ * 
+ * @package zts-cpt
  */
 
 if ( ! function_exists( 'zts_cpts' ) ) :
 
 	/**
 	 * Registers a new post type
-	 *
-	 * @uses $wp_post_types Inserts new post type object into the list
-	 *
-	 * @param string  Post type key, must not exceed 20 characters
-	 * @param array|string  See optional args description above.
-	 * @return object|WP_Error the registered post type object, or an error object
 	 */
 	function zts_cpts() {
 
@@ -29,15 +25,16 @@ if ( ! function_exists( 'zts_cpts' ) ) :
 				'supports'      => array( 'editor', 'title', 'page-attributes', 'thumbnail' ),
 				'has_single'    => true,
 			),
-			// array(
-			// 	'slug'          => 'team',
-			// 	'singular_name' => 'Team',
-			// 	'plural_name'   => 'Teams',
-			// 	'post_type'     => 'teams',
-			// 	'post_icon'     => 'dashicons-groups',
-			// 	'supports'      => array( 'editor', 'title', 'page-attributes' ),
-			// 	'has_single'    => false,
-			// ),
+			array(
+				'slug'          => 'testimonial',
+				'singular_name' => 'Testimonial',
+				'plural_name'   => 'Testimonials',
+				'post_type'     => 'testimonial',
+				'post_icon'     => 'dashicons-format-status',
+				'supports'      => array( 'editor', 'title', 'thumbnail' ),
+				'has_single'    => false,
+				'has_archive'   => false,
+			),
 
 		);
 
@@ -65,7 +62,7 @@ if ( ! function_exists( 'zts_cpts' ) ) :
 				'query_var'          => $zts_cpt['has_single'],
 				'rewrite'            => array( 'slug' => $zts_cpt['slug'] ),
 				'capability_type'    => 'post',
-				'has_archive'        => true,
+				'has_archive'        => isset( $zts_cpt['has_archive'] ) ? $zts_cpt['has_archive'] : true,
 				'hierarchical'       => true,
 				'menu_position'      => null,
 				'supports'           => $zts_cpt['supports'],
@@ -85,12 +82,10 @@ endif;
 
 	/**
 	 * [vcTeachregisterTaxonomy register custom taxonomy]
-	 *
-	 * @return [type] [init]
 	 */
-function ztsregisterTaxonomy() {
+function zts_register_taxonomy() {
 
-	$ztspostTaxonomies = array(
+	$zts_post_taxonomies = array(
 		array(
 			'slug'          => 'service-categories',
 			'front_slug'    => 'service-cats',
@@ -115,14 +110,14 @@ function ztsregisterTaxonomy() {
 		),
 	);
 
-	foreach ( $ztspostTaxonomies as $zts_post_taxonomy ) {
+	foreach ( $zts_post_taxonomies as $zts_post_taxonomy ) {
 		register_taxonomy(
 			$zts_post_taxonomy['slug'],
 			$zts_post_taxonomy['post_type'],
 			array(
-				// Hierarchical taxonomy (like categories)
+				// Hierarchical taxonomy (like categories).
 				'hierarchical'      => isset( $zts_post_taxonomy['hierarchical'] ) ? $zts_post_taxonomy['hierarchical'] : true,
-				// This array of options controls the labels displayed in the WordPress Admin UI
+				// This array of options controls the labels displayed in the WordPress Admin UI.
 				'labels'            => array(
 					'name'              => _x( $zts_post_taxonomy['name'], $zts_post_taxonomy['name'] ),
 					'singular_name'     => _x( $zts_post_taxonomy['singular_name'], $zts_post_taxonomy['singular_name'] ),
@@ -148,4 +143,4 @@ function ztsregisterTaxonomy() {
 		);
 	}
 }
-// add_action( 'init', 'ztsregisterTaxonomy', 0 );
+// add_action( 'init', 'zts_register_taxonomy', 0 );
