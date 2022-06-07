@@ -473,7 +473,7 @@
                         },
                         {
                             "key": "field_629f70d01be28",
-                            "label": "Selective Categories",
+                            "label": "Selective Services Lists",
                             "name": "selective_categories",
                             "type": "relationship",
                             "instructions": "Select services to be displayed. Filter services by taxonomy.",
@@ -778,6 +778,54 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_629f7a49d56a7": {
+                    "key": "layout_629f7a49d56a7",
+                    "name": "portfolio_filter_section",
+                    "label": "Portfolio Filter section",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_629f7aa3d56a8",
+                            "label": "Section Pre TItle",
+                            "name": "section_pre_title",
+                            "type": "text",
+                            "instructions": "Appears above the title. Appears in h5 tag.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_629f7ab6d56a9",
+                            "label": "Section Main Title",
+                            "name": "section_main_title",
+                            "type": "text",
+                            "instructions": "Main title of the section. Appears in h2 tag.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_629b79ee95574": {
                     "key": "layout_629b79ee95574",
                     "name": "customer_testimonials",
@@ -1048,5 +1096,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1654616784
+    "modified": 1654618825
 }

@@ -35,6 +35,16 @@ if ( ! function_exists( 'zts_cpts' ) ) :
 				'has_single'    => false,
 				'has_archive'   => true,
 			),
+			array(
+				'slug'          => 'portfolio',
+				'singular_name' => 'Portfolio',
+				'plural_name'   => 'Portfolios',
+				'post_type'     => 'portfolios',
+				'post_icon'     => 'dashicons-portfolio',
+				'supports'      => array( 'editor', 'title', 'thumbnail' ),
+				'has_single'    => true,
+				'has_archive'   => true,
+			),
 
 		);
 
@@ -92,6 +102,14 @@ function zts_register_taxonomy() {
 			'singular_name' => 'Service Category',
 			'name'          => 'Service Categories',
 			'post_type'     => 'services',
+			'hierarchical'  => true,
+		),
+		array(
+			'slug'          => 'portfolio-categories',
+			'front_slug'    => 'portfolio',
+			'singular_name' => 'Portfolio Category',
+			'name'          => 'Portfolio Categories',
+			'post_type'     => 'portfolios',
 			'hierarchical'  => true,
 		),
 	);
