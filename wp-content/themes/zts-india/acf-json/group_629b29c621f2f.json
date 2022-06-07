@@ -163,6 +163,91 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_629cc630ce53a": {
+                    "key": "layout_629cc630ce53a",
+                    "name": "services_category_listing",
+                    "label": "Services Category Listing",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_629cc641ce53b",
+                            "label": "Section Pre Title",
+                            "name": "section_pre_title",
+                            "type": "text",
+                            "instructions": "Appears above the title. Appears in h5 tag.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_629cc664ce53c",
+                            "label": "Section Main Title",
+                            "name": "section_main_title",
+                            "type": "text",
+                            "instructions": "Main title of the section. Appears in h2 tag.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_629cc679ce53d",
+                            "label": "Featured Categories",
+                            "name": "featured_categories",
+                            "type": "taxonomy",
+                            "instructions": "Selected service categories are displayed as featured. Leave all unselected to display all non empty categories.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "taxonomy": "service-categories",
+                            "field_type": "multi_select",
+                            "allow_null": 0,
+                            "add_term": 1,
+                            "save_terms": 0,
+                            "load_terms": 0,
+                            "return_format": "object",
+                            "multiple": 0
+                        },
+                        {
+                            "key": "field_629cccc6b8071",
+                            "label": "View All Services Link",
+                            "name": "view_all_services_link",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_629b3453626c5": {
                     "key": "layout_629b3453626c5",
                     "name": "two_col_about_section",
@@ -337,6 +422,79 @@
                                     "new_lines": "wpautop"
                                 }
                             ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_629ccf31f2aea": {
+                    "key": "layout_629ccf31f2aea",
+                    "name": "category_specific_service_listing",
+                    "label": "Category Specific Service Listing",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_629ccf3ef2aeb",
+                            "label": "Section Pre Title",
+                            "name": "section_pre_title",
+                            "type": "text",
+                            "instructions": "Appears above the title. Appears in h5 tag.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_629ccf46f2aec",
+                            "label": "Section Main Title",
+                            "name": "section_main_title",
+                            "type": "text",
+                            "instructions": "Main title of the section. Appears in h2 tag.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_629f70d01be28",
+                            "label": "Selective Categories",
+                            "name": "selective_categories",
+                            "type": "relationship",
+                            "instructions": "Select services to be displayed. Filter services by taxonomy.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "services"
+                            ],
+                            "taxonomy": "",
+                            "filters": [
+                                "taxonomy"
+                            ],
+                            "elements": "",
+                            "min": "",
+                            "max": "",
+                            "return_format": "object"
                         }
                     ],
                     "min": "",
@@ -890,5 +1048,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1654359928
+    "modified": 1654616784
 }

@@ -4,7 +4,7 @@
  * Description: For custom post types used in site.
  * Version: 1.0.0
  * Author: ZTS
- * 
+ *
  * @package zts-cpt
  */
 
@@ -33,7 +33,7 @@ if ( ! function_exists( 'zts_cpts' ) ) :
 				'post_icon'     => 'dashicons-format-status',
 				'supports'      => array( 'editor', 'title', 'thumbnail' ),
 				'has_single'    => false,
-				'has_archive'   => false,
+				'has_archive'   => true,
 			),
 
 		);
@@ -88,25 +88,11 @@ function zts_register_taxonomy() {
 	$zts_post_taxonomies = array(
 		array(
 			'slug'          => 'service-categories',
-			'front_slug'    => 'service-cats',
+			'front_slug'    => 'service-categories',
 			'singular_name' => 'Service Category',
 			'name'          => 'Service Categories',
 			'post_type'     => 'services',
-		),
-		array(
-			'slug'          => 'portfolio-categories',
-			'front_slug'    => 'portfolio-cats',
-			'singular_name' => 'Portfolio Category',
-			'name'          => 'Portfolio Categories',
-			'post_type'     => 'portfolios',
-		),
-		array(
-			'slug'          => 'portfolio-tags',
-			'front_slug'    => 'portfolio-tags',
-			'singular_name' => 'Portfolio Tag',
-			'name'          => 'Portfolio Tags',
-			'post_type'     => 'portfolios',
-			'hierarchical'  => false,
+			'hierarchical'  => true,
 		),
 	);
 
@@ -143,4 +129,4 @@ function zts_register_taxonomy() {
 		);
 	}
 }
-// add_action( 'init', 'zts_register_taxonomy', 0 );
+add_action( 'init', 'zts_register_taxonomy', 0 );
