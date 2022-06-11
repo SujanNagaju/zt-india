@@ -88,6 +88,66 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_62a4a8ff5cb07": {
+                    "key": "layout_62a4a8ff5cb07",
+                    "name": "intro_banner",
+                    "label": "Intro Banner",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_62a4a9095cb08",
+                            "label": "Banner Intro Text",
+                            "name": "banner_intro_text",
+                            "type": "wysiwyg",
+                            "instructions": "Use h1 tag for title and p tag for description.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 0,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_62a4a93e5cb09",
+                            "label": "Banner Media",
+                            "name": "banner_media",
+                            "type": "oembed",
+                            "instructions": "Youtube video to embed.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "width": "",
+                            "height": ""
+                        },
+                        {
+                            "key": "field_62a4a99b5cb0a",
+                            "label": "Banner CTA Button",
+                            "name": "banner_cta_button",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_629b3050ab35d": {
                     "key": "layout_629b3050ab35d",
                     "name": "awards_section",
@@ -1069,6 +1129,52 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_62a4a8845cb05": {
+                    "key": "layout_62a4a8845cb05",
+                    "name": "service_categories_listing",
+                    "label": "Service Categories Listing",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_62a4ad554ec6d",
+                            "label": "List Empty Terms?",
+                            "name": "list_empty_terms",
+                            "type": "true_false",
+                            "instructions": "Enable if you want to list all terms.\r\nDisable if only terms that have posts is to be listed",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 1,
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
+                            "key": "field_62a4a8cf5cb06",
+                            "label": "Message",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "Block to list all service categories with their description.",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add New Module",
@@ -1096,5 +1202,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1654618825
+    "modified": 1654959505
 }
