@@ -40,7 +40,7 @@ $pf_categories = get_terms(
 					</li>
 					<?php foreach ( $pf_categories as $category ) : ?>
 						<li>
-							<a data-filter=".<?php echo $category->slug; ?>"><?php echo $category->name; ?></a>
+							<a data-filter=".<?php echo 'cat-'.$category->term_id; ?>"><?php echo $category->name; ?></a>
 						</li>
 					<?php endforeach; ?>
 					
@@ -66,8 +66,9 @@ $pf_categories = get_terms(
 					$associated_terms = get_the_terms( get_the_ID(), 'portfolio-categories' );
 					$filter_cat       = array();
 					foreach ( $associated_terms as $term ) {
-						$filter_cat[] = $term->slug;
+						$filter_cat[] = 'cat-'.$term->term_id;
 					}
+					
 					?>
 					<div class="project-card <?php echo implode( ' ', $filter_cat ); ?>" data-category="<?php echo implode( ' ', $filter_cat ); ?>">
 						<div class="card-inner">
