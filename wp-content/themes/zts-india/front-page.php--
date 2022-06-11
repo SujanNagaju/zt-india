@@ -3,298 +3,740 @@
 <section class="hero-banner">
     <div class="container">
         <div class="banner-content">
-            <h1>We deliver absolute &<br> <strong>growth-oriented</strong> solutions in<br> <span data-text="Developer Hiring., App Development., Web App Development."></span></h1>
+            <h1>We deliver <strong>growth-oriented</strong> solutions in<br> <span data-text="Developer Hiring., App Development., Web App Development."></span></h1>
         </div><!-- banner-content -->
     </div><!-- container -->
+    <div class="banner-trans">
+        <img src="<?php echo home_url(); ?>/wp-content/uploads/2022/05/pexels-kampus-production-6248966.jpg" alt="">
+    </div><!-- banner-trans -->
 </section><!-- hero-banner -->
 
-<section class="awards-section py-40" style="background-image: url('<?php echo home_url(); ?>/wp-content/uploads/2022/04/slider_img_bg.png');">
+<section class="awards-section py-60">
     <div class="container">
-        <div class="awards-wrapper">
-            <div class="section-title">
-                <h3>Awards & Association</h3>
-            </div><!-- section-title -->
-            <div class="awards-grid">
-                <div class="awards-card">
-                    <a href="#"><img src="<?php echo home_url(); ?>/wp-content/uploads/2022/04/clutch-min.png" alt=""></a>
-                </div><!-- awards-card -->
-                <div class="awards-card">
-                    <a href="#"><img src="<?php echo home_url(); ?>/wp-content/uploads/2022/04/DMCA-min.png" alt=""></a>
-                </div><!-- awards-card -->
-                <div class="awards-card">
-                    <a href="#"><img src="<?php echo home_url(); ?>/wp-content/uploads/2022/04/red-hiring-min.png" alt=""></a>
-                </div><!-- awards-card -->
-                <div class="awards-card">
-                    <a href="#"><img src="<?php echo home_url(); ?>/wp-content/uploads/2022/04/best-search-min.png" alt=""></a>
-                </div><!-- awards-card -->
-                <div class="awards-card">
-                    <a href="#"><img src="<?php echo home_url(); ?>/wp-content/uploads/2022/04/google-partner-min.png" alt=""></a>
-                </div><!-- awards-card -->
-                <div class="awards-card">
-                    <a href="#"><img src="<?php echo home_url(); ?>/wp-content/uploads/2022/04/iso-min.png" alt=""></a>
-                </div><!-- awards-card -->
-                <div class="awards-card">
-                    <a href="#"><img src="<?php echo home_url(); ?>/wp-content/uploads/2022/04/seo-agencies2.svg" alt=""></a>
-                </div><!-- awards-card -->
-            </div><!-- awards-grid -->
-        </div><!-- awards-wrapper -->
+        <div class="section-title">
+            <h5>Awards</h5>
+            <h2>Awards and <span>Association</span></h2>
+        </div><!-- section-title -->
+        <div class="awards-marquee">
+            <div class="awards-wrapper">
+                <div class="awards-block">
+                    <div class="block-inner">
+                        <img src="<?php echo home_url(); ?>/wp-content/uploads/2022/05/clutch.png">
+                    </div><!-- block-inner -->
+                </div><!-- awards-block -->
+                <div class="awards-block">
+                    <div class="block-inner">
+                        <img src="<?php echo home_url(); ?>/wp-content/uploads/2022/05/best-seo-company-250-1-removebg-preview.png">
+                    </div><!-- block-inner -->
+                </div><!-- awards-block -->
+                <div class="awards-block">
+                    <div class="block-inner">
+                        <img src="<?php echo home_url(); ?>/wp-content/uploads/2022/05/nasscom.png">
+                    </div><!-- block-inner -->
+                </div><!-- awards-block -->
+                <div class="awards-block">
+                    <div class="block-inner">
+                        <img src="<?php echo home_url(); ?>/wp-content/uploads/2022/05/stackoverflow.png">
+                    </div><!-- block-inner -->
+                </div><!-- awards-block -->
+                <div class="awards-block">
+                    <div class="block-inner">
+                        <img src="<?php echo home_url(); ?>/wp-content/uploads/2022/05/tie-silicon-logo.png">
+                    </div><!-- block-inner -->
+                </div><!-- awards-block -->
+                <div class="awards-block">
+                    <div class="block-inner">
+                        <img src="<?php echo home_url(); ?>/wp-content/uploads/2022/05/sitepoint-community.png">
+                    </div><!-- block-inner -->
+                </div><!-- awards-block -->
+            </div><!-- awards-wrapper -->
+        </div><!-- awards-marquee -->
     </div><!-- container -->
 </section><!-- awards-section -->
-<section class="services-section">
-    <div class="container">
-        <div class="section-title center-lined">
-            <h3>Services</h3>
-        </div>
-        <div class="row">
-            <div class="col-lg-4 col-md-6">
-                <div class="service-card">
-                    <div class="card-inner">
-                        <div class="service-thumb">
-                            <img src="<?php echo home_url(); ?>/wp-content/uploads/2022/04/se-icon4.png" alt="">
-                        </div><!-- service-thumb -->
-                        <div class="service-content">
-                            <h4>Web Design</h4>
-                            <p>As a leading web design company in Kolkota, India, we build creative responsive websites using HTML5, CSS3, Bootstrap and...</p>
-                            <a href="#" class="btn btn-purple">Read More</a>
-                        </div><!-- service-content -->
-                    </div><!-- card-inner -->
-                </div><!-- service-card -->
-            </div><!-- col-lg-4 -->
-            <div class="col-lg-4 col-md-6">
-                <div class="service-card">
-                    <div class="card-inner">
-                        <div class="service-thumb">
-                            <img src="<?php echo home_url(); ?>/wp-content/uploads/2022/04/se-icon8.png" alt="">
-                        </div><!-- service-thumb -->
-                        <div class="service-content">
-                            <h4>App Development</h4>
-                            <p>As a leading web design company in Kolkota, India, we build creative responsive websites using HTML5, CSS3, Bootstrap and...</p>
-                            <a href="#" class="btn btn-purple">Read More</a>
-                        </div><!-- service-content -->
-                    </div><!-- card-inner -->
-                </div><!-- service-card -->
-            </div><!-- col-lg-4 -->
-            <div class="col-lg-4 col-md-6">
-                <div class="service-card">
-                    <div class="card-inner">
-                        <div class="service-thumb">
-                            <img src="<?php echo home_url(); ?>/wp-content/uploads/2022/04/se-icon5.png" alt="">
-                        </div><!-- service-thumb -->
-                        <div class="service-content">
-                            <h4>eCommerce</h4>
-                            <p>As a leading web design company in Kolkota, India, we build creative responsive websites using HTML5, CSS3, Bootstrap and...</p>
-                            <a href="#" class="btn btn-purple">Read More</a>
-                        </div><!-- service-content -->
-                    </div><!-- card-inner -->
-                </div><!-- service-card -->
-            </div><!-- col-lg-4 -->
-        </div><!-- row -->
-    </div><!-- container -->
-</section><!-- services-section -->
 
-<section class="packages-section pb-60">
+<section class="services-section py-60">
     <div class="container">
-        <div class="section-title center-lined">
-            <h3>Web Design <span>Packages</span></h3>
+        <div class="section-title">
+            <h5>What We Offer</h5>
+            <h2>Creative <span>Landing Services</span></h2>
         </div><!-- section-title -->
         <div class="row">
-            <div class="col-lg-3 col-md-6">
-                <div class="package-card">
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
                     <div class="card-inner">
-                        <div class="card-image-content">
-                            <div class="card-image">
-                                <img src="<?php echo home_url(); ?>/wp-content/uploads/2022/05/WordPress.svg" alt="">
-                            </div><!-- card-image -->
-                            <div class="card-content">
-                                <h5>WordPress Website Development</h5>
-                                <p>Starting at $499</p>
-                            </div><!-- card-content -->
-                        </div><!-- card-image-content -->
-                        <div class="button-wrap">
-                            <a href="#" class="btn btn-red">Get Free Quote</a>
-                        </div><!-- button-wrap -->
+                        <div class="card-image">
+                            <img src="<?php echo home_url(); ?>/wp-content/uploads/2022/05/icon-1.png" alt="">
+                        </div><!-- card-image -->
+                        <div class="card-content">
+                            <div class="content-inner">
+                                <h3><a href="#">Developer Hiring</a></h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+                                </p>
+                            </div><!-- content-inner -->
+                            <div class="button-wrap">
+                                <a href="#" class="btn btn-red-outline">Read More</a>
+                            </div><!-- button-wrap -->
+                        </div><!-- card-content -->
                     </div><!-- card-inner -->
-                </div><!-- package-card -->
-            </div><!-- col-lg-3 -->
-            <div class="col-lg-3 col-md-6">
-                <div class="package-card">
+                </div><!-- service-card -->
+            </div><!-- col-lg-4 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
                     <div class="card-inner">
-                        <div class="card-image-content">
-                            <div class="card-image">
-                                <img src="<?php echo home_url(); ?>/wp-content/uploads/2022/05/ipad-mobile.svg" alt="">
-                            </div><!-- card-image -->
-                            <div class="card-content">
-                                <h5>Responsive Website Development</h5>
-                                <p>Starting at $699</p>
-                            </div><!-- card-content -->
-                        </div><!-- card-image-content -->
-                        <div class="button-wrap">
-                            <a href="#" class="btn btn-red">Get Free Quote</a>
-                        </div><!-- button-wrap -->
+                        <div class="card-image">
+                            <img src="<?php echo home_url(); ?>/wp-content/uploads/2022/05/icon-2.png" alt="">
+                        </div><!-- card-image -->
+                        <div class="card-content">
+                            <div class="content-inner">
+                                <h3><a href="#">App Development</a></h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+                                </p>
+                            </div><!-- content-inner -->
+                            <div class="button-wrap">
+                                <a href="#" class="btn btn-red-outline">Read More</a>
+                            </div><!-- button-wrap -->
+                        </div><!-- card-content -->
                     </div><!-- card-inner -->
-                </div><!-- package-card -->
-            </div><!-- col-lg-3 -->
-            <div class="col-lg-3 col-md-6">
-                <div class="package-card">
+                </div><!-- service-card -->
+            </div><!-- col-lg-4 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
                     <div class="card-inner">
-                        <div class="card-image-content">
-                            <div class="card-image">
-                                <img src="<?php echo home_url(); ?>/wp-content/uploads/2022/05/desktop.svg" alt="">
-                            </div><!-- card-image -->
-                            <div class="card-content">
-                                <h5>Shopify Development</h5>
-                                <p>Starting at $1299</p>
-                            </div><!-- card-content -->
-                        </div><!-- card-image-content -->
-                        <div class="button-wrap">
-                            <a href="#" class="btn btn-red">Get Free Quote</a>
-                        </div><!-- button-wrap -->
+                        <div class="card-image">
+                            <img src="<?php echo home_url(); ?>/wp-content/uploads/2022/05/icon-3.png" alt="">
+                        </div><!-- card-image -->
+                        <div class="card-content">
+                            <div class="content-inner">
+                                <h3><a href="#">Digital Marketing</a></h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+                                </p>
+                            </div><!-- content-inner -->
+                            <div class="button-wrap">
+                                <a href="#" class="btn btn-red-outline">Read More</a>
+                            </div><!-- button-wrap -->
+                        </div><!-- card-content -->
                     </div><!-- card-inner -->
-                </div><!-- package-card -->
-            </div><!-- col-lg-3 -->
-            <div class="col-lg-3 col-md-6">
-                <div class="package-card">
-                    <div class="card-inner">
-                        <div class="card-image-content">
-                            <div class="card-image">
-                                <img src="<?php echo home_url(); ?>/wp-content/uploads/2022/05/brush.svg" alt="">
-                            </div><!-- card-image -->
-                            <div class="card-content">
-                                <h5>UI / UX Design</h5>
-                                <p>Starting at $499</p>
-                            </div><!-- card-content -->
-                        </div><!-- card-image-content -->
-                        <div class="button-wrap">
-                            <a href="#" class="btn btn-red">Get Free Quote</a>
-                        </div><!-- button-wrap -->
-                    </div><!-- card-inner -->
-                </div><!-- package-card -->
-            </div><!-- col-lg-3 -->
-            <div class="col-lg-3 col-md-6">
-                <div class="package-card">
-                    <div class="card-inner">
-                        <div class="card-image-content">
-                            <div class="card-image">
-                                <img src="<?php echo home_url(); ?>/wp-content/uploads/2022/05/laptop-coding.svg" alt="">
-                            </div><!-- card-image -->
-                            <div class="card-content">
-                                <h5>Professional Website Development</h5>
-                                <p>Starting at $999</p>
-                            </div><!-- card-content -->
-                        </div><!-- card-image-content -->
-                        <div class="button-wrap">
-                            <a href="#" class="btn btn-red">Get Free Quote</a>
-                        </div><!-- button-wrap -->
-                    </div><!-- card-inner -->
-                </div><!-- package-card -->
-            </div><!-- col-lg-3 -->
-            <div class="col-lg-3 col-md-6">
-                <div class="package-card">
-                    <div class="card-inner">
-                        <div class="card-image-content">
-                            <div class="card-image">
-                                <img src="<?php echo home_url(); ?>/wp-content/uploads/2022/05/list-document.svg" alt="">
-                            </div><!-- card-image -->
-                            <div class="card-content">
-                                <h5>Mobile Application Development</h5>
-                                <p>Starting at $1599</p>
-                            </div><!-- card-content -->
-                        </div><!-- card-image-content -->
-                        <div class="button-wrap">
-                            <a href="#" class="btn btn-red">Get Free Quote</a>
-                        </div><!-- button-wrap -->
-                    </div><!-- card-inner -->
-                </div><!-- package-card -->
-            </div><!-- col-lg-3 -->
-            <div class="col-lg-3 col-md-6">
-                <div class="package-card">
-                    <div class="card-inner">
-                        <div class="card-image-content">
-                            <div class="card-image">
-                                <img src="<?php echo home_url(); ?>/wp-content/uploads/2022/05/ecommerce-cart.svg" alt="">
-                            </div><!-- card-image -->
-                            <div class="card-content">
-                                <h5>E-commerce Website Development</h5>
-                                <p>Starting at $899</p>
-                            </div><!-- card-content -->
-                        </div><!-- card-image-content -->
-                        <div class="button-wrap">
-                            <a href="#" class="btn btn-red">Get Free Quote</a>
-                        </div><!-- button-wrap -->
-                    </div><!-- card-inner -->
-                </div><!-- package-card -->
-            </div><!-- col-lg-3 -->
-            <div class="col-lg-3 col-md-6">
-                <div class="package-card">
-                    <div class="card-inner">
-                        <div class="card-image-content">
-                            <div class="card-image">
-                                <img src="<?php echo home_url(); ?>/wp-content/uploads/2022/05/laravel.svg" alt="">
-                            </div><!-- card-image -->
-                            <div class="card-content">
-                                <h5>Laravel Developers</h5>
-                                <p>Starting at $799</p>
-                            </div><!-- card-content -->
-                        </div><!-- card-image-content -->
-                        <div class="button-wrap">
-                            <a href="#" class="btn btn-red">Get Free Quote</a>
-                        </div><!-- button-wrap -->
-                    </div><!-- card-inner -->
-                </div><!-- package-card -->
-            </div><!-- col-lg-3 -->
+                </div><!-- service-card -->
+            </div><!-- col-lg-4 -->
+            <div class="col-12">
+                <div class="button-wrap d-block text-center">
+                    <a href="#" class="btn btn-2x btn-red">VIEW ALL SERVICES</a>
+                </div><!-- button-wrap -->
+            </div><!-- col-12 -->
         </div><!-- row -->
     </div><!-- container -->
-</section><!-- packages-section -->
-
-<section class="stats-section">
-    <div class="container">
-        <div class="section-title center-lined">
-            <h3>Our Credentials</h3>
-        </div><!-- section-title -->
-        <div class="row">
-            <div class="col-lg-3 col-md-6">
-                <div class="stats-block wow">
-                    <h5>Started in</h5>
-                    <h2><span>2004</span></h2>
-                </div><!-- stats-block -->
-            </div><!-- col-lg-3 -->
-            <div class="col-lg-3 col-md-6">
-                <div class="stats-block wow">
-                    <h5>Testimonials Form</h5>
-                    <h2><span>200</span>+</h2>
-                </div><!-- stats-block -->
-            </div><!-- col-lg-3 -->
-            <div class="col-lg-3 col-md-6">
-                <div class="stats-block wow">
-                    <h5>Worked for</h5>
-                    <h2><span>1000</span>+</h2>
-                </div><!-- stats-block -->
-            </div><!-- col-lg-3 -->
-            <div class="col-lg-3 col-md-6">
-                <div class="stats-block wow">
-                    <h5>Projects Worked</h5>
-                    <h2><span>4000</span>+</h2>
-                </div><!-- stats-block -->
-            </div><!-- col-lg-3 -->
-        </div><!-- row -->
-    </div><!-- container -->
-</section><!-- stats-section -->
+</section><!-- service-section -->
 
 <section class="home-about-section">
-    <div class="container">
-        <div class="content-block">
-            <p>
-                ZTS - A LEADING WEB DEVELOPMENT COMPANY IN KOLKOTA PROVIDES DIGITAL MARKETING & MOBILE APP DEVELOPMENT
-            </p>
-            <p>
-                We are The Zebra Techies Solution, a qualified Indian techies solution that cares about bringing clients more business. We work with ambitious business organizations & professionals, local and global, delivering cutting-edge Web design and Digital Marketing services. We can help you to get noticeable website traffic, a large number of customers, and greater online visibility with dedicated and comprehensive SEO services. Search engine optimization plays a key role in satisfactory online marketing. Our expert team can develop a campaign specific to the individual needs of your business. Not only that, we can facilitate you with PPC marketing. It is basically a model of internet marketing in which the advertisers spend a particular amount at the time when their ads are clicked.
-            </p>
-            <div class="button-wrap">
-                <a href="#" class="btn btn-purple">Read More</a>
-            </div><!-- button-wrap -->
-        </div><!-- content-block -->
-    </div><!-- container -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="content-left">
+                    <div class="section-title">
+                        <h5>We are Zebra Techies Solution</h5>
+                        <h2><span class="ree-text">Top-rated</span> Web and Mobile App Development Company</h2>
+                    </div><!-- section-title -->
+                    <div class="about-content">
+                        <p>
+                            We are Zebra Techies Solution, a qualified techies solution that cares about bringing clients more business. We work with ambitious business organisations & professionals local and global, delivering cutting-edge design, web and marketing services. If you’d like to advance the way your business, website, or marketing looks and performance, drop us a line or pop in for a chat. The coffee’s on us.
+                        </p>
+                        <p>
+                            Zebra Techie Solution, as the name signifies, is all about creating beauty from complexity. We are inspired from nature to make technological complexity of web world simple and effective. The highly qualified and experienced team’s innovative use of most advanced software application assures guaranteed high return.
+                        </p>                        
+                    </div><!-- about-content -->
+                    <div class="button-wrap">
+                        <a href="#" class="btn btn-2x btn-red-outline">More About Us</a>
+                    </div>
+                </div><!-- content-left -->
+            </div><!-- col-lg-6 -->
+            <div class="col-lg-6">
+                <div class="company-stats">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="stats-box">
+                                <span class="sub-heading">Projects</span>
+                                <h2><span>2000</span>+</h2>
+                                <p>
+                                    Zebra Techies delivered the Thousands of Successful projects around the world.
+                                </p>
+                            </div><!-- stats-box -->
+                        </div><!-- col-lg-6 -->
+                        <div class="col-lg-6">
+                            <div class="stats-box">
+                                <span class="sub-heading">Started In</span>
+                                <h2><span>2004</span></h2>
+                                <p>
+                                    Clients across the globe witness our quality, processes and work.
+                                </p>
+                            </div><!-- stats-box -->
+                        </div><!-- col-lg-6 -->
+                        <div class="col-lg-6">
+                            <div class="stats-box">
+                                <span class="sub-heading">Team</span>
+                                <h2><span>200</span>+</h2>
+                                <p>
+                                    Our team consists of highly qualified, experienced and knowledgeable.
+                                </p>
+                            </div><!-- stats-box -->
+                        </div><!-- col-lg-6 -->
+                        <div class="col-lg-6">
+                            <div class="stats-box">
+                                <span class="sub-heading">Clients</span>
+                                <h2><span>3500</span>+</h2>
+                                <p>
+                                    Zebra Techies delivered the Thousands of Successful projects around the world.
+                                </p>
+                            </div><!-- stats-box -->
+                        </div><!-- col-lg-6 -->
+                    </div><!-- row -->
+                </div><!-- company-stats -->
+            </div><!-- col-lg-6 -->
+        </div><!-- row -->
+    </div><!-- container-fluid -->
 </section><!-- home-about-section -->
+
+<section class="service-cat-section pt-60">
+    <div class="container">
+        <div class="section-title">
+            <h5>Our Packages</h5>
+            <h2>Web Design <span>Service Packages</span></h2>
+        </div><!-- section-title -->
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="service-cat-card">
+                    <div class="card-inner">
+                        <div class="card-image">
+                            <img src="<?php echo home_url(); ?>/wp-content/uploads/2022/05/wordpress.png" alt="">
+                        </div><!-- card-image -->
+                        <div class="card-content">
+                            <div class="title-price">
+                                <h4>WordPress Website Development</h4>
+                                <h5>Starting at <span>$399</span></h5>
+                            </div><!-- title-price -->
+                            <div class="features">
+                                <ul>
+                                    <li>Custom Website Management System</li>
+                                    <li>User-Friendly Themes and Templates</li>
+                                    <li>SEO Specific</li>
+                                    <li>Widgets & Plugins</li>
+                                </ul>
+                            </div><!-- features -->
+                            <div class="button-wrap">
+                                <a class="btn btn-red">Request Free Quote</a>
+                            </div><!-- button-wrap -->
+                        </div><!-- card-content -->
+                        <a href="#" class="stretched-link"></a>
+                    </div><!-- card-inner -->
+                </div><!-- service-cat-card -->
+            </div><!-- col-lg-4 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="service-cat-card">
+                    <div class="card-inner">
+                        <div class="card-image">
+                            <img src="<?php echo home_url(); ?>/wp-content/uploads/2022/05/responsive-ipad.png" alt="">
+                        </div><!-- card-image -->
+                        <div class="card-content">
+                            <div class="title-price">
+                                <h4>Responsive Website Development</h4>
+                                <h5>Starting at <span>$499</span></h5>
+                            </div><!-- title-price -->
+                            <div class="features">
+                                <ul>
+                                    <li>Cell Phone Friendly Optimization</li>
+                                    <li>Blog Amalgamation</li>
+                                    <li>HTML 5 & CSS 3</li>
+                                    <li>Search Engine Optimization Specific</li>
+                                </ul>
+                            </div><!-- features -->
+                            <div class="button-wrap">
+                                <a class="btn btn-red">Request Free Quote</a>
+                            </div><!-- button-wrap -->
+                        </div><!-- card-content -->
+                        <a href="#" class="stretched-link"></a>
+                    </div><!-- card-inner -->
+                </div><!-- service-cat-card -->
+            </div><!-- col-lg-4 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="service-cat-card">
+                    <div class="card-inner">
+                        <div class="card-image">
+                            <img src="<?php echo home_url(); ?>/wp-content/uploads/2022/05/shopify.png" alt="">
+                        </div><!-- card-image -->
+                        <div class="card-content">
+                            <div class="title-price">
+                                <h4>Shopify Development</h4>
+                                <h5>Starting at <span>$999</span></h5>
+                            </div><!-- title-price -->
+                            <div class="features">
+                                <ul>
+                                    <li>Shopify Custom Theme Design & Layout</li>
+                                    <li>Shopify Functionality Customization</li>
+                                    <li>Shopify API Integration</li>
+                                    <li>Shopify 3rd Party App Installation</li>
+                                </ul>
+                            </div><!-- features -->
+                            <div class="button-wrap">
+                                <a class="btn btn-red">Request Free Quote</a>
+                            </div><!-- button-wrap -->
+                        </div><!-- card-content -->
+                        <a href="#" class="stretched-link"></a>
+                    </div><!-- card-inner -->
+                </div><!-- service-cat-card -->
+            </div><!-- col-lg-4 -->  
+            <div class="col-lg-4 col-md-6">
+                <div class="service-cat-card">
+                    <div class="card-inner">
+                        <div class="card-image">
+                            <img src="<?php echo home_url(); ?>/wp-content/uploads/2022/05/brush-desktop.png" alt="">
+                        </div><!-- card-image -->
+                        <div class="card-content">
+                            <div class="title-price">
+                                <h4>UI/UX Design</h4>
+                                <h5>Starting at <span>$399</span></h5>
+                            </div><!-- title-price -->
+                            <div class="features">
+                                <ul>
+                                    <li>Grid Based Layout</li>
+                                    <li>HTML5 & CSS3</li>
+                                    <li>Responsive Outline</li>
+                                    <li>Using SASS Concept</li>
+                                </ul>
+                            </div><!-- features -->
+                            <div class="button-wrap">
+                                <a class="btn btn-red">Request Free Quote</a>
+                            </div><!-- button-wrap -->
+                        </div><!-- card-content -->
+                        <a href="#" class="stretched-link"></a>
+                    </div><!-- card-inner -->
+                </div><!-- service-cat-card -->
+            </div><!-- col-lg-4 --> 
+            <div class="col-lg-4 col-md-6">
+                <div class="service-cat-card">
+                    <div class="card-inner">
+                        <div class="card-image">
+                            <img src="<?php echo home_url(); ?>/wp-content/uploads/2022/05/desktop.png" alt="">
+                        </div><!-- card-image -->
+                        <div class="card-content">
+                            <div class="title-price">
+                                <h4>Professional Website Designing</h4>
+                                <h5>Starting at <span>$399</span></h5>
+                            </div><!-- title-price -->
+                            <div class="features">
+                                <ul>
+                                    <li>Unique Website Homepage</li>
+                                    <li>High-Quality Pictures</li>
+                                    <li>Upto 2 Mockup design layout</li>
+                                    <li>SEO Specific</li>
+                                </ul>
+                            </div><!-- features -->
+                            <div class="button-wrap">
+                                <a class="btn btn-red">Request Free Quote</a>
+                            </div><!-- button-wrap -->
+                        </div><!-- card-content -->
+                        <a href="#" class="stretched-link"></a>
+                    </div><!-- card-inner -->
+                </div><!-- service-cat-card -->
+            </div><!-- col-lg-4 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="service-cat-card">
+                    <div class="card-inner">
+                        <div class="card-image">
+                            <img src="<?php echo home_url(); ?>/wp-content/uploads/2022/05/iphone.png" alt="">
+                        </div><!-- card-image -->
+                        <div class="card-content">
+                            <div class="title-price">
+                                <h4>Mobile Application Development</h4>
+                                <h5>Starting at <span>$999</span></h5>
+                            </div><!-- title-price -->
+                            <div class="features">
+                                <ul>
+                                    <li>Attractive Visuals</li>
+                                    <li>Underline Key Points</li>
+                                    <li>Typography</li>
+                                    <li>Comprehensible Interactive Structure</li>
+                                </ul>
+                            </div><!-- features -->
+                            <div class="button-wrap">
+                                <a class="btn btn-red">Request Free Quote</a>
+                            </div><!-- button-wrap -->
+                        </div><!-- card-content -->
+                        <a href="#" class="stretched-link"></a>
+                    </div><!-- card-inner -->
+                </div><!-- service-cat-card -->
+            </div><!-- col-lg-4 -->                
+        </div><!-- row -->
+    </div><!-- container -->
+</section><!-- service-cat-section -->
+
+<section class="clients-section">
+    <div class="container">
+        <div class="clients-logo-wrap">
+            <div class="section-title">
+                <h3>Some of Our Clients</h3>
+            </div>
+            <div class="clients-slider">
+                <div class="client-logo">
+                    <a href="#">
+                        <img src="<?php echo home_url(); ?>/wp-content/uploads/2022/05/mklaw-min.png" alt="">
+                    </a>
+                </div><!-- client-logo -->
+                <div class="client-logo">
+                    <a href="#">
+                        <img src="<?php echo home_url(); ?>/wp-content/uploads/2022/05/layover-min.png" alt="">
+                    </a>
+                </div><!-- client-logo -->
+                <div class="client-logo">
+                    <a href="#">
+                        <img src="<?php echo home_url(); ?>/wp-content/uploads/2022/05/justcollages-min.png" alt="">
+                    </a>
+                </div><!-- client-logo -->
+                <div class="client-logo">
+                    <a href="#">
+                        <img src="<?php echo home_url(); ?>/wp-content/uploads/2022/05/healthmanagement-min.png" alt="">
+                    </a>
+                </div><!-- client-logo -->
+                <div class="client-logo">
+                    <a href="#">
+                        <img src="<?php echo home_url(); ?>/wp-content/uploads/2022/05/sports-min.png" alt="">
+                    </a>
+                </div><!-- client-logo -->
+                <div class="client-logo">
+                    <a href="#">
+                        <img src="<?php echo home_url(); ?>/wp-content/uploads/2022/05/lottery-min.png" alt="">
+                    </a>
+                </div><!-- client-logo -->
+                <div class="client-logo">
+                    <a href="#">
+                        <img src="<?php echo home_url(); ?>/wp-content/uploads/2022/05/stemcell-min.png" alt="">
+                    </a>
+                </div><!-- client-logo -->
+                <div class="client-logo">
+                    <a href="#">
+                        <img src="<?php echo home_url(); ?>/wp-content/uploads/2022/05/sunnyreality-min.png" alt="">
+                    </a>
+                </div><!-- client-logo -->
+                <div class="client-logo">
+                    <a href="#">
+                        <img src="<?php echo home_url(); ?>/wp-content/uploads/2022/05/Boston-min.png" alt="">
+                    </a>
+                </div><!-- client-logo -->
+                <div class="client-logo">
+                    <a href="#">
+                        <img src="<?php echo home_url(); ?>/wp-content/uploads/2022/05/ABP-min.png" alt="">
+                    </a>
+                </div><!-- client-logo -->
+                <div class="client-logo">
+                    <a href="#">
+                        <img src="<?php echo home_url(); ?>/wp-content/uploads/2022/05/jaquar-min.png" alt="">
+                    </a>
+                </div><!-- client-logo -->
+                <div class="client-logo">
+                    <a href="#">
+                        <img src="<?php echo home_url(); ?>/wp-content/uploads/2022/05/ITC-Hotel-min.png" alt="">
+                    </a>
+                </div><!-- client-logo -->
+                <div class="client-logo">
+                    <a href="#">
+                        <img src="<?php echo home_url(); ?>/wp-content/uploads/2022/05/acrartex-min.png" alt="">
+                    </a>
+                </div><!-- client-logo -->
+            </div><!-- clients-slider -->
+        </div><!-- clients-logo-wrap -->
+    </div><!-- container -->
+</section><!-- clients-se/ction -->
+
+<section class="why-choose-us">
+    <div class="container-wrapper">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="why-choose-image">
+                    <img src="<?php echo home_url(); ?>/wp-content/uploads/2022/05/we-change-right-img-1.jpg" alt="">
+                </div><!-- why-choose-image -->
+            </div><!-- col-lg-6 -->
+            <div class="col-lg-6">
+                <div class="why-choose-content">
+                    <div class="section-title">
+                        <h5>Why Choose Us</h5>
+                        <h2>We provide services<br> in one places</h2>
+                    </div><!-- section-title -->
+                    <div class="list-content">
+                        <ul>
+                            <li>
+                                <h5>Competitive Rates</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </li>
+                            <li>
+                                <h5>No Contracts Needed</h5>
+                                <p> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </li>
+                            <li>
+                                <h5>24/7 Customer Support</h5>
+                                <p> Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                cillum dolore eu fugiat nulla pariatur.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div><!-- why-choose-content -->
+            </div><!-- col-lg-6 -->
+        </div><!-- row -->
+    </div><!-- container -->
+</section><!-- why-choose-us -->
+
+<section class="faq-section">
+    <div class="container-wrapper">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="faq-content">
+                    <div class="section-title">
+                        <h5>Core Features</h5>
+                        <h2>New Ideas for Successful<br> Web Development</h2>
+                    </div><!-- section-title -->
+                    <div class="accordion-wrap">
+                        <div class="accordion-list">
+                            <div class="title">
+                                <h4 class="icon-open">Flippy Snaps With React And GreenSock</h4>
+                            </div>
+                            <div class="content content-open" style="display: block;">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="accordion-list">
+                            <div class="title">
+                                <h4>Meet Touch Design Mobile Interfaces Book ?</h4>
+                            </div>
+                            <div class="content">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="accordion-list">
+                            <div class="title">
+                                <h4>Useful React Hooks Can Use In Your Projects ?</h4>
+                            </div>
+                            <div class="content">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                </p>
+                            </div>
+                        </div><!--  -->
+                    </div>
+                </div><!-- faq-content -->
+            </div><!-- col-lg-6 -->
+            <div class="col-lg-6">
+                <div class="faq-image">
+                    <img src="<?php echo home_url(); ?>/wp-content/uploads/2022/05/reasons-img-1.jpg" alt="">
+                </div><!-- faq-image -->
+            </div><!-- col-lg-6 -->
+        </div><!-- row -->
+    </div><!-- container -->
+</section><!-- faq-section -->
+
+<section class="our-work-section py-60">
+    <div class="container-fluid">
+        <div class="section-title">
+            <h5>Featured Work</h5>
+            <h2>Some of <span>Our Works</span></h2>
+        </div><!-- section-title -->
+    </div><!-- container -->
+    <div class="project-wrapper">
+        <div class="project-filter">
+            <ul>
+                <li>
+                    <a class="active" data-filter="*">All</a>
+                </li>
+                <li>
+                    <a data-filter=".ui-ux">UI/UX</a>
+                </li>
+                <li>
+                    <a data-filter=".web-development">Web Development</a>
+                </li>
+                <li>
+                    <a data-filter=".wordpress-development">WordPress</a>
+                </li>
+                <li>
+                    <a data-filter=".laravel-development">Laravel</a>
+                </li>
+                <li>
+                    <a data-filter=".ecommerce-development">E-Commerce</a>
+                </li>
+            </ul>
+        </div><!-- project-filter -->
+        <div class="project-grid">
+            <div class="project-card ui-ux development" data-category="ui-ux">
+                <div class="card-inner">
+                    <div class="card-image">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/img/MK-LAW_FIRM_NEW.jpg" alt="">
+                    </div>
+                    <div class="card-hover">
+                        <div class="hover-content">
+                            <h3>MK Law Firm</h3>
+                            <p>Web Design</p>
+                        </div><!-- hover-content -->
+                    </div><!-- card-hover -->
+                    <a href="#" class="stretched-link">Read More</a>
+                </div><!-- card-inner -->
+            </div><!-- project-card -->
+            <div class="project-card web-development wordpress-development" data-category="wordpress-development">
+                <div class="card-inner">
+                    <div class="card-image">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/img/Yatan-portfolio.jpg" alt="">
+                    </div>
+                    <div class="card-hover">
+                        <div class="hover-content">
+                            <h3>Yatan Ayur</h3>
+                            <p>WordPress Development</p>
+                        </div><!-- hover-content -->
+                    </div><!-- card-hover -->
+                    <a href="#" class="stretched-link">Read More</a>
+                </div><!-- card-inner -->
+            </div><!-- project-card -->
+            <div class="project-card ui-ux" data-category="ui-ux">
+                <div class="card-inner">
+                    <div class="card-image">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/img/PSD-center.jpg" alt="">
+                    </div>
+                    <div class="card-hover">
+                        <div class="hover-content">
+                            <h3>PSD Center</h3>
+                            <p>UI/UX Design</p>
+                        </div><!-- hover-content -->
+                    </div><!-- card-hover -->
+                    <a href="#" class="stretched-link">Read More</a>
+                </div><!-- card-inner -->
+            </div><!-- project-card -->
+            <div class="project-card web-development laravel-development" data-category="web-development">
+                <div class="card-inner">
+                    <div class="card-image">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/img/Holm.jpg" alt="">
+                    </div>
+                    <div class="card-hover">
+                        <div class="hover-content">
+                            <h3>Holm Care</h3>
+                            <p>Laravel Development</p>
+                        </div><!-- hover-content -->
+                    </div><!-- card-hover -->
+                    <a href="#" class="stretched-link">Read More</a>
+                </div><!-- card-inner -->
+            </div><!-- project-card -->
+            <div class="project-card ecommerce-development" data-category="ecommerce-development">
+                <div class="card-inner">
+                    <div class="card-image">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/img/merilijean.jpg" alt="">
+                    </div>
+                    <div class="card-hover">
+                        <div class="hover-content">
+                            <h3>Marili Jean</h3>
+                            <p>E-Commerce Development</p>
+                        </div><!-- hover-content -->
+                    </div><!-- card-hover -->
+                    <a href="#" class="stretched-link">Read More</a>
+                </div><!-- card-inner -->
+            </div><!-- project-card -->
+            <div class="project-card ecommerce-development" data-category="ecommerce-development">
+                <div class="card-inner">
+                    <div class="card-image">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/img/thelivingurn.jpg" alt="">
+                    </div>
+                    <div class="card-hover">
+                        <div class="hover-content">
+                            <h3>The Living Urn</h3>
+                            <p>Shopify Web Development</p>
+                        </div><!-- hover-content -->
+                    </div><!-- card-hover -->                    
+                    <a href="#" class="stretched-link">Read More</a>
+                </div><!-- card-inner -->
+            </div><!-- project-card -->
+        </div><!-- project-grid -->
+    </div><!-- project-wrapper -->
+</section><!-- our-work-section -->
+
+<section class="testimonial-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="testimonial-left">
+                    <div class="section-title">
+                        <h5>Customer Feedback</h5>
+                        <h2>What they are<br> talking about<br> Zebra Techies?</h2>
+                    </div><!-- section-title -->
+                    <div class="button-wrap">
+                        <a href="#" class="btn btn-2x btn-red-outline">View All Feedback</a>
+                    </div><!-- button-wrap -->
+                </div><!-- testimonial-left -->
+            </div><!-- col-lg-4 -->
+            <div class="col-lg-8">
+                <div class="testimonial-wrapper">
+                    <div class="testimonial-img-slider">
+                        <div class="img-holder">
+                            <img src="<?php echo home_url(); ?>/wp-content/uploads/2022/05/testimonials-1-1.png" alt="">
+                        </div><!-- img-holder -->
+                        <div class="img-holder">
+                            <img src="<?php echo home_url(); ?>/wp-content/uploads/2022/05/testimonials-1-2.png" alt="">
+                        </div><!-- img-holder -->
+                        <div class="img-holder">
+                            <img src="<?php echo home_url(); ?>/wp-content/uploads/2022/05/testimonials-1-3.png" alt="">
+                        </div><!-- img-holder -->
+                        <div class="img-holder">
+                            <img src="<?php echo home_url(); ?>/wp-content/uploads/2022/05/testimonials-1-2.png" alt="">
+                        </div><!-- img-holder -->
+                    </div><!-- testimonial-img-slider -->
+                    <div class="testimonial-slider">
+                        <div class="testimonial-block">                            
+                            <div class="content">
+                                <p>
+                                    This is due to their excellent service, competitive pricing and customer support. It’s throughly refresing to get such a personal touch. Duis aute lorem ipsum is simply.
+                                </p>
+                            </div><!-- content -->
+                            <div class="client-info">
+                                <h4>Aleesha Brown</h4>
+                                <span>Satisfied Customer</span>
+                            </div><!-- client-info -->
+                        </div><!-- testimonial-block -->
+                        <div class="testimonial-block">
+                            <div class="content">
+                                <p>
+                                    This is due to their excellent service, competitive pricing and customer support. It’s throughly refresing to get such a personal touch. Duis aute lorem ipsum is simply.
+                                </p>
+                            </div><!-- content -->
+                            <div class="client-info">
+                                <h4>Mustafa Bentachour</h4>
+                                <span>Satisfied Customer</span>
+                            </div><!-- client-info -->
+                        </div><!-- testimonial-block -->
+                        <div class="testimonial-block">
+                            <div class="content">
+                                <p>
+                                    This is due to their excellent service, competitive pricing and customer support. It’s throughly refresing to get such a personal touch. Duis aute lorem ipsum is simply.
+                                </p>
+                            </div><!-- content -->
+                            <div class="client-info">
+                                <h4>Jesicca Hernandez</h4>
+                                <span>Satisfied Customer</span>
+                            </div><!-- client-info -->
+                        </div><!-- testimonial-block -->
+                        <div class="testimonial-block">
+                            <div class="content">
+                                <p>
+                                    This is due to their excellent service, competitive pricing and customer support. It’s throughly refresing to get such a personal touch. Duis aute lorem ipsum is simply.
+                                </p>
+                            </div><!-- content -->
+                            <div class="client-info">
+                                <h4>Harold Smith</h4>
+                                <span>Satisfied Customer</span>
+                            </div><!-- client-info -->
+                        </div><!-- testimonial-block -->
+                    </div><!-- testimonial-slider -->
+                </div><!-- testimonial-wrapper -->
+            </div><!-- col-lg-8 -->
+        </div><!-- row -->
+    </div><!-- container -->
+</section><!-- testimonial-section -->
 
 <section class="blog-section">
     <div class="container">
@@ -345,8 +787,8 @@
         <div class="row">
             <div class="col-lg-7">
                 <div class="contact-left">
-                   <div class="content-inner">
-                    <img src="<?php echo home_url(); ?>/wp-content/uploads/2022/05/pexels-kampus-production-6248966.jpg" alt="" class="bg-image">
+                    <div class="content-inner">
+                        <img src="<?php echo home_url(); ?>/wp-content/uploads/2022/05/pexels-kampus-production-6248966.jpg" alt="" class="bg-image">
                         <ul>
                             <li><h3><span>2000+</span> Successful Projects</h3></li>
                             <li><h3><span>100%</span> Job Success Rates</h3></li>
@@ -354,7 +796,7 @@
                             <li><h3><span>89%</span> Client Retention Rates</h3></li>
                             <li><h3><span>10+</span> Business Years</h3></li>
                         </ul>
-                   </div><!-- content-inner -->
+                    </div><!-- content-inner -->
                 </div><!-- contact-left -->
             </div><!-- col-lg-7 -->
             <div class="col-lg-5">
