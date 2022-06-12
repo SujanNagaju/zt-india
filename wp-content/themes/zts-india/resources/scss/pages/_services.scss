@@ -1,0 +1,134 @@
+.service-intro-banner {
+    padding: 60px 0;
+    background: rgba($grey, 0.2);
+    .intro-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        .intro-content {
+            flex: 0 0 60%;
+            max-width: 50%;
+            padding-right: 35px;
+            .content-inner {
+                h2, h3, p {
+                    color: $black;
+                }
+                h2, h3 {
+                    margin: 0 0 30px;
+                }
+                p {
+                    margin: 0;
+                    line-height: 1.77;
+                    a {
+                        color: $purple;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+                .button-wrap {
+                    padding-top: 30px;
+                }
+            }
+        }
+        .intro-media {
+            flex: 0 0 40%;
+            max-width: 40%;
+        }
+    }
+}
+
+.service-cat-section {
+    padding: 80px 0;
+    .service-cat-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 -20px;
+        .category-listing {
+            flex: 0 0 50%;
+            max-width: 50%;
+            padding: 0 20px;
+            margin: 0 0 145px;
+            .category-inner {
+                width: 100%;
+                border-radius: 16px;
+                padding: 55px 50px 0;
+                height: 455px;
+                text-align: center;
+                .category-image {
+                    margin: 0 0 20px;
+                    img {
+                        width: 64px;
+                        height: 64px;
+                    }
+                }
+                .category-info {
+                    h3 {
+                        margin: 0 0 15px;
+                    }
+                    p {
+                        font-size: 14px;
+                        line-height: 1.77;
+                        color: #475467;
+                    }
+                }
+                .service-cat-listing {
+                    margin-top: 30px;
+                    background: $white;
+                    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+                    border-radius: 16px;
+                    padding: 30px;
+                    @include transition(0.4s);
+                    .service-list-inner {
+                        h5 {
+                            margin: 0 0 15px;
+                            font-weight: 700;
+                            text-transform: uppercase;
+                        }
+                        ul {
+                            li {
+                                &:not(:last-child) {
+                                    margin: 0 0 10px;
+                                }
+                                a {
+                                    color: $dark_grey;
+                                    font-weight: 500;
+                                    @include transition(0.4s);
+                                    &:hover {
+                                        color: $red;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &:hover {
+                    .service-cat-listing {
+                        transform: translateY(-15px);
+                    }
+                }
+            }
+            &:nth-child(4n+1) {
+                .category-inner {
+                    background: rgba($dark_blue, 0.1);
+                }
+            }
+            &:nth-child(4n+2) {
+                .category-inner {
+                    background: rgba($dark_grey, 0.1);
+                }
+            }
+            &:nth-child(4n+3) {
+                .category-inner {
+                    background: rgba($red, 0.1);
+                }
+            }
+            &:nth-child(4n) {
+                .category-inner {
+                    background: rgba($dark_green, 0.1);
+                }
+            }
+        }
+    }
+}
