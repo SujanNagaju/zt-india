@@ -1,6 +1,7 @@
 <?php
 	$section_pre_title = get_sub_field( 'section_pre_title' );
 	$section_title     = get_sub_field( 'section_title' );
+	$services_listing	= get_sub_field( 'services_listing' );
 ?>
 <section class="services-section-two">
 	<div class="container">
@@ -19,97 +20,32 @@
                 ?>
             </div>
         <?php endif; ?>
-		<div class="row">
-			<div class="col-lg-4 col-md-6">
-				<div class="service-card style-2">
-					<div class="card-inner">
-						<div class="card-image">
-							<img src="<?php echo home_url(); ?>/wp-content/uploads/2022/05/icon-1.png" alt="">
-						</div><!-- card-image -->
-						<div class="card-content">
-							<div class="content-inner">
-								<h3>Hire Web & Mobile Developers</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-							</div><!-- content-inner -->
-							<div class="button-wrap">
-								<a href="#" class="btn btn-red-outline">Read More</a>
-							</div>
-						</div><!-- card-content -->
-					</div><!-- card-inner -->
-				</div><!-- service-card -->
-			</div><!-- col-lg-4 -->
-			<div class="col-lg-4 col-md-6">
-				<div class="service-card style-2">
-					<div class="card-inner">
-						<div class="card-image">
-							<img src="<?php echo home_url(); ?>/wp-content/uploads/2022/05/icon-2.png" alt="">
-						</div><!-- card-image -->
-						<div class="card-content">
-							<div class="content-inner">
-								<h3>eCommerce Website Design</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-							</div><!-- content-inner -->
-							<div class="button-wrap">
-								<a href="#" class="btn btn-red-outline">Read More</a>
-							</div>
-						</div><!-- card-content -->
-					</div><!-- card-inner -->
-				</div><!-- service-card -->
-			</div><!-- col-lg-4 -->
-			<div class="col-lg-4 col-md-6">
-				<div class="service-card style-2">
-					<div class="card-inner">
-						<div class="card-image">
-							<img src="<?php echo home_url(); ?>/wp-content/uploads/2022/05/icon-3.png" alt="">
-						</div><!-- card-image -->
-						<div class="card-content">
-							<div class="content-inner">
-								<h3>Mobile App Developers</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-							</div><!-- content-inner -->
-							<div class="button-wrap">
-								<a href="#" class="btn btn-red-outline">Read More</a>
-							</div>
-						</div><!-- card-content -->
-					</div><!-- card-inner -->
-				</div><!-- service-card -->
-			</div><!-- col-lg-4 -->
-			<div class="col-lg-4 col-md-6">
-				<div class="service-card style-2">
-					<div class="card-inner">
-						<div class="card-image">
-							<img src="<?php echo home_url(); ?>/wp-content/uploads/2022/05/icon-2.png" alt="">
-						</div><!-- card-image -->
-						<div class="card-content">
-							<div class="content-inner">
-								<h3>Website Design Services</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-							</div><!-- content-inner -->
-							<div class="button-wrap">
-								<a href="#" class="btn btn-red-outline">Read More</a>
-							</div>
-						</div><!-- card-content -->
-					</div><!-- card-inner -->
-				</div><!-- service-card -->
-			</div><!-- col-lg-4 -->
-			<div class="col-lg-4 col-md-6">
-				<div class="service-card style-2">
-					<div class="card-inner">
-						<div class="card-image">
-							<img src="<?php echo home_url(); ?>/wp-content/uploads/2022/05/icon-3.png" alt="">
-						</div><!-- card-image -->
-						<div class="card-content">
-							<div class="content-inner">
-								<h3>Brand Identity Development</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-							</div><!-- content-inner -->
-							<div class="button-wrap">
-								<a href="#" class="btn btn-red-outline">Read More</a>
-							</div>
-						</div><!-- card-content -->
-					</div><!-- card-inner -->
-				</div><!-- service-card -->
-			</div><!-- col-lg-4 -->
-		</div><!-- row -->
+
+		<?php if ( $services_listing ): ?>
+			<div class="row">
+				<?php foreach( $services_listing as $service ) : ?>
+					<div class="col-lg-4 col-md-6">
+						<div class="service-card style-2">
+							<div class="card-inner">
+								<?php if( has_post_thumbnail( $service->ID ) ) : ?>
+									<div class="card-image">
+										<?php echo get_the_post_thumbnail( $service->ID, 'full' ); ?>
+									</div><!-- card-image -->
+								<?php endif; ?>
+								<div class="card-content">
+									<div class="content-inner">
+										<h3><?php echo get_the_title($service->ID); ?></h3>
+										<?php echo apply_filters('the_content', get_the_excerpt($service->ID)); ?>
+									</div><!-- content-inner -->
+									<div class="button-wrap">
+										<a href="<?php echo get_the_permalink( $service->ID ); ?>" class="btn btn-red-outline"><?php _e( 'Read More', 'zts-india' ); ?></a>
+									</div>
+								</div><!-- card-content -->
+							</div><!-- card-inner -->
+						</div><!-- service-card -->
+					</div><!-- col-lg-4 -->
+				<?php endforeach; ?>
+			</div><!-- row -->
+		<?php endif; ?>
 	</div><!-- container -->
 </section><!-- services-section-two -->

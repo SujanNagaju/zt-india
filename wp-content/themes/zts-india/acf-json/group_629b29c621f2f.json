@@ -1468,6 +1468,31 @@
                             "prepend": "",
                             "append": "",
                             "maxlength": ""
+                        },
+                        {
+                            "key": "field_62c1b127ac59c",
+                            "label": "Services Listing",
+                            "name": "services_listing",
+                            "type": "relationship",
+                            "instructions": "Choose services to display",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "services"
+                            ],
+                            "taxonomy": "",
+                            "filters": [
+                                "taxonomy"
+                            ],
+                            "elements": "",
+                            "min": "",
+                            "max": "",
+                            "return_format": "object"
                         }
                     ],
                     "min": "",
@@ -1597,5 +1622,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1656857517
+    "modified": 1656861004
 }
