@@ -8,6 +8,21 @@ $banner_media      = get_sub_field( 'banner_media' );
 $banner_cta_button = get_sub_field( 'banner_cta_button' );
 
 ?>
+
+<section class="service-banner" style="background-image: url('<?php echo home_url(); ?>/wp-content/uploads/2022/05/we-change-right-img-1.jpg');">
+    <div class="container">
+        <div class="intro-content">
+            <h1>Services</h1>
+            <div class="breadcrumbs">
+                <ul>
+                    <li><a href="<?php echo home_url(); ?>">Home</a></li>
+                    <li>Services</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section><!-- service-banner -->
+
 <div class="service-intro-banner">
     <div class="container">
         <div class="intro-wrapper">

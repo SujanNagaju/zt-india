@@ -36,47 +36,52 @@ $service_categories = get_terms(
 
 					// List Service categories and related posts.
 					?>
-					<div class="category-listing">
-						<div class="category-inner">
-						<?php
-							// Term Image.
-							$category_image              = get_field( 'category_image', $service_category );
-							$category_custom_description = get_field( 'service_category_custom_description', $service_category );
-							if ( $category_image ) {
-								?>
-								<div class="category-image">
-									<?php echo wp_get_attachment_image( $category_image['ID'], 'full' ); ?>
-								</div>
-							<?php } ?>
-
-							<div class="category-info">
-								<h3><?php echo $service_category->name; ?></h3>
-								<?php
-								if ( $category_custom_description ) :
-									echo $category_custom_description;
-								endif;
-								?>
-							</div><!-- category-info -->
-							<div class="service-cat-listing">
-								<div class="service-list-inner">
-									<h5><?php _e('Service includes:', 'zts-india') ?></h5>
-									<?php
-									// Services post listing.
-									if ( $services_post ) {
-										//echo '<a href="' . esc_url( home_url() . '/services/' ) . '">' . __( 'Know in detail', 'zts-india' ) . '</a>';
-										echo '<ul>';
-										foreach ( $services_post as $service ) {
-											echo '<li>';
-											echo '<a href="' . get_the_permalink( $service ) . '">' . get_the_title( $service ) . '</a>';
-											echo '</li>';
+					<?php
+						// Term Image.
+						$category_image              = get_field( 'category_image', $service_category );
+						$category_custom_description = get_field( 'service_category_custom_description', $service_category );
+					?>
+					<div class="category-list">
+						<div class="row">
+							<?php if ( $category_image ) : ?>
+								<div class="col-lg-3">
+									<div class="category-image">
+										<a href="#">
+											<?php echo wp_get_attachment_image( $category_image['ID'], 'full' ); ?>							
+										</a>
+									</div><!-- category-image -->
+								</div><!-- col-lg-3 -->
+							<?php endif; ?>
+							<div class="<?php echo ( $category_image ) ? 'col-lg-9 ' : 'col-12'; ?>">
+								<div class="category-detail">
+									<div class="category-info">
+										<h3><a href=""><?php echo $service_category->name; ?></a></h3>
+										<?php
+										if ( $category_custom_description ) :
+											echo $category_custom_description;
+										endif;
+										?>
+									</div><!-- category-info -->
+									<div class="services-list">
+										<h5><?php _e('Service includes:', 'zts-india') ?></h5>
+										<?php
+										// Services post listing.
+										if ( $services_post ) {
+											//echo '<a href="' . esc_url( home_url() . '/services/' ) . '">' . __( 'Know in detail', 'zts-india' ) . '</a>';
+											echo '<ul>';
+											foreach ( $services_post as $service ) {
+												echo '<li>';
+												echo '<a href="' . get_the_permalink( $service ) . '">' . get_the_title( $service ) . '</a>';
+												echo '</li>';
+											}
+											echo '</ul>';
 										}
-										echo '</ul>';
-									}
-									?>
-								</div>
-							</div><!-- service-cat-listing -->
-						</div><!-- category-inner -->
-					</div><!-- category-listing -->
+										?>
+									</div><!-- services-list -->
+								</div><!-- category-detail -->
+							</div><!-- col-lg-8 -->
+						</div><!-- row -->
+					</div><!-- category-list -->					
 					<?php
 
 				} // End foreach loop.
