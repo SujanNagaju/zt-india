@@ -9,7 +9,7 @@
  $content_background_image  = get_sub_field( 'content_background_image' );
  $contact_form_shortcode    = get_sub_field( 'contact_form_shortcode' );
 ?>
-<section class="home-contact-section py-60">
+<section class="home-contact-section py-60" id="contact">
 	<div class="container">
         <?php if ( $section_title || $section_short_description ) : ?>
             <div class="section-title center-lined">

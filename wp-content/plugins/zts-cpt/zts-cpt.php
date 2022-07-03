@@ -16,6 +16,7 @@ if ( ! function_exists( 'zts_cpts' ) ) :
 	function zts_cpts() {
 
 		$zts_cpts = array(
+			// Services.
 			array(
 				'slug'          => 'service',
 				'singular_name' => 'Service',
@@ -24,7 +25,10 @@ if ( ! function_exists( 'zts_cpts' ) ) :
 				'post_icon'     => 'dashicons-admin-generic',
 				'supports'      => array( 'editor', 'title', 'page-attributes', 'thumbnail' ),
 				'has_single'    => true,
+				'has_archive' 	=> false,
 			),
+
+			// Testimonial.
 			array(
 				'slug'          => 'testimonial',
 				'singular_name' => 'Testimonial',
@@ -33,8 +37,10 @@ if ( ! function_exists( 'zts_cpts' ) ) :
 				'post_icon'     => 'dashicons-format-status',
 				'supports'      => array( 'editor', 'title', 'thumbnail' ),
 				'has_single'    => false,
-				'has_archive'   => true,
+				'has_archive'   => false,
 			),
+
+			// Portfolio.
 			array(
 				'slug'          => 'portfolio',
 				'singular_name' => 'Portfolio',
@@ -91,7 +97,7 @@ endif;
 
 
 	/**
-	 * [vcTeachregisterTaxonomy register custom taxonomy]
+	 * [registerTaxonomy register custom taxonomy]
 	 */
 function zts_register_taxonomy() {
 
@@ -103,7 +109,9 @@ function zts_register_taxonomy() {
 			'name'          => 'Service Categories',
 			'post_type'     => 'services',
 			'hierarchical'  => true,
+			'publicly_queryable' 		=> false,
 		),
+
 		array(
 			'slug'          => 'portfolio-categories',
 			'front_slug'    => 'portfolio',
@@ -111,6 +119,7 @@ function zts_register_taxonomy() {
 			'name'          => 'Portfolio Categories',
 			'post_type'     => 'portfolios',
 			'hierarchical'  => true,
+			'publicly_queryable' 		=> false,
 		),
 	);
 
@@ -121,6 +130,8 @@ function zts_register_taxonomy() {
 			array(
 				// Hierarchical taxonomy (like categories).
 				'hierarchical'      => isset( $zts_post_taxonomy['hierarchical'] ) ? $zts_post_taxonomy['hierarchical'] : true,
+				// Public
+				'publicly_queryable'			=> isset( $zts_post_taxonomy['publicly_queryable'] ) ? $zts_post_taxonomy['publicly_queryable'] : true,
 				// This array of options controls the labels displayed in the WordPress Admin UI.
 				'labels'            => array(
 					'name'              => _x( $zts_post_taxonomy['name'], $zts_post_taxonomy['name'] ),
