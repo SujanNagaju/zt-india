@@ -114,13 +114,46 @@
                             "delay": 0
                         },
                         {
+                            "key": "field_62d41756f3f9e",
+                            "label": "Media Type",
+                            "name": "media_type",
+                            "type": "select",
+                            "instructions": "Select to display either image or OEmbed content",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "Image": "Image",
+                                "OEmbed": "OEmbed"
+                            },
+                            "default_value": "Image",
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "return_format": "value",
+                            "ajax": 0,
+                            "placeholder": ""
+                        },
+                        {
                             "key": "field_62a4a93e5cb09",
-                            "label": "Banner Media",
+                            "label": "OEmbed content",
                             "name": "banner_media",
                             "type": "oembed",
                             "instructions": "Youtube video to embed.",
                             "required": 0,
-                            "conditional_logic": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_62d41756f3f9e",
+                                        "operator": "==",
+                                        "value": "OEmbed"
+                                    }
+                                ]
+                            ],
                             "wrapper": {
                                 "width": "",
                                 "class": "",
@@ -130,10 +163,52 @@
                             "height": ""
                         },
                         {
-                            "key": "field_62a4a99b5cb0a",
-                            "label": "Banner CTA Button",
-                            "name": "banner_cta_button",
-                            "type": "link",
+                            "key": "field_62d41788f3f9f",
+                            "label": "Banner Image",
+                            "name": "banner_image",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_62d41756f3f9e",
+                                        "operator": "==",
+                                        "value": "Image"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_62d413e107809": {
+                    "key": "layout_62d413e107809",
+                    "name": "banner_with_with_title_and_breadcrumb",
+                    "label": "Banner with With Title and Breadcrumb",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_62d413f40780a",
+                            "label": "Banner Image",
+                            "name": "banner_image",
+                            "type": "image",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -142,7 +217,16 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "return_format": "array"
+                            "return_format": "array",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
                         }
                     ],
                     "min": "",
@@ -838,6 +922,130 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_62d420fb45c11": {
+                    "key": "layout_62d420fb45c11",
+                    "name": "faq_section_layout_2",
+                    "label": "FAQ Section Layout 2",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_62d4211d45c18",
+                            "label": "Section Preview",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "<img src=\"http:\/\/localhost\/zt-india\/wp-content\/uploads\/2022\/07\/faq-2.png\" height=\"250px\" width=\"700px\">",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        },
+                        {
+                            "key": "field_62d420fb45c12",
+                            "label": "Section Pre Title",
+                            "name": "section_pre_title",
+                            "type": "text",
+                            "instructions": "Appears above the title. Appears in h5 tag.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_62d420fb45c13",
+                            "label": "Section Main Title",
+                            "name": "section_main_title",
+                            "type": "text",
+                            "instructions": "Main title of the section. Appears in h2 tag.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_62d420fb45c14",
+                            "label": "FAQ Accordion",
+                            "name": "faq_accordion",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "row",
+                            "button_label": "",
+                            "sub_fields": [
+                                {
+                                    "key": "field_62d420fb45c15",
+                                    "label": "FAQ Question",
+                                    "name": "faq_question",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_62d420fb45c16",
+                                    "label": "FAQ Answer",
+                                    "name": "faq_answer",
+                                    "type": "textarea",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "maxlength": "",
+                                    "rows": "",
+                                    "new_lines": ""
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_629f7a49d56a7": {
                     "key": "layout_629f7a49d56a7",
                     "name": "portfolio_filter_section",
@@ -1498,6 +1706,137 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_62d41b04dacd7": {
+                    "key": "layout_62d41b04dacd7",
+                    "name": "additional_services_listing",
+                    "label": "Additional Services Listing",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_62d41b04dacd8",
+                            "label": "Section Pre Title",
+                            "name": "section_pre_title",
+                            "type": "text",
+                            "instructions": "Appears above the title. Appears in h5 tag.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_62d41b04dacd9",
+                            "label": "Section Title",
+                            "name": "section_title",
+                            "type": "text",
+                            "instructions": "Main section title.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_62d41b25dacdb",
+                            "label": "Additional Service details",
+                            "name": "additional_service_details",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "row",
+                            "button_label": "",
+                            "sub_fields": [
+                                {
+                                    "key": "field_62d41b37dacdc",
+                                    "label": "Service Image",
+                                    "name": "service_image",
+                                    "type": "image",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "preview_size": "thumbnail",
+                                    "library": "all",
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": ""
+                                },
+                                {
+                                    "key": "field_62d41b46dacdd",
+                                    "label": "Service Title",
+                                    "name": "service_title",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_62d41b4cdacde",
+                                    "label": "Service Description",
+                                    "name": "service_description",
+                                    "type": "wysiwyg",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "tabs": "all",
+                                    "toolbar": "full",
+                                    "media_upload": 1,
+                                    "delay": 0
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_62c19775e5a2a": {
                     "key": "layout_62c19775e5a2a",
                     "name": "service_categories_fields_portfolio",
@@ -1591,6 +1930,31 @@
                             "min": -1,
                             "max": "",
                             "step": 1
+                        },
+                        {
+                            "key": "field_62d41e9be7e88",
+                            "label": "Display Type",
+                            "name": "display_type_",
+                            "type": "select",
+                            "instructions": "Select the display type from available options.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "Slider": "Slider",
+                                "List": "List"
+                            },
+                            "default_value": "List",
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "return_format": "value",
+                            "ajax": 0,
+                            "placeholder": ""
                         }
                     ],
                     "min": "",
@@ -1609,6 +1973,13 @@
                 "operator": "==",
                 "value": "page"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "services"
+            }
         ]
     ],
     "menu_order": 0,
@@ -1622,5 +1993,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1656861004
+    "modified": 1658069619
 }

@@ -1,6 +1,7 @@
 <?php
 	$section_pre_title                    = get_sub_field( 'section_pre_title' );
 	$section_title                        = get_sub_field( 'section_title' );
+    $display_type                         = get_sub_field( 'display_type_' );
 	$selected_portfolio_category = get_sub_field( 'select_portfolio_category_to_display' );
 	$number_of_portfolios_to_display = get_sub_field( 'number_of_portfolios_to_display' );
     $items_per_page = ( isset( $number_of_portfolios_to_display) && (int)$number_of_portfolios_to_display > 0 ) ? (int)$number_of_portfolios_to_display : -1;
@@ -23,7 +24,7 @@
         $portfolios = new WP_Query( $args );
     }
 ?>
-<section class="portfolio-section">
+<section class="portfolio-section <?php echo ( $display_type == 'Slider' ) ? 'portfolio-slider' : ''; ?>">
 	<div class="container">
 		<?php if ( $section_pre_title || $section_title ) : ?>
 			<div class="section-title">

@@ -3,57 +3,44 @@
  * Intro Banner Template.
  */
 
-$banner_intro_text = get_sub_field( 'banner_intro_text' );
-$banner_media      = get_sub_field( 'banner_media' );
-$banner_cta_button = get_sub_field( 'banner_cta_button' );
+$banner_intro_text  = get_sub_field( 'banner_intro_text' );
+$banner_oEmbed      = get_sub_field( 'banner_media' );
+$banner_image       = get_sub_field( 'banner_image' );
+$banner_media_type  = get_sub_field( 'media_type' );
 
 ?>
 
-<section class="service-banner" style="background-image: url('<?php echo home_url(); ?>/wp-content/uploads/2022/05/we-change-right-img-1.jpg');">
-    <div class="container">
-        <div class="intro-content">
-            <h1>Services</h1>
-            <div class="breadcrumbs">
-                <ul>
-                    <li><a href="<?php echo home_url(); ?>">Home</a></li>
-                    <li>Services</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section><!-- service-banner -->
-
-<div class="service-intro-banner">
-    <div class="container">
-        <div class="intro-wrapper">
-            <?php if ( $banner_intro_text || $banner_cta_button ) : ?>
-                <div class="intro-content">
-                    <div class="content-inner">
-                        <?php
-                            // Banner Intro Text.
-                        if ( $banner_intro_text ) {
-                            echo $banner_intro_text;
-                        }
-                        ?>
-                        <?php
-                            // Banner CTA Button.
-                        if ( $banner_cta_button ) {
+<section class="left-content-right-image py-60">
+    <div class="container-fluid">
+        <div class="row">
+            <?php if ( $banner_intro_text ) :  ?>
+                <div class="col-lg-6">
+                    <div class="content-left">
+                        <div class="about-content">
+                            <?php
+                                // Banner Intro Text.
+                                    echo $banner_intro_text;
                             ?>
-                            <div class="button-wrap">
-                                <a href="<?php echo ( $banner_cta_button['url'] ) ? $banner_cta_button['url'] : '#'; ?>" class="btn btn-red-outline btn-2x" target="<?php echo $banner_cta_button['target']; ?>">
-                                    <?php echo $banner_cta_button['title']; ?>
-                                </a>
-                            </div>
-                        <?php } ?>
-                    </div><!-- content-inner -->
-                </div><!-- intro-content -->
+                        </div>
+                    </div><!-- content-left -->
+                </div><!-- col-lg-6 -->
             <?php endif; ?>
+            
+            <?php if ( $banner_image || $banner_oEmbed ) : ?>
+                <div class="col-lg-6">
+                    <div class="image-right">
+                        <?php 
+                            if ( $banner_media_type == 'Image' && $banner_image ){
+                                echo wp_get_attachment_image( $banner_image['ID'], 'full' );
+                            }
 
-            <?php if ( $banner_media ) { ?>
-                <div class="intro-media">
-                    <?php echo $banner_media; ?>
-                </div><!-- intro-media -->
-            <?php } ?>
-        </div><!-- intro-wrapper -->
+                            elseif ( $banner_media_type != 'Image' && $banner_oEmbed ) {
+                                echo $banner_oEmbed;
+                            }
+                        ?>
+                    </div><!-- image-right -->
+                </div><!-- col-lg-6 --> 
+            <?php endif; ?>
+        </div><!-- image-content-wrapper -->
     </div><!-- container -->
-</div><!-- service-intro-banner -->
+</section><!-- left-content-right-image -->
