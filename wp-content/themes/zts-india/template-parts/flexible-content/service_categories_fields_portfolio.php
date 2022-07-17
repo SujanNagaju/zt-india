@@ -23,7 +23,7 @@
         $portfolios = new WP_Query( $args );
     }
 ?>
-<section class="section-zig-zac">
+<section class="portfolio-section">
 	<div class="container">
 		<?php if ( $section_pre_title || $section_title ) : ?>
 			<div class="section-title">
@@ -42,7 +42,7 @@
 		<?php endif; ?>
         
         <?php if( $portfolios->have_posts() ) : ?>
-            <div class="zig-zac-wrapper">
+            <div class="portfolio-wrapper">
                 <?php while ( $portfolios->have_posts() ): $portfolios->the_post(); ?>
                     <div class="row align-items-center">
                         <div class="col-lg-6">
@@ -69,7 +69,7 @@
                 endwhile;
                 wp_reset_postdata();
                 ?>
-            </div><!-- zig-zac-wrapper -->
+            </div><!-- portfolio-wrapper -->
         <?php endif; ?>
 	</div><!-- container -->
-</section><!-- section-zig-zac -->
+</section><!-- portfolio-section -->

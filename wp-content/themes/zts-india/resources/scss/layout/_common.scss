@@ -110,6 +110,19 @@ a {
         font-size: 16px;
         font-family: $font_rubik;
     }
+    &.title-left {
+        margin-left: 0;
+        text-align: left;
+        h5 {
+            padding-left: 0;
+            &:before {
+                content: none;
+            }
+        }
+        h2 {
+            text-transform: capitalize;
+        }
+    }
 }
 .sub-heading {
     font-weight: 400;
@@ -154,6 +167,7 @@ ul {
         }
     }
 }
+
 
 @keyframes cursor {
     from { border-color: $red; }

@@ -103,28 +103,35 @@
 		}
 	}
 	&.style-2 {
+		height: 100%;
 		.card-inner {
 			background: transparent;
 			position: relative;
 			padding: 0;
 			border: 0;
-			// padding-left: 90px;
+			height: 100%;
 			box-shadow: unset;
+			margin: 0;
 			.card-image {
 				text-align: left;
 				img {
+					width: auto;
 					height: 60px;
 					margin: 0 0 20px;
 				}
 			}
 			.card-content {
-				display: block;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
 				text-align: left;
+				height: 100%;
 				h3 {
 
 				}
 				p {
 					line-height: 1.77;
+					margin: 0;
 				}
 			}
 		}
@@ -182,7 +189,8 @@
 	}
 }
 
-.home-about-section {
+.home-about-section,
+.left-content-right-image {
 	background-color: rgba($grey, 0.1);
 	padding: 100px 0 60px;	
 	.content-left {
@@ -367,20 +375,7 @@
 	.why-choose-content,
 	.faq-content {
 		max-width: 600px;
-		margin: 0 0 0 auto;
-		.section-title {
-			margin-left: 0;
-			text-align: left;
-			h5 {
-				padding-left: 0;
-				&:before {
-					content: none;
-				}
-			}
-			h2 {
-				text-transform: capitalize;
-			}
-		}
+		margin: 0 0 0 auto;		
 		.list-content {			
 			ul {
 				li {

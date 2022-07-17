@@ -21,7 +21,7 @@ $section_content    = get_sub_field( 'section_content' );
 			<div class="col-lg-6">
 				<div class="why-choose-content">
                     <?php if ( $section_pre_title || $section_main_title ) { ?>
-                        <div class="section-title">
+                        <div class="section-title title-left">
                             <?php 
                                 // Pre Title
                                 if ( $section_pre_title ) {

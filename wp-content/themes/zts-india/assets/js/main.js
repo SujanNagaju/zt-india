@@ -257,7 +257,6 @@
         arrows: false,
         autoplay: true,
         autoplaySpeed: 3000,
-
     });
 
     // marquee awards
@@ -279,6 +278,20 @@
         dots: true,
         autoplay: true,
         autoplaySpeed: 800,
+    });
+
+    // testimonial slider
+    $('.portfolio-wrapper').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+    });
+
+    // faq dropdown class toggle
+    $('.faq-title button').on('click', function () {
+        $('.faq-list').not($(this).parents('.faq-list')).removeClass('faq-open');
+        $(this).parents('.faq-list').toggleClass('faq-open');
     });
 
 })(jQuery);

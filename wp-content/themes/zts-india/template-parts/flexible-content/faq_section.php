@@ -14,7 +14,7 @@ $section_image      = get_sub_field( 'section_image' );
 				<div class="faq-content">
 
 					<?php if ( $section_pre_title || $section_main_title ) { ?>
-						<div class="section-title">
+						<div class="section-title title-left">
 							<?php
 							// Pre Title
 							if ( $section_pre_title ) {
