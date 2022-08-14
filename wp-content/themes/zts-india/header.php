@@ -72,12 +72,6 @@
                     <?php the_custom_logo(); ?>
                 </div><!-- .site-branding -->
                 <nav id="site-navigation" class="main-navigation">
-                    <div class="menu-toggle">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
                     <?php
 					wp_nav_menu(
 						array(
@@ -99,5 +93,11 @@
                         </li>
                     </ul>
                 </div><!-- header-right -->
+                <div class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div><!-- menu-toggle -->
             </div><!-- header-wrap -->
         </header><!-- #masthead -->

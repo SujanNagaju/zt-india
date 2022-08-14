@@ -296,4 +296,5 @@
         $(this).parents('.faq-list').toggleClass('faq-open');
     });
 
+
 })(jQuery);

@@ -84,6 +84,12 @@ BREAKPOINTS
       @content;
     }
   }
+    /* iPad Pro Device */
+    @else if $point == ipadpro {
+      @media (max-width: 1024px) {
+        @content;
+      }
+    }
     /* Medium Devices, Desktops */
   @else if $point == medium {
     @media (max-width: 991px) {

@@ -15,17 +15,44 @@ h1, h2, h3 {
 }
 h1 {
     font-size: 62px;
+    @include breakpoint(wide) {
+        font-size: 52px;
+    }
+    @include breakpoint(small) {
+        font-size: 38px;
+    }
 }
 h2 {
     font-size: 48px;
+    @include breakpoint(wide) {
+        font-size: 38px;
+        line-height: 1.16;
+    }
+    @include breakpoint(small) {
+        font-size: 24px;
+    }
 }
 h3 {
     font-size: 30px;
     line-height: 1.13;
+    @include breakpoint(wide) {
+        font-size: 26px;
+    }
+    @include breakpoint(small) {
+        font-size: 20px;
+    }
 }
 h4 {
     font-size: 22px;
     line-height: 1.18;
+    @include breakpoint(small) {
+        font-size: 18px;
+        line-height: 1.66;
+    }
+
+    @media screen and (max-width: 330px) {
+        font-size: 16px;
+    }
 }
 h5 {
     font-size: 18px;

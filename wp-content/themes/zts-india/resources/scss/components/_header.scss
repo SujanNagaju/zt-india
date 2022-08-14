@@ -56,10 +56,18 @@
 		padding: 0 60px;
 		display: flex;
 		flex-wrap: wrap;
-		align-items: center;        
+		align-items: center;
+		@media screen and (max-width: 1299px) {
+			padding: 0 15px;
+			max-width: 1140px;
+		}        
 		.site-branding {
 			flex: 0 0 200px;
 			max-width: 200px;
+			@include breakpoint(wide) {
+				flex: 0 0 150px;
+				max-width: 150px;
+			}
 			.custom-logo-link {
 				img {
 					width: 100%;
@@ -71,7 +79,11 @@
 			max-width: calc(100% - 280px);
 			display: flex;
 			justify-content: center;
-			align-items: center;			
+			align-items: center;
+			@include breakpoint(wide) {
+				flex: 0 0 calc(100% - 230px);
+				max-width: calc(100% - 230px);
+			}
 		}
 		.header-right {
 			ul {
@@ -109,6 +121,31 @@
 								height: 20px;
 							}
 						}
+					}
+				}
+			}
+		}
+	}
+	&.header-sticky {
+		box-shadow: 0 2px 8px 0 rgba($black, 0.25);
+		animation: show-down .6s linear forwards;
+		position: fixed;
+		background: $white;
+		width: 100%;
+		top: 0;
+		z-index: 20;
+		.header-wrapper {
+			.site-branding {
+				img {
+					max-width: 130px;
+				}
+			}
+		}
+		.main-navigation {
+			.menu {
+				li {
+					a {
+						font-size: 16px;
 					}
 				}
 			}

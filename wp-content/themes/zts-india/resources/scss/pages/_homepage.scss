@@ -9,6 +9,9 @@
 		align-items: flex-start;
 		padding: 60px 0;
 		max-width: 695px;
+		@include breakpoint(wide) {
+			max-width: 50%;
+		}
 
 		h4 {
 			background: $soft_blue;
@@ -50,6 +53,9 @@
 		width: 600px;
 		min-height: 500px;
 		height: calc(100% - 40px);
+		@media screen and (max-width: 1299px) {
+			width: 45%;
+		}
 
 		img {
 			width: 100%;
@@ -59,15 +65,29 @@
 		}
 	}
 }
-
+.services-section {
+	.row {
+		@include breakpoint(wide) {
+			justify-content: center;
+		}
+		.col-lg-4 {
+			margin-bottom: 30px;
+			@media screen and (max-width: 1199px) and (min-width: 992px) {
+				flex: 50%;
+				max-width: 50%;
+			}
+		}
+	}
+}
 .service-card {
+	height: 100%;
 	.card-inner {
 		background: $white;
 		transition: 0.5s;
 		padding: 60px 40px;
-		border-radius: 7px;
-		margin-bottom: 30px;
+		border-radius: 7px;		
 		border: 1px solid #eeeff1;
+		height: 100%;
 
 		.card-image {
 			text-align: center;
@@ -267,12 +287,18 @@
 			&:nth-child(2) {
 				.stats-box {
 					margin-top: 100px;
+					@include breakpoint(wide) {
+						margin-top: 50px;
+					}
 				}
 			}
 
 			&:nth-child(odd) {
 				.stats-box {
 					margin-top: -100px;
+					@include breakpoint(wide) {
+						margin-top: -30px;
+					}
 				}
 			}
 
@@ -289,6 +315,10 @@
 			min-height: 320px;
 			background-color: $white;
 			@include transition(0.4s);
+			@include breakpoint(wide) {
+				padding: 30px 20px;
+				min-height: auto;
+			}
 
 			.sub-heading,
 			h2 {
@@ -310,7 +340,7 @@
 
 			p {
 				// font-size: 18px;
-				color: $color_text;
+				color: $color_text;				
 			}
 
 			&:hover {
@@ -1037,6 +1067,9 @@
 
 			.content-inner {
 				overflow: hidden;
+				@media screen and (max-width: 1299px) {
+					height: 100%;
+				}
 			}
 
 			.bg-image {
@@ -1054,6 +1087,10 @@
 				z-index: 1;
 				display: flex;
 				flex-direction: column;
+				@media screen and (max-width: 1299px) {
+					height: 100%;
+					justify-content: center;
+				}
 
 				li {
 					display: inline-block;
@@ -1061,7 +1098,11 @@
 					overflow: hidden;
 					width: 86%;
 					position: relative;
-
+					@media screen and (max-width: 1299px) {
+						width: 100%;
+						text-align: center;
+					}
+					
 					&:before {
 						content: '';
 						position: absolute;
@@ -1082,13 +1123,20 @@
 						background: $white;
 					}
 
+					&:before,
+					&:after {
+						@media screen and (max-width: 1299px) {
+							content: none;
+						}
+					}
+
 					h3 {
 						position: relative;
 						color: $white;
 						font-size: 26px;
 						margin: 0;
 						font-weight: 400;
-						display: inline-block;
+						display: inline-block;						
 
 						&:before {
 							content: '';
@@ -1098,6 +1146,9 @@
 							height: 3px;
 							width: 400%;
 							background: $white;
+							@media screen and (max-width: 1299px) {
+								content: none;
+							}
 						}
 
 						span {
@@ -1120,6 +1171,9 @@
 					}
 
 					&:last-child {
+						@media screen and (max-width: 1299px) {
+							padding-bottom: 0;
+						}
 						&:after {
 							content: none;
 						}
@@ -1128,6 +1182,9 @@
 					&:nth-child(even) {
 						text-align: right;
 						margin-left: auto;
+						@media screen and (max-width: 1299px) {
+							text-align: center;
+						}
 
 						&:before {
 							left: 0;
@@ -1207,6 +1264,9 @@
 				background-size: 20px;
 				background-position: calc(100% - 10px) 50%;
 				background-repeat: no-repeat;
+				option {
+					color: $color_text;
+				}
 			}
 
 			.input-submit {
