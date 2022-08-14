@@ -84,6 +84,10 @@ if ( ! function_exists( 'zts_cpts' ) ) :
 				'supports'           => $zts_cpt['supports'],
 			);
 
+			if( $zts_cpt['post_type'] == 'portfolios' ){
+				$args['rewrite'] = array( 'slug' => 'portfolios' );
+			}
+
 			register_post_type( $zts_cpt['post_type'], $args );
 		}
 	}
