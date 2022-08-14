@@ -1,5 +1,17 @@
 .section-portfolio-detail {
     padding: 80px 0;
+    @include breakpoint(small) {
+        padding: 60px 0;
+    }
+    .row {
+        .col-lg-6 {
+            &:first-child {
+                @include breakpoint(medium) {
+                    order: 2;
+                }
+            }
+        }
+    }
     .image-block {
         img {
             width: 100%;
@@ -7,9 +19,20 @@
     }
     .info-right {
         padding-left: 20px;
+        @include breakpoint(wide) {
+            padding-left: 0;
+        }
+        @include breakpoint(medium) {
+            padding: 0 0 30px;
+        }
         h1 {
-            font-size: 40px;
             margin: 0 0 30px;
+            @media screen and (min-width: 992px) {                
+                font-size: 40px;
+            }
+            @include breakpoint(smaller) {
+                margin: 0 0 22px;
+            }
         }
         ul {
             li {
@@ -17,6 +40,12 @@
                 font-size: 18px;
                 &:not(:last-child) {
                     margin: 0 0 15px;
+                    @include breakpoint(smaller) {
+                        margin: 0 0 12px;
+                    }
+                    @media screen and (max-width: 299px) {
+                        font-size: 16px;
+                    }
                 }
                 span {
                     color: $grey;
@@ -26,11 +55,16 @@
     }
     .portfolio-content {
         padding-top: 40px;
+        @include breakpoint(extrasmall) {
+            padding-top: 30px;
+        }
         .content-inner {
             h2 {
                 margin: 0 0 20px;
                 color: $color_text;
-                font-size: 36px;
+                @media screen and (min-width: 992px) {
+                    font-size: 36px;    
+                }
                 span {
                     font-weight: 400;
                 }
@@ -38,6 +72,9 @@
             p, ul li, ol li {
                 font-size: 18px;
                 line-height: 1.77;
+                @include breakpoint(small) {
+                    font-size: 16px;
+                }
             }
             h3, h4, h5 {
                 padding-top: 20px;

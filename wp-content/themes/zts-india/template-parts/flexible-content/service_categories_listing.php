@@ -46,16 +46,14 @@ $service_categories = get_terms(
 							<?php if ( $category_image ) : ?>
 								<div class="col-lg-3">
 									<div class="category-image">
-										<a href="#">
-											<?php echo wp_get_attachment_image( $category_image['ID'], 'full' ); ?>							
-										</a>
+										<?php echo wp_get_attachment_image( $category_image['ID'], 'full' ); ?>							
 									</div><!-- category-image -->
 								</div><!-- col-lg-3 -->
 							<?php endif; ?>
 							<div class="<?php echo ( $category_image ) ? 'col-lg-9 ' : 'col-12'; ?>">
 								<div class="category-detail">
 									<div class="category-info">
-										<h3><a href=""><?php echo $service_category->name; ?></a></h3>
+										<h3><?php echo $service_category->name; ?></h3>
 										<?php
 										if ( $category_custom_description ) :
 											echo $category_custom_description;

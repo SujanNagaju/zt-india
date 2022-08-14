@@ -36,7 +36,7 @@
                 foreach( $featured_members as $team ):
                     setup_postdata( $team );
                      ?>
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-3 col-sm-6">
                         <div class="team-block">
                             <div class="team-inner">
                                 <div class="image">

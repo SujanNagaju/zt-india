@@ -45,11 +45,7 @@ a {
 }
 .py-60 {
     padding: 60px 0;
-<<<<<<< HEAD
     @include breakpoint(small) {
-=======
-    @include breakpoint(ipadpro) {
->>>>>>> 3c96de0bcf832462d3b4c3307c66c2fcbc2daa92
         padding: 45px 0;
     }
 }
@@ -198,11 +194,18 @@ ul {
 }
 
 .full-image-section {
-    min-height: 450px;
-    height: auto;
+    @include breakpoint(medium) {
+        padding: 0 0 60px;
+    }
     .banner-image {
         img {
+            min-height: 450px;
+            height: auto;
+            object-fit: cover;
             width: 100%;
+            @include breakpoint(medium) {
+                min-height: auto;
+            }
         }
     }
 }
@@ -210,6 +213,14 @@ ul {
 .section-team {
     &.dark {
         // background: rgba($grey, 0.1);
+    }
+    .row {
+        justify-content: center;
+        .col-lg-3 {
+            &:not(:last-child) {
+                margin: 0 0 30px;
+            }
+        }
     }
     .team-block {
         .team-inner {
@@ -221,13 +232,22 @@ ul {
             .info {
                 padding: 15px 15px 0;
                 text-align: center;
+                @include breakpoint(small) {
+                    padding: 12px 12px 0;
+                }
                 h4 {
                     margin: 0 0 5px;
                     font-size: 24px;
+                    @include breakpoint(small) {
+                        font-size: 22px;
+                    }
                 }
                 p {
                     font-size: 18px;
                     color: #777777;
+                    @include breakpoint(small) {
+                        font-size: 16px;
+                    }
                 }
             }
         }

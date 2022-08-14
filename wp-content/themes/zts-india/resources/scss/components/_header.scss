@@ -80,9 +80,11 @@
 
 .site-header {
 	padding: 15px 0;
-<<<<<<< HEAD
 	position: relative;
-	&:before {		
+	@media screen and (max-width: 330px) {
+		padding: 10px 0;
+	}
+	&:before {
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -95,8 +97,6 @@
 			content: '';
 		}
 	}
-=======
->>>>>>> 3c96de0bcf832462d3b4c3307c66c2fcbc2daa92
 
 	.header-wrapper {
 		padding: 0 60px;
@@ -129,13 +129,8 @@
 			}
 
 			@include breakpoint(medium) {
-<<<<<<< HEAD
 				flex: 0 0 50%;
 				max-width: 50%;
-=======
-				flex: 0 0 60%;
-				max-width: 60%;
->>>>>>> 3c96de0bcf832462d3b4c3307c66c2fcbc2daa92
 				position: relative;
 				z-index: 100;
 			}
@@ -146,6 +141,9 @@
 
 					@include breakpoint(medium) {
 						width: 150px;
+					}
+					@media screen and (max-width: 330px) {
+						width: 120px;
 					}
 				}
 			}
@@ -171,13 +169,8 @@
 
 		.header-right {
 			@include breakpoint(medium) {
-<<<<<<< HEAD
 				flex: 0 0 50%;
 				max-width: 50%;
-=======
-				flex: 0 0 40%;
-				max-width: 40%;
->>>>>>> 3c96de0bcf832462d3b4c3307c66c2fcbc2daa92
 				display: flex;
 				align-items: center;
 				justify-content: flex-end;
@@ -187,13 +180,10 @@
 				display: flex;
 				flex-wrap: wrap;
 				align-items: center;
-<<<<<<< HEAD
 				@include breakpoint(medium) {
 					position: relative;
 					z-index: 100;
 				}
-=======
->>>>>>> 3c96de0bcf832462d3b4c3307c66c2fcbc2daa92
 
 				li {
 					position: relative;
@@ -238,13 +228,15 @@
 	}
 
 	&.header-sticky {
-		// box-shadow: 0 2px 8px 0 rgba($black, 0.25);
 		animation: show-down .6s linear forwards;
 		position: fixed;
 		background: $white;
 		width: 100%;
 		top: 0;
 		z-index: 20;
+		@media screen and (min-width: 992px) {			
+			box-shadow: $default_shadow;
+		}
 
 		.header-wrapper {
 			.site-branding {				
@@ -255,11 +247,7 @@
 			}
 		}
 
-<<<<<<< HEAD
 		.main-navigation {			
-=======
-		.main-navigation {
->>>>>>> 3c96de0bcf832462d3b4c3307c66c2fcbc2daa92
 			.menu {
 				li {
 					a {

@@ -313,6 +313,29 @@
         autoplay: true,
         autoplaySpeed: 800,
         speed: 800,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 5,
+                    slidesToScroll: 2,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                }
+            }
+        ]
     });
 
     // testimonial slider
@@ -321,6 +344,18 @@
         slidesToShow: 1,
         slidesToScroll: 1,
         dots: false,
+        responsive: [
+            {
+                breakpoint: 1025,
+                settings: {
+                    dots: true,
+                    arrows: false,
+                    autoplay: true,
+                    autoplaySpeed: 20000,
+                    speed: 800,
+                }
+            }
+        ]
     });
 
     // faq dropdown class toggle

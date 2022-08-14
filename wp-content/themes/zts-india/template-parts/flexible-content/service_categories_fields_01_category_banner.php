@@ -14,7 +14,7 @@
 				</div><!-- content-inner -->
 				<div class="button-wrap">
 					<a href="<?php echo home_url(); ?>/contact" class="btn btn-2x btn-red">Get in Touch</a>
-					<a href="<?php echo home_url(); ?>/portfolio" class="btn btn-2x btn-red">Our Portfolio</a>
+					<a href="<?php echo home_url(); ?>/portfolio" class="btn btn-2x btn-red-outline">Our Portfolio</a>
 				</div>
 			</div><!-- banner-content -->
 

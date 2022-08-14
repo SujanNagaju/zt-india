@@ -9,15 +9,14 @@
 		align-items: flex-start;
 		padding: 60px 0;
 		max-width: 695px;
+
 		@include breakpoint(wide) {
 			max-width: 50%;
 		}
+
 		@include breakpoint(medium) {
 			max-width: 80%;
-<<<<<<< HEAD
 			padding: 0;
-=======
->>>>>>> 3c96de0bcf832462d3b4c3307c66c2fcbc2daa92
 		}
 
 		h4 {
@@ -31,6 +30,7 @@
 			margin: 0 0 30px;
 			font-weight: 300;
 			color: $color_text;
+
 			@include breakpoint(medium) {
 				color: $white;
 			}
@@ -63,20 +63,19 @@
 		width: 600px;
 		min-height: 500px;
 		height: calc(100% - 40px);
+
 		@media screen and (max-width: 1299px) {
 			width: 45%;
 		}
+
 		@include breakpoint(medium) {
 			height: 100%;
 			width: 100%;
-<<<<<<< HEAD
 			z-index: -1;
 			min-height: unset;
 			right: 0;
-=======
-			z-index: -1;			
->>>>>>> 3c96de0bcf832462d3b4c3307c66c2fcbc2daa92
 		}
+
 		&:after {
 			position: absolute;
 			top: 0;
@@ -85,6 +84,7 @@
 			width: 100%;
 			background-color: rgba($black, 0.6);
 			background-blend-mode: multiply;
+
 			@include breakpoint(medium) {
 				content: '';
 			}
@@ -95,19 +95,23 @@
 			height: 100%;
 			object-fit: cover;
 			animation: border-transform-default 10s linear infinite alternate forwards;
+
 			@include breakpoint(medium) {
 				animation: none;
 			}
 		}
 	}
 }
+
 .services-section {
 	.row {
 		@include breakpoint(wide) {
 			justify-content: center;
 		}
+
 		.col-lg-4 {
 			margin-bottom: 30px;
+
 			@media screen and (max-width: 1199px) and (min-width: 992px) {
 				flex: 50%;
 				max-width: 50%;
@@ -115,27 +119,32 @@
 		}
 	}
 }
+
 .service-card {
 	height: 100%;
+
 	.card-inner {
 		background: $white;
 		transition: 0.5s;
 		padding: 60px 40px;
-		border-radius: 7px;		
+		border-radius: 7px;
 		border: 1px solid #eeeff1;
 		height: 100%;
+
 		@include breakpoint(medium) {
 			padding: 45px 30px;
 		}
+
 		@include breakpoint(small) {
 			padding: 30px 20px;
 		}
-		
+
 		.card-image {
 			text-align: center;
-			
+
 			img {
 				margin: 0 0 30px;
+
 				@include breakpoint(small) {
 					width: 60px;
 				}
@@ -169,6 +178,7 @@
 				line-height: 2;
 				color: $color_text;
 				font-size: 16px;
+
 				@include breakpoint(medium) {
 					line-height: 1.77;
 				}
@@ -234,6 +244,10 @@
 	padding: 60px 0;
 	background: rgba($grey, 0.07);
 
+	@include breakpoint(small) {
+		padding: 45px 0;
+	}
+
 	.clients-logo-wrap {
 		.section-title {
 			margin-left: 0;
@@ -294,9 +308,11 @@
 .left-content-right-image {
 	background-color: rgba($grey, 0.1);
 	padding: 100px 0 60px;
+
 	@include breakpoint(medium) {
 		padding: 80px 0 60px;
 	}
+
 	@include breakpoint(small) {
 		padding: 60px 0 40px;
 	}
@@ -334,8 +350,10 @@
 	.company-stats {
 		padding-left: 45px;
 		padding-right: 15px;
+
 		@include breakpoint(medium) {
-			padding: 35px 0 0;;
+			padding: 35px 0 0;
+			;
 		}
 
 		.col-md-6 {
@@ -344,9 +362,11 @@
 			&:nth-child(2) {
 				.stats-box {
 					margin-top: 100px;
+
 					@include breakpoint(wide) {
 						margin-top: 50px;
 					}
+
 					@include breakpoint(medium) {
 						margin-top: 0;
 					}
@@ -356,9 +376,11 @@
 			&:nth-child(odd) {
 				.stats-box {
 					margin-top: -100px;
+
 					@include breakpoint(wide) {
 						margin-top: -30px;
 					}
+
 					@include breakpoint(medium) {
 						margin-top: 0;
 					}
@@ -378,6 +400,7 @@
 			min-height: 320px;
 			background-color: $white;
 			@include transition(0.4s);
+
 			@include breakpoint(wide) {
 				padding: 30px 20px;
 				min-height: auto;
@@ -403,7 +426,7 @@
 
 			p {
 				// font-size: 18px;
-				color: $color_text;				
+				color: $color_text;
 			}
 
 			&:hover {
@@ -414,7 +437,7 @@
 }
 
 .service-cat-section {
-	padding-bottom: 40px;	
+	padding-bottom: 40px;
 
 	.row {
 		.col-lg-4 {
@@ -425,6 +448,7 @@
 
 .service-cat-card {
 	height: 100%;
+
 	.card-inner {
 		padding: 30px 20px;
 		position: relative;
@@ -460,6 +484,7 @@
 				display: block;
 				transform: translateY(0px);
 				@include transition(0.4s);
+
 				@include breakpoint(small) {
 					width: 60px;
 				}
@@ -539,9 +564,11 @@
 .faq-section {
 	padding: 80px 15px;
 	overflow: hidden;
+
 	@include breakpoint(medium) {
 		padding-top: 0;
 	}
+
 	@include breakpoint(small) {
 		padding-bottom: 60px;
 	}
@@ -550,13 +577,16 @@
 	.faq-content {
 		max-width: 600px;
 		margin: 0 0 0 auto;
+
 		@include breakpoint(medium) {
 			max-width: 100%;
-			padding: 35px 15px 0;
+			padding: 35px 0 0;
 		}
+
 		@include breakpoint(small) {
 			padding: 30px 5px 0;
 		}
+
 		@include breakpoint(iPhone5) {
 			padding: 30px 0 0;
 		}
@@ -603,9 +633,10 @@
 	.why-choose-image {
 		width: calc(100% + 15px);
 		position: relative;
+
 		@include breakpoint(medium) {
-			width: calc(100% + 30px);
-			left: -15px;
+			width: 100%;
+			left: 0;
 		}
 	}
 }
@@ -613,10 +644,23 @@
 .why-choose-us {
 	.container-wrapper {
 		padding-right: calc((100vw - 1270px) / 2);
+		@include breakpoint(medium) {
+			padding: 0 15px;
+		}
+		@include breakpoint(small) {
+			padding: 0 5px;
+		}
+		@include breakpoint(iPhone5) {
+			padding: 0;
+		}
 	}
 
 	.why-choose-image {
-		left: -15px;		
+		left: -15px;
+
+		@include breakpoint(medium) {
+			left: 0;
+		}
 
 		img {
 			width: 100%;
@@ -628,7 +672,7 @@
 	&.image-right {
 		.container-wrapper {
 			padding-right: 0;
-			padding-left: calc((100vw - 1270px) / 2);
+			padding-left: calc((100vw - 1270px) / 2);			
 
 			.row {
 				.col-lg-6 {
@@ -659,6 +703,7 @@
 	.container-wrapper {
 		padding-left: calc((100vw - 1270px) / 2);
 	}
+
 	.row {
 		.col-lg-6 {
 			&:first-child {
@@ -666,6 +711,7 @@
 					order: 2;
 				}
 			}
+
 			&:last-child {
 				@include breakpoint(medium) {
 					order: 1;
@@ -673,6 +719,7 @@
 			}
 		}
 	}
+
 	.faq-image {
 		text-align: right;
 
@@ -761,8 +808,10 @@
 	@include breakpoint(small) {
 		padding-bottom: 30px;
 	}
+
 	.project-wrapper {
 		padding-bottom: 20px;
+
 		@include breakpoint(small) {
 			padding-bottom: 0;
 		}
@@ -823,10 +872,12 @@
 				max-width: 33.33%;
 				padding: 0 15px;
 				margin: 0 0 30px;
+
 				@include breakpoint(medium) {
 					flex: 0 0 50%;
 					max-width: 50%;
 				}
+
 				@include breakpoint(smaller) {
 					flex: 0 0 100%;
 					max-width: 100%;
@@ -913,6 +964,7 @@
 
 .testimonial-section {
 	padding: 40px 0 80px;
+
 	@include breakpoint(small) {
 		padding: 40px 0 60px;
 	}
@@ -929,6 +981,7 @@
 					content: none;
 				}
 			}
+
 			h2 {
 				br {
 					@include breakpoint(medium) {
@@ -937,6 +990,7 @@
 				}
 			}
 		}
+
 		.button-wrap {
 			@include breakpoint(medium) {
 				padding-bottom: 45px;
@@ -949,6 +1003,7 @@
 			width: 315px;
 			margin-right: auto;
 			margin-left: 0;
+
 			@include breakpoint(iPhone5) {
 				width: 100%;
 			}
@@ -1011,6 +1066,9 @@
 		}
 
 		.testimonial-slider {
+			@include breakpoint(medium) {
+				padding-bottom: 30px;
+			}
 			.testimonial-block {
 				position: relative;
 				display: block;
@@ -1024,9 +1082,11 @@
 						font-weight: 400;
 						line-height: 1.77;
 						margin: 0;
+
 						@include breakpoint(small) {
 							font-size: 22px;
 						}
+
 						@include breakpoint(extrasmall) {
 							font-size: 18px;
 						}
@@ -1035,6 +1095,7 @@
 
 				.client-info {
 					padding-top: 35px;
+
 					@include breakpoint(medium) {
 						max-width: 80%;
 					}
@@ -1058,6 +1119,11 @@
 			position: absolute;
 			bottom: 0;
 			right: 10px;
+			@include breakpoint(medium) {
+				right: unset;
+				left: 50%;
+				transform: translateX(-50%);
+			}
 
 			li {
 				display: inline-block;
@@ -1109,6 +1175,7 @@
 			padding: 0 10px;
 			width: auto;
 			height: auto;
+
 			@include breakpoint(medium) {
 				height: 100px;
 			}
@@ -1126,6 +1193,7 @@
 					// height: 100%;
 					mix-blend-mode: multiply;
 					@include transition(0.4s);
+
 					@include breakpoint(medium) {
 						height: 100%;
 						width: auto;
@@ -1148,11 +1216,13 @@
 	.section-title {
 		margin-bottom: 45px;
 	}
+
 	.row {
 		.col-lg-4 {
 			margin: 0 0 40px;
 		}
 	}
+
 	.blog-card {
 		.card-inner {
 			.card-image {
@@ -1200,6 +1270,7 @@
 			min-height: 450px;
 			height: 100%;
 			padding: 30px;
+
 			@include breakpoint(small) {
 				min-height: auto;
 				padding: 50px 20px;
@@ -1219,6 +1290,7 @@
 
 			.content-inner {
 				overflow: hidden;
+
 				@media screen and (max-width: 1299px) {
 					height: 100%;
 				}
@@ -1239,6 +1311,7 @@
 				z-index: 1;
 				display: flex;
 				flex-direction: column;
+
 				@media screen and (max-width: 1299px) {
 					height: 100%;
 					justify-content: center;
@@ -1250,20 +1323,20 @@
 					overflow: hidden;
 					width: 86%;
 					position: relative;
+
 					@media screen and (max-width: 1299px) {
 						width: 100%;
 						text-align: center;
 					}
+
 					@include breakpoint(ipadpro) {
 						padding-bottom: 35px;
 					}
-<<<<<<< HEAD
+
 					@include breakpoint(smaller) {
 						padding-bottom: 30px;
 					}
-=======
->>>>>>> 3c96de0bcf832462d3b4c3307c66c2fcbc2daa92
-					
+
 					&:before {
 						content: '';
 						position: absolute;
@@ -1298,15 +1371,14 @@
 						margin: 0;
 						font-weight: 400;
 						display: inline-block;
+
 						@include breakpoint(ipadpro) {
 							font-size: 22px;
 						}
-<<<<<<< HEAD
+
 						@include breakpoint(smaller) {
 							font-size: 20px;
 						}
-=======
->>>>>>> 3c96de0bcf832462d3b4c3307c66c2fcbc2daa92
 
 						&:before {
 							content: '';
@@ -1316,6 +1388,7 @@
 							height: 3px;
 							width: 400%;
 							background: $white;
+
 							@media screen and (max-width: 1299px) {
 								content: none;
 							}
@@ -1344,6 +1417,7 @@
 						@media screen and (max-width: 1299px) {
 							padding-bottom: 0;
 						}
+
 						&:after {
 							content: none;
 						}
@@ -1352,6 +1426,7 @@
 					&:nth-child(even) {
 						text-align: right;
 						margin-left: auto;
+
 						@media screen and (max-width: 1299px) {
 							text-align: center;
 						}
@@ -1434,6 +1509,7 @@
 				background-size: 20px;
 				background-position: calc(100% - 10px) 50%;
 				background-repeat: no-repeat;
+
 				option {
 					color: $color_text;
 				}
