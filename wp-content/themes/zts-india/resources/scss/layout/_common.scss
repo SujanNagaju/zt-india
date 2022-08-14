@@ -168,6 +168,43 @@ ul {
     }
 }
 
+.full-image-section {
+    min-height: 450px;
+    height: auto;
+    .banner-image {
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.section-team {
+    &.dark {
+        // background: rgba($grey, 0.1);
+    }
+    .team-block {
+        .team-inner {
+            .image {
+                img {
+                    width: 100%;
+                }
+            }
+            .info {
+                padding: 15px 15px 0;
+                text-align: center;
+                h4 {
+                    margin: 0 0 5px;
+                    font-size: 24px;
+                }
+                p {
+                    font-size: 18px;
+                    color: #777777;
+                }
+            }
+        }
+    }
+}
+
 
 @keyframes cursor {
     from { border-color: $red; }

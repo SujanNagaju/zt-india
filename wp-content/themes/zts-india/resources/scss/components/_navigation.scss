@@ -51,6 +51,11 @@
           color: $red;
         }
       }
+      &.current-menu-item {
+        > a {
+          font-weight: 600;
+        }
+      }
     }
   }
 }

@@ -339,27 +339,54 @@
 
 .service-cat-banner {
     padding: 100px 0 60px;
-
-    .banner-content {
-        h1 {
-            margin: 0 0 20px;
-        }
-
-        .content-inner {
-            display: flex;
-            align-items: center;
-
-            h2 {
-                max-width: 75%;
-                color: $red;
-                padding-right: 30px;
-            }
-
-            img {
-                width: 150px;
-            }
+    .container-fluid {
+        padding: 0 30px;
+        @media screen and (min-width: 1921px) {
+            max-width: 1270px;
+            padding: 0 15px;
         }
     }
+    .banner-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        .banner-content {
+            max-width: 840px;
+            h1 {
+                margin: 0 0 20px;
+            }
+    
+            .content-inner {
+                display: flex;
+                align-items: center;                
+                h3 {
+                    padding-right: 30px;
+                    font-weight: 400;
+                    color: #222222;
+                }
+    
+                img {
+                    width: 150px;
+                }
+            }
+            .button-wrap {
+                padding: 35px 0 0;
+                .btn {
+                    &:not(:last-child) {
+                        margin-right: 15px;
+                    }
+                }
+            }
+        }
+        .service-thumbnail {
+            max-width: calc(100% - 840px);
+            img {
+                width: 80%;
+                margin: 0 auto;
+                display: block;
+            }
+        }
+    }    
 }
 
 .services-section-two {
@@ -494,9 +521,12 @@
 .section-zig-zac {
     .zig-zac-wrapper {
         .row {
+            display: flex;
+            align-items: center;
             .content-block {
                 .content-inner {
                     width: 80%;
+                    margin-left: auto;
 
                     h5 {
                         color: $red;
@@ -507,7 +537,8 @@
             &:nth-child(even) {
                 .content-block {
                     .content-inner {
-                        margin-left: auto;
+                        margin-right: auto;
+                        margin-left: 0;
                     }
                 }
             }
@@ -660,7 +691,7 @@
 }
 
 body {
-    &.page-template-tpl-service-detail {
+    &.single-services {
         .services-section-two {
             background: $white;
             padding-bottom: 20px;
@@ -669,22 +700,22 @@ body {
         .portfolio-section {
             background: rgba($grey, 0.1);
 
-            .portfolio-wrapper {
-                .row {
-                    display: flex;
+                .portfolio-wrapper {
+                    .row {
+                        display: flex;
 
-                    &:nth-child(even) {
-                        .col-lg-6 {
-                            &:first-child {
-                                order: 1 !important;
-                            }
+                        &:nth-child(even) {
+                            .col-lg-6 {
+                                &:first-child {
+                                    order: 1 !important;
+                                }
 
-                            &:last-child {
-                                order: 2 !important;
+                                &:last-child {
+                                    order: 2 !important;
+                                }
                             }
                         }
                     }
-                }
 
                 .slick-arrow {
                     position: absolute;
@@ -708,6 +739,22 @@ body {
                     &.slick-next {
                         transform: translateY(-50%) rotate(-90deg);
                         right: -60px;
+                    }
+                }
+            }
+        }
+    }
+}
+body {
+    &.single-services {
+        .main-navigation {
+            .menu {
+                li {
+                    &.menu-services {
+                        > a {
+                            color: $red;
+                            font-weight: 600;
+                        }
                     }
                 }
             }

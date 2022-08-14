@@ -256,7 +256,8 @@
         slidesToScroll: 1,
         arrows: false,
         autoplay: true,
-        autoplaySpeed: 3000,
+        autoplaySpeed: 2000,
+        speed: 800,
     });
 
     // marquee awards
@@ -278,10 +279,11 @@
         dots: true,
         autoplay: true,
         autoplaySpeed: 800,
+        speed: 800,
     });
 
     // testimonial slider
-    $('.portfolio-wrapper').slick({
+    $('.portfolio-slider .portfolio-wrapper').slick({
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,

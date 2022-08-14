@@ -1,0 +1,38 @@
+.section-blog-detail {
+    padding: 80px 0;
+    article {
+        .entry-header {
+            h1, h2 {
+                margin: 0 0 35px;
+            }
+            h1 {
+                @media screen and (min-width: 1200px) {
+                    font-size: 50px;
+                }
+            }
+        }
+        .post-thumbnail {
+            margin-bottom: 30px;
+            border-radius: 16px;
+            box-shadow: 0 0px 24px 0 rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin: 0 0 45px;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+.section-blog-detail,
+.default-section {
+    .entry-content {
+        max-width: 892px;
+        width: 100%;
+        margin: 0 auto;
+        p,
+        ul li,
+        ol li {
+            font-size: 18px;
+        }
+    }
+}

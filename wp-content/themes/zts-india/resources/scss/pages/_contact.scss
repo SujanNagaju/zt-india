@@ -1,0 +1,65 @@
+.section-page-contact {
+    .contact-wrapper {
+        .section-title {
+            p {
+                font-weight: 400;
+            }
+        }
+        .form-inner {
+            .row {
+                .col-12 {
+                    margin: 0 0 20px;
+                }
+            }
+            input:not([type=submit]),
+            select,
+            textarea {
+                height: 56px;
+                border-radius: 4px;
+                background-color: #f3f4f8;
+                font-weight: 400;
+            }
+            textarea {
+                height: 170px;
+            }
+            input[type=submit] {
+                border-radius: 4px;
+            }
+        }
+    }
+    .contact-right {
+        padding-left: 15%;
+        .info-inner {
+            padding: 45px 40px;
+            padding-right: 70px;
+            border-radius: 4px;
+            box-shadow: 0px 10px 50px 0px rgba(1, 11, 60, 0.1);
+            position: relative;
+            z-index: 1;
+            .contact-info {
+                &.usa {
+                    margin-top: 50px;
+                }
+                p {
+                    font-size: 18px;
+                    color: $color_text;
+                    &:before {
+                        top: 2px;
+                    }
+                }
+                ul li, 
+                ul li a {
+                    color: #777b83;
+                    font-weight: 400;
+                }
+                ul {
+                    li {
+                        &:not(:last-child) {
+                            margin: 0 0 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

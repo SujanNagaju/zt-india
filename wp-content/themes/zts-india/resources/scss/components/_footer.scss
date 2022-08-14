@@ -74,87 +74,7 @@
                 }
             }
         }
-    }
-    .contact-info {
-        p {
-            position: relative;
-            padding-left: 27px;
-            font-weight: 600;
-            color: $white;
-            margin: 0 0 10px;
-            font-size: 15px;
-            &:before {
-                content: '';
-                position: absolute;
-                top: 2px;
-                left: 0;
-                height: 14px;
-                width: 21px;
-                background-image: url('../../images/spite-min.png');
-                background-size: 100%;
-                background-repeat: no-repeat;
-            }
-        }
-        &.india {
-            p {
-                &:before {
-                    background-position: top;
-                }
-            }
-        }
-        &.usa {
-            margin-top: 15px;
-            p {
-                &:before {
-                    background-position: bottom;
-                }
-            }
-        }
-        ul {
-            li {
-                position: relative;
-                padding-left: 27px;
-                color: $white;
-                font-weight: 500;
-                &:not(:last-child) {
-                    margin: 0 0 10px;
-                }
-                &:before {
-                    content: '';
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 20px;
-                    height: 20px;                    
-                    background-size: contain;
-                    background-repeat: no-repeat;
-                }
-                a {
-                    color: $white;
-                    &:hover {
-                        text-decoration: underline !important;
-                        text-underline-position: under;
-                    };
-                }
-                &.address {
-                    &:before {
-                        background-image: url('../../images/map-marker-red.svg');
-                    }
-                }
-                &.phone {
-                    &:before {
-                        background-image: url('../../images/mobile-red.svg');
-                    }
-                }
-                &.email {
-                    &:before {
-                        top: 4px;
-                        background-image: url('../../images/envelope-red.svg');
-                    }
-                }
-            }
-        }
-    }
+    }    
     .footer-logos {
         display: flex;
         flex-wrap: wrap;
@@ -200,6 +120,86 @@
             font-size: 13px;
             margin: 0;
         }        
+    }
+}
+.contact-info {
+    p {
+        position: relative;
+        padding-left: 27px;
+        font-weight: 600;
+        color: $white;
+        margin: 0 0 10px;
+        font-size: 15px;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 0;
+            height: 14px;
+            width: 21px;
+            background-image: url('../../images/spite-min.png');
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+    }
+    &.india {
+        p {
+            &:before {
+                background-position: top;
+            }
+        }
+    }
+    &.usa {
+        margin-top: 15px;
+        p {
+            &:before {
+                background-position: bottom;
+            }
+        }
+    }
+    ul {
+        li {
+            position: relative;
+            padding-left: 27px;
+            color: $white;
+            font-weight: 500;
+            &:not(:last-child) {
+                margin: 0 0 10px;
+            }
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 20px;
+                height: 20px;                    
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+            a {
+                color: $white;
+                &:hover {
+                    text-decoration: underline !important;
+                    text-underline-position: under;
+                };
+            }
+            &.address {
+                &:before {
+                    background-image: url('../../images/map-marker-red.svg');
+                }
+            }
+            &.phone {
+                &:before {
+                    background-image: url('../../images/mobile-red.svg');
+                }
+            }
+            &.email {
+                &:before {
+                    top: 4px;
+                    background-image: url('../../images/envelope-red.svg');
+                }
+            }
+        }
     }
 }
 .social-links {
