@@ -22,7 +22,7 @@
             this.$mainMenuContainer = this.$mainNavContainer.find('.menu-primary-container');
             this.$mainMenu = this.$mainNavContainer.find('#primary-menu');
             console.log(this.$menuToggler);
-            this.$menuToggler.on('click',this.toggleMenu.bind(this));
+            this.$menuToggler.on('click', this.toggleMenu.bind(this));
         },
         toggleMenu: function (e) {
             e.preventDefault();
@@ -79,8 +79,18 @@
         });
     };
 
+    // hamburger menu open/close
+    $('.menu-toggle').on('click', function () {
+        $('body').toggleClass('body-menu-opened');
+    });
+
+    // closes nav menu when clicked outside the main-navigation area
+    $(".main-navigation, .menu-toggle").clickOutside(function () {
+        $("body").removeClass("body-menu-opened");
+    });
+
     // adding sticky class on scroll
-    $(window).on('scroll', function(){
+    $(window).on('scroll', function () {
         var headerHeight = $('.site-header').outerHeight();
         if ($(window).scrollTop() >= headerHeight) {
             $('.site-header').addClass('header-sticky');
@@ -91,15 +101,15 @@
     });
 
     // hamburger menu open/close
-    $('.hamburger-menu').on('click', function(){
+    $('.hamburger-menu').on('click', function () {
         $('body').toggleClass('menu-opened');
-    }); 
+    });
     // closes nav menu when clicked outside the menu + header area
     $('.main-navigation, .site-header').clickOutside(function () {
         $('body').removeClass('menu-opened');
     });
 
-    $.fn.isInViewport = function() {
+    $.fn.isInViewport = function () {
         var elementTop = $(this).offset().top;
         var elementBottom = elementTop + $(this).outerHeight();
         var viewportTop = $(window).scrollTop();
@@ -125,47 +135,47 @@
     // });
 
     // typewriter effect animation
-    if($('.hero-banner .banner-content').length) {
+    if ($('.hero-banner .banner-content').length) {
         var span = document.querySelector(".hero-banner .banner-content span");
-        var textArr = span.getAttribute("data-text").split(", "); 
-        var maxTextIndex = textArr.length; 
+        var textArr = span.getAttribute("data-text").split(", ");
+        var maxTextIndex = textArr.length;
 
-        var sPerChar = 0.15; 
+        var sPerChar = 0.15;
         var sBetweenWord = 1.5;
-        var textIndex = 0; 
+        var textIndex = 0;
 
-        typing(textIndex, textArr[textIndex]); 
+        typing(textIndex, textArr[textIndex]);
 
         function typing(textIndex, text) {
-            var charIndex = 0; 
-            var maxCharIndex = text.length - 1; 
-            
+            var charIndex = 0;
+            var maxCharIndex = text.length - 1;
+
             var typeInterval = setInterval(function () {
-                span.innerHTML += text[charIndex]; 
+                span.innerHTML += text[charIndex];
                 if (charIndex == maxCharIndex) {
                     clearInterval(typeInterval);
-                    setTimeout(function() { deleting(textIndex, text) }, sBetweenWord * 1000); 
-                    
+                    setTimeout(function () { deleting(textIndex, text) }, sBetweenWord * 1000);
+
                 } else {
-                    charIndex += 1; 
+                    charIndex += 1;
                 }
-            }, sPerChar * 1000); 
+            }, sPerChar * 1000);
         }
 
         function deleting(textIndex, text) {
-            var minCharIndex = 0; 
-            var charIndex = text.length - 1; 
+            var minCharIndex = 0;
+            var charIndex = text.length - 1;
 
             var typeInterval = setInterval(function () {
-                span.innerHTML = text.substr(0, charIndex); 
+                span.innerHTML = text.substr(0, charIndex);
                 if (charIndex == minCharIndex) {
                     clearInterval(typeInterval);
-                    textIndex + 1 == maxTextIndex ? textIndex = 0 : textIndex += 1; 
-                    setTimeout(function() { typing(textIndex, textArr[textIndex]) }, sBetweenWord * 1000); 
+                    textIndex + 1 == maxTextIndex ? textIndex = 0 : textIndex += 1;
+                    setTimeout(function () { typing(textIndex, textArr[textIndex]) }, sBetweenWord * 1000);
                 } else {
-                    charIndex -= 1; 
+                    charIndex -= 1;
                 }
-            }, sPerChar * 1000); 
+            }, sPerChar * 1000);
         }
     }
 
@@ -173,8 +183,8 @@
         e.preventDefault();
         e.stopPropagation();
         $('html, body').animate({
-          scrollTop: $($.attr(this, 'href')).offset().top
-      }, 700);
+            scrollTop: $($.attr(this, 'href')).offset().top
+        }, 700);
     });
 
     // Isotope layoutMode none JS code //
@@ -205,7 +215,7 @@
         itemSelector: '.project-card',
         layoutMode: 'none',
     });
-    $('.project-filter ul li a').on('click', function(){
+    $('.project-filter ul li a').on('click', function () {
         $('.project-filter ul li a').removeClass('active');
         $(this).addClass('active');
         if ($("body").hasClass("home")) {
@@ -219,10 +229,10 @@
     });
 
     // faq accordion
-    $('.accordion-list .title').on('click', function(){
+    $('.accordion-list .title').on('click', function () {
         $('.accordion-list .content').slideUp().removeClass('content-open');
         $('.accordion-list .title h4').removeClass('icon-open');
-        if($(this).next().is(':hidden')) {
+        if ($(this).next().is(':hidden')) {
             $(this).next().slideDown().addClass('content-open');
             $(this).find('h4').addClass('icon-open');
         }

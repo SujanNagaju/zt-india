@@ -12,6 +12,9 @@
 		@include breakpoint(wide) {
 			max-width: 50%;
 		}
+		@include breakpoint(medium) {
+			max-width: 80%;
+		}
 
 		h4 {
 			background: $soft_blue;
@@ -24,6 +27,9 @@
 			margin: 0 0 30px;
 			font-weight: 300;
 			color: $color_text;
+			@include breakpoint(medium) {
+				color: $white;
+			}
 
 			strong {
 				font-weight: 500;
@@ -56,12 +62,32 @@
 		@media screen and (max-width: 1299px) {
 			width: 45%;
 		}
+		@include breakpoint(medium) {
+			height: 100%;
+			width: 100%;
+			z-index: -1;			
+		}
+		&:after {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			background-color: rgba($black, 0.6);
+			background-blend-mode: multiply;
+			@include breakpoint(medium) {
+				content: '';
+			}
+		}
 
 		img {
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
 			animation: border-transform-default 10s linear infinite alternate forwards;
+			@include breakpoint(medium) {
+				animation: none;
+			}
 		}
 	}
 }
@@ -995,7 +1021,7 @@
 }
 
 .blog-section {
-	padding: 60px 0;
+	padding: 60px 0 10px;
 
 	.section-title {
 		margin-bottom: 45px;
@@ -1102,6 +1128,9 @@
 						width: 100%;
 						text-align: center;
 					}
+					@include breakpoint(ipadpro) {
+						padding-bottom: 35px;
+					}
 					
 					&:before {
 						content: '';
@@ -1136,7 +1165,10 @@
 						font-size: 26px;
 						margin: 0;
 						font-weight: 400;
-						display: inline-block;						
+						display: inline-block;
+						@include breakpoint(ipadpro) {
+							font-size: 22px;
+						}
 
 						&:before {
 							content: '';
