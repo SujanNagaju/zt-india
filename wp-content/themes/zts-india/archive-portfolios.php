@@ -1,29 +1,14 @@
 <?php 
-/**
- * Template Name: Portfolio Archive
- */
 get_header();
-?>
 
-<?php
 /**
  * Portfolio Filter Template.
  */
-
-$section_pre_title  = get_sub_field( 'section_pre_title' );
-$section_main_title = get_sub_field( 'section_main_title' );
-
-$pf_categories = get_terms(
-	array(
-		'taxonomy'   => 'portfolio-categories',
-		'hide_empty' => false,
-	)
-);
 ?>
 <section class="our-work-section py-60">
 	<div class="container">
         <div class="section-title">
-            <h5>Case Studies</h5>
+            <h5><?php echo __( 'Case Studies', 'zts-india' ); ?></h5>
             <h2>Some of <span>Our Work</span></h2>
         </div><!-- section-title -->
 		<div class="project-wrapper">
@@ -47,7 +32,7 @@ $pf_categories = get_terms(
 						foreach ( $associated_terms as $term ) {
 							$filter_cat[] = 'cat-'.$term->term_id;
 						}
-						
+                        
 						?>
 						<div class="project-card">
 							<div class="card-inner">
@@ -57,7 +42,9 @@ $pf_categories = get_terms(
 								<div class="card-hover">
 									<div class="hover-content">
 										<h3><?php the_title(); ?></h3>
-										<p>Web Design</p>
+                                        <?php if ( $filter_cat ) { ?>
+										    <p><?php echo $associated_terms[0]->name; ?></p>
+                                        <?php } ?>
 									</div><!-- hover-content -->
 								</div><!-- card-hover -->
 								<a href="<?php the_permalink(); ?>" class="stretched-link"><?php echo _e( 'Read More', 'zts-india' ); ?></a>

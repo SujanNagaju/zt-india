@@ -14,7 +14,10 @@
 		}
 		@include breakpoint(medium) {
 			max-width: 80%;
+<<<<<<< HEAD
 			padding: 0;
+=======
+>>>>>>> 3c96de0bcf832462d3b4c3307c66c2fcbc2daa92
 		}
 
 		h4 {
@@ -66,9 +69,13 @@
 		@include breakpoint(medium) {
 			height: 100%;
 			width: 100%;
+<<<<<<< HEAD
 			z-index: -1;
 			min-height: unset;
 			right: 0;
+=======
+			z-index: -1;			
+>>>>>>> 3c96de0bcf832462d3b4c3307c66c2fcbc2daa92
 		}
 		&:after {
 			position: absolute;
@@ -1250,9 +1257,12 @@
 					@include breakpoint(ipadpro) {
 						padding-bottom: 35px;
 					}
+<<<<<<< HEAD
 					@include breakpoint(smaller) {
 						padding-bottom: 30px;
 					}
+=======
+>>>>>>> 3c96de0bcf832462d3b4c3307c66c2fcbc2daa92
 					
 					&:before {
 						content: '';
@@ -1291,9 +1301,12 @@
 						@include breakpoint(ipadpro) {
 							font-size: 22px;
 						}
+<<<<<<< HEAD
 						@include breakpoint(smaller) {
 							font-size: 20px;
 						}
+=======
+>>>>>>> 3c96de0bcf832462d3b4c3307c66c2fcbc2daa92
 
 						&:before {
 							content: '';

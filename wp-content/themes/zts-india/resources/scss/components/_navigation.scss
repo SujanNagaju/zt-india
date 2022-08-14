@@ -1,10 +1,14 @@
 .mobile-menu-wrap {
   margin-left: 35px;
+<<<<<<< HEAD
   @include breakpoint(small) {
     margin-left: 25px;
   }
 }
 
+=======
+}
+>>>>>>> 3c96de0bcf832462d3b4c3307c66c2fcbc2daa92
 .menu-toggle {
   width: 32px;
   height: 25px;
@@ -12,16 +16,25 @@
   margin: 0 0 0 auto;
   cursor: pointer;
   display: block;
+<<<<<<< HEAD
 
   @media screen and (min-width: 992px) {
     display: none;
   }
 
+=======
+  @media screen and (min-width: 992px) {
+    display: none;
+  }
+>>>>>>> 3c96de0bcf832462d3b4c3307c66c2fcbc2daa92
   @include breakpoint(medium) {
     position: relative;
     z-index: 100;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3c96de0bcf832462d3b4c3307c66c2fcbc2daa92
   span {
     @include transition(0.3s);
     display: block;
@@ -30,24 +43,35 @@
     width: 100%;
     background: $black;
     margin: 0 0 6px auto;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3c96de0bcf832462d3b4c3307c66c2fcbc2daa92
     &:nth-child(3) {
       margin-top: -10px;
     }
   }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3c96de0bcf832462d3b4c3307c66c2fcbc2daa92
 .main-navigation {
   @include breakpoint(medium) {
     position: fixed;
     width: 42%;
     height: 100%;
+<<<<<<< HEAD
     background: #f0f0f0;
+=======
+    background: $color_text;
+>>>>>>> 3c96de0bcf832462d3b4c3307c66c2fcbc2daa92
     top: -100%;
     left: 0;
     @include transition(0.4s);
     padding: 20% 0 25px;
     z-index: 99;
+<<<<<<< HEAD
     overflow: hidden;
   }
 
@@ -70,6 +94,18 @@
     @include breakpoint(iPhone5) {
       padding: 0 15px;
     }
+=======
+  }
+  @include breakpoint(small) {
+    width: 100%;
+  }
+  .menu-primary-menu-container {
+    @include breakpoint(medium) {
+      padding: 0 44px;
+      height: 100%;
+      overflow: auto;
+    }
+>>>>>>> 3c96de0bcf832462d3b4c3307c66c2fcbc2daa92
   }
 
   .menu {
@@ -77,13 +113,17 @@
     margin: 0;
     display: flex;
     flex-wrap: wrap;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3c96de0bcf832462d3b4c3307c66c2fcbc2daa92
     @include breakpoint(medium) {
       flex-direction: column;
     }
 
     li {
       list-style: none;
+<<<<<<< HEAD
 
       @include breakpoint(medium) {
         padding: 15px 0 20px;
@@ -93,6 +133,14 @@
         padding: 12px 0;
       }
 
+=======
+      @include breakpoint(medium) {
+        padding: 15px 0;
+      }
+      @media screen and (max-width: 991px) {
+        padding: 12px 0;
+      }
+>>>>>>> 3c96de0bcf832462d3b4c3307c66c2fcbc2daa92
       &:not(:last-child) {
         margin-right: 30px;
 
@@ -103,11 +151,14 @@
         @media screen and (max-width: 1299px) {
           margin-right: 25px;
         }
+<<<<<<< HEAD
 
         @include breakpoint(medium) {
           margin-right: 0;
           border-bottom: 1px solid rgba($color_text, 0.1);
         }
+=======
+>>>>>>> 3c96de0bcf832462d3b4c3307c66c2fcbc2daa92
       }
 
       a {
@@ -121,11 +172,18 @@
         @include breakpoint(wide) {
           font-size: 16px;
         }
+<<<<<<< HEAD
 
         @include breakpoint(medium) {
           font-size: 20px;
           font-weight: 500;
           // color: $white;
+=======
+        @include breakpoint(medium) {
+          font-size: 18px;
+          font-weight: 500;
+          color: $white;
+>>>>>>> 3c96de0bcf832462d3b4c3307c66c2fcbc2daa92
         }
       }
 
@@ -145,6 +203,7 @@
   }
 }
 
+<<<<<<< HEAD
 
 body {
   &.single-services {
@@ -155,6 +214,50 @@ body {
             >a {
               color: $red;
               font-weight: 600;
+=======
+body {
+  &.menu-opened {
+    overflow: hidden;
+
+    .site-header {
+      &.header-sticky {
+        height: 100%;
+      }
+
+      .header-wrapper {
+        .header-right {
+          .hamburger-menu {
+            span {
+              transform-origin: center;
+              opacity: 0;
+              background: $black;
+
+              &:nth-child(2) {
+                transform: rotate(45deg);
+                opacity: 1;
+              }
+
+              &:nth-child(3) {
+                transform: rotate(-45deg);
+                opacity: 1;
+              }
+>>>>>>> 3c96de0bcf832462d3b4c3307c66c2fcbc2daa92
+            }
+          }
+        }
+      }
+<<<<<<< HEAD
+    }
+  }
+
+  &.single-post {
+    .main-navigation {
+      .menu {
+        li {
+          &.menu-blog {
+            >a {
+              color: $red;
+              font-weight: 600;
             }
           }
         }
@@ -162,6 +265,71 @@ body {
     }
   }
 
+  &.single-portfolio {
+    .main-navigation {
+      .menu {
+        li {
+          &.menu-portfolio {
+            >a {
+              color: $red;
+              font-weight: 600;
+            }
+          }
+        }
+=======
+
+      .main-navigation {
+        left: 0;
+>>>>>>> 3c96de0bcf832462d3b4c3307c66c2fcbc2daa92
+      }
+    }
+  }
+}
+
+body {
+<<<<<<< HEAD
+  .site-header {
+    &.header-sticky {
+      .main-navigation {
+        @include breakpoint(medium) {
+          height: 100vh;
+          top: -100vh;
+=======
+  &.single-services {
+    .main-navigation {
+      .menu {
+        li {
+          &.menu-services {
+            >a {
+              color: $red;
+              font-weight: 600;
+            }
+          }
+>>>>>>> 3c96de0bcf832462d3b4c3307c66c2fcbc2daa92
+        }
+      }
+    }
+  }
+
+<<<<<<< HEAD
+  &.body-menu-opened {
+    overflow: hidden;
+
+    .topbar {
+      display: none;
+    }
+
+    .menu-toggle {
+      span {
+        transform-origin: center;
+        opacity: 0;
+
+        &:nth-child(2) {
+          transform: rotate(45deg);
+          opacity: 1;
+        }
+
+=======
   &.single-post {
     .main-navigation {
       .menu {
@@ -194,40 +362,27 @@ body {
 }
 
 body {
-  .site-header {
-    &.header-sticky {
-      .main-navigation {
-        @include breakpoint(medium) {
-          height: 100vh;
-          top: -100vh;
-        }
-      }
-    }
-  }
-
   &.body-menu-opened {
     overflow: hidden;
-
-    .topbar {
-      display: none;
-    }
-
     .menu-toggle {
       span {
         transform-origin: center;
         opacity: 0;
-
+        @include breakpoint(small) {
+          background-color: $white;
+        }
         &:nth-child(2) {
           transform: rotate(45deg);
           opacity: 1;
         }
-
+>>>>>>> 3c96de0bcf832462d3b4c3307c66c2fcbc2daa92
         &:nth-child(3) {
           transform: rotate(-45deg);
           opacity: 1;
         }
       }
     }
+<<<<<<< HEAD
 
     .site-header {
       .header-wrapper {
@@ -242,6 +397,10 @@ body {
       .main-navigation {
         top: 0px;
       }
+=======
+    .main-navigation {
+      top: 0%;
+>>>>>>> 3c96de0bcf832462d3b4c3307c66c2fcbc2daa92
     }
   }
 }

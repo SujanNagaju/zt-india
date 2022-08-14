@@ -80,6 +80,7 @@
 
 .site-header {
 	padding: 15px 0;
+<<<<<<< HEAD
 	position: relative;
 	&:before {		
 		position: absolute;
@@ -94,6 +95,8 @@
 			content: '';
 		}
 	}
+=======
+>>>>>>> 3c96de0bcf832462d3b4c3307c66c2fcbc2daa92
 
 	.header-wrapper {
 		padding: 0 60px;
@@ -126,8 +129,13 @@
 			}
 
 			@include breakpoint(medium) {
+<<<<<<< HEAD
 				flex: 0 0 50%;
 				max-width: 50%;
+=======
+				flex: 0 0 60%;
+				max-width: 60%;
+>>>>>>> 3c96de0bcf832462d3b4c3307c66c2fcbc2daa92
 				position: relative;
 				z-index: 100;
 			}
@@ -163,8 +171,13 @@
 
 		.header-right {
 			@include breakpoint(medium) {
+<<<<<<< HEAD
 				flex: 0 0 50%;
 				max-width: 50%;
+=======
+				flex: 0 0 40%;
+				max-width: 40%;
+>>>>>>> 3c96de0bcf832462d3b4c3307c66c2fcbc2daa92
 				display: flex;
 				align-items: center;
 				justify-content: flex-end;
@@ -174,10 +187,13 @@
 				display: flex;
 				flex-wrap: wrap;
 				align-items: center;
+<<<<<<< HEAD
 				@include breakpoint(medium) {
 					position: relative;
 					z-index: 100;
 				}
+=======
+>>>>>>> 3c96de0bcf832462d3b4c3307c66c2fcbc2daa92
 
 				li {
 					position: relative;
@@ -239,7 +255,11 @@
 			}
 		}
 
+<<<<<<< HEAD
 		.main-navigation {			
+=======
+		.main-navigation {
+>>>>>>> 3c96de0bcf832462d3b4c3307c66c2fcbc2daa92
 			.menu {
 				li {
 					a {

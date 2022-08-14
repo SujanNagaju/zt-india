@@ -45,7 +45,11 @@ a {
 }
 .py-60 {
     padding: 60px 0;
+<<<<<<< HEAD
     @include breakpoint(small) {
+=======
+    @include breakpoint(ipadpro) {
+>>>>>>> 3c96de0bcf832462d3b4c3307c66c2fcbc2daa92
         padding: 45px 0;
     }
 }

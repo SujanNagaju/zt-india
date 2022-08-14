@@ -52,6 +52,19 @@ if ( ! function_exists( 'zts_cpts' ) ) :
 				'has_archive'   => true,
 			),
 
+
+			array(
+				'slug'          => 'team',
+				'singular_name' => 'Our Team',
+				'plural_name'   => 'Our Team',
+				'post_type'     => 'team',
+				'post_icon'     => 'dashicons-buddicons-groups',
+				'supports'      => array( 'title', 'thumbnail' ),
+				'has_single'    => false,
+				'has_archive'   => false,
+				'publicly_queryable' => false,
+			),
+
 		);
 
 		foreach ( $zts_cpts as $zts_cpt ) {
@@ -72,7 +85,7 @@ if ( ! function_exists( 'zts_cpts' ) ) :
 				),
 				'public'             => true,
 				'menu_icon'          => $zts_cpt['post_icon'],
-				'publicly_queryable' => true,
+				'publicly_queryable' => isset( $zts_cpt['publicly_queryable'] ) ? $zts_cpt['publicly_queryable'] : 'true',
 				'show_ui'            => true,
 				'show_in_menu'       => true,
 				'query_var'          => $zts_cpt['has_single'],
@@ -83,6 +96,10 @@ if ( ! function_exists( 'zts_cpts' ) ) :
 				'menu_position'      => null,
 				'supports'           => $zts_cpt['supports'],
 			);
+
+			if( $zts_cpt['post_type'] == 'portfolios' ){
+				$args['rewrite'] = array( 'slug' => 'portfolios' );
+			}
 
 			register_post_type( $zts_cpt['post_type'], $args );
 		}

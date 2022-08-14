@@ -17,14 +17,18 @@
 					<a href="<?php echo home_url(); ?>/portfolio" class="btn btn-2x btn-red">Our Portfolio</a>
 				</div>
 			</div><!-- banner-content -->
-			<div class="service-thumbnail">
-				<?php
-					// post thumbnail.
-					if ( has_post_thumbnail() ) {
-						the_post_thumbnail( 'full' );
-					}
-				?>
-			</div><!-- service-thumbnail -->
+
+			<?php 
+				$banner_image = get_sub_field( 'banner_image' );
+				if( $banner_image ):
+			?>
+				<div class="service-thumbnail">
+					<?php
+						// Banner Image
+						echo wp_get_attachment_image( $banner_image['ID'], 'full' );
+					?>
+				</div><!-- service-thumbnail -->
+			<?php endif; ?>
 		</div><!-- banner-wrap -->
 	</div><!-- container -->
 </section><!-- service-cat-banner -->
