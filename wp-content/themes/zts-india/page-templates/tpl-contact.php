@@ -3,6 +3,10 @@
  * Template Name: Contact Us
  */
 get_header();
+
+$entry_title = get_field( 'entry_title' );
+$entry_sub_title = get_field( 'entry_sub_title' );
+$contact_form_shortcode = get_field( 'contact_form_shortcode' );
 ?>
 
 <section class="section-page-contact py-60">
@@ -10,33 +14,50 @@ get_header();
         <div class="row align-items-center">
             <div class="col-lg-7">
                 <div class="contact-wrapper">
-                    <div class="section-title text-left">
-                        <h2>Get in Touch</h2>
-                        <p>Have a question or just want to say hi? We'd love to hear from you.</p>
-                    </div><!-- section-title -->
+                    <?php if ( $entry_title || $entry_sub_title ): ?>
+                        <div class="section-title text-left">
+                            <?php 
+                                if( $entry_title ){
+                                    echo '<h2>'.$entry_title.'</h2>';
+                                }
+
+                                if( $entry_sub_title ){
+                                    echo '<p>' . $entry_sub_title . '</p>';
+                                }
+                            ?>    
+                        </div><!-- section-title -->
+                    <?php endif; ?>
+
                     <div class="form-inner">
-                        <?php echo do_shortcode('[contact-form-7 id="39" title="Contact Form"]'); ?>
+                        <?php echo do_shortcode($contact_form_shortcode); ?>
                     </div><!-- form-inner -->
                 </div><!-- contact-wrapper -->
             </div><!-- col-lg-5 -->
+
+
+            <?php 
+                $widget_4_title     = get_field( 'widget_4_title', 'option' );
+                $contact_info_india = get_field( 'contact_info_india', 'option' );
+                $contact_info_usa   = get_field( 'contact_info_usa', 'option' );
+            ?>
+
             <div class="col-lg-5">
                 <div class="contact-right">
                     <div class="info-inner">
-                        <div class="contact-info india">
-                            <p>Zebra Techies Solution</p>
-                            <ul>
-                                <li class="address">Debigarh 4th Lane, Madhyamgram Kolkata (W.B) India – 700129</li>
-                                <li class="phone">+91-9804210198</li>
-                            </ul>
-                        </div><!-- contact-info -->
-                        <div class="contact-info usa">
-                            <p>Zebra Techies Solution</p>
-                            <ul>
-                                <li class="address">10685-B Hazelhurst Dr. #20871 Houston, TX 77043 USA</li>
-                                <li class="phone">+1-213-233-1633</li>
-                                <li class="email"><a href="mailto:support@zebratechies.com">support@zebratechies.com</a></li>
-                            </ul>
-                        </div><!-- contact-info -->
+                        <?php if ( $contact_info_india ) : // Contact info india. ?>
+                            <div class="contact-info india">
+                                <?php echo $contact_info_india; ?>
+                            </div><!-- contact-info -->
+                            <?php
+                        endif; // End check contact info india.
+                       
+                        // Contact info USA.
+                        if ( $contact_info_usa ) :
+                            ?>
+                            <div class="contact-info usa">
+                            <?php echo $contact_info_usa; ?>
+                            </div><!-- contact-info -->
+                        <?php endif; ?>
                     </div><!-- info-inner -->
                 </div><!-- contact-right -->
             </div><!-- col-lg-5 -->
