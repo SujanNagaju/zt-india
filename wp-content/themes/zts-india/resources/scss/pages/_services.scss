@@ -130,6 +130,12 @@
 
 .service-cat-section {
     padding: 80px 0;
+    @include breakpoint(medium) {
+        padding: 80px 0 40px;
+    }
+    @include breakpoint(small) {
+		padding: 60px 0 40px;
+	}
 
     .service-cat-wrap {
 

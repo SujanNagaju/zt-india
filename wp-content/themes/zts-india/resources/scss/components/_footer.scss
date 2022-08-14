@@ -2,7 +2,9 @@
     background: $dark_grey;
     .row {
         .col-lg-3 {
-
+            @include breakpoint(medium) {
+                margin: 0 0 30px;
+            }
         }
     }
     .footer-block {

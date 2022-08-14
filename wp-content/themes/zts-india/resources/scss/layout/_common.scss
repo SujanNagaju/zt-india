@@ -45,6 +45,9 @@ a {
 }
 .py-60 {
     padding: 60px 0;
+    @include breakpoint(small) {
+        padding: 45px 0;
+    }
 }
 .pt-40 {
     padding-top: 40px;
@@ -61,10 +64,16 @@ a {
 .bg-grey {
     background: #f4f4f4;
 }
+.site {
+    overflow: hidden;
+}
 .section-title {
     max-width: 785px;
     margin: 0 auto 45px;
     text-align: center;
+    @include breakpoint(small) {	
+        margin: 0 auto 30px;
+    }
     h5 {
         font-size: 16px;
         font-weight: 500;
@@ -75,6 +84,10 @@ a {
         letter-spacing: 1.4px;
         position: relative;
         padding: 0 35px;
+        @include breakpoint(small) {
+            font-size: 15px;
+            // margin: 0 0 10px;
+        }
         &:before,
         &:after {
             content: '';

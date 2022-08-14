@@ -29,7 +29,7 @@ h2 {
         line-height: 1.16;
     }
     @include breakpoint(small) {
-        font-size: 24px;
+        font-size: 30px;
     }
 }
 h3 {
@@ -39,7 +39,7 @@ h3 {
         font-size: 26px;
     }
     @include breakpoint(small) {
-        font-size: 20px;
+        font-size: 22px;
     }
 }
 h4 {

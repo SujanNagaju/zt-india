@@ -57,7 +57,7 @@
 								$counter_suffix         = get_sub_field( 'counter_suffix' );
 								$stats_box_description  = get_sub_field( 'stats_box_description' );
 								?>
-								<div class="col-lg-6">
+								<div class="col-md-6">
                                     <div class="stats-box">
                                         <?php
 										if ( $stats_box_heading ) {
@@ -75,7 +75,7 @@
 										}
 										?>
 									</div><!-- stats-box -->
-								</div><!-- col-lg-6 -->
+								</div><!-- col-md-6 -->
 								<?php endwhile; ?>
 						</div><!-- row -->
 					</div><!-- company-stats -->

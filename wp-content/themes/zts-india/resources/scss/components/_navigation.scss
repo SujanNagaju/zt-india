@@ -1,20 +1,115 @@
-.main-navigation {  
+.mobile-menu-wrap {
+  margin-left: 35px;
+  @include breakpoint(small) {
+    margin-left: 25px;
+  }
+}
+
+.menu-toggle {
+  width: 32px;
+  height: 25px;
+  text-align: right;
+  margin: 0 0 0 auto;
+  cursor: pointer;
+  display: block;
+
+  @media screen and (min-width: 992px) {
+    display: none;
+  }
+
+  @include breakpoint(medium) {
+    position: relative;
+    z-index: 100;
+  }
+
+  span {
+    @include transition(0.3s);
+    display: block;
+    height: 4px;
+    border-radius: 20px;
+    width: 100%;
+    background: $black;
+    margin: 0 0 6px auto;
+
+    &:nth-child(3) {
+      margin-top: -10px;
+    }
+  }
+}
+
+.main-navigation {
+  @include breakpoint(medium) {
+    position: fixed;
+    width: 42%;
+    height: 100%;
+    background: #f0f0f0;
+    top: -100%;
+    left: 0;
+    @include transition(0.4s);
+    padding: 20% 0 25px;
+    z-index: 99;
+    overflow: hidden;
+  }
+
+  @include breakpoint(small) {
+    width: 100%;
+    padding-top: 25%;
+  }
+
+  .menu-primary-menu-container {
+    @include breakpoint(medium) {
+      padding: 0 30px;
+      height: 100%;
+      overflow: auto;
+    }
+
+    @include breakpoint(small) {
+      padding: 0 20px;
+    }
+
+    @include breakpoint(iPhone5) {
+      padding: 0 15px;
+    }
+  }
+
   .menu {
     padding: 0;
     margin: 0;
     display: flex;
     flex-wrap: wrap;
+
+    @include breakpoint(medium) {
+      flex-direction: column;
+    }
+
     li {
       list-style: none;
+
+      @include breakpoint(medium) {
+        padding: 15px 0 20px;
+      }
+
+      @media screen and (max-width: 991px) and (orientation: landscape) {
+        padding: 12px 0;
+      }
+
       &:not(:last-child) {
         margin-right: 30px;
+
         @media screen and (max-width: 1429px) {
           margin-right: 30px;
         }
+
         @media screen and (max-width: 1299px) {
           margin-right: 25px;
-        }        
+        }
+
+        @include breakpoint(medium) {
+          margin-right: 0;
+          border-bottom: 1px solid rgba($color_text, 0.1);
+        }
       }
+
       a {
         font-weight: 400;
         color: $color_text;
@@ -22,97 +117,131 @@
         font-size: 18px;
         text-transform: uppercase;
         font-family: $font_roboto;
+
         @include breakpoint(wide) {
           font-size: 16px;
         }
+
+        @include breakpoint(medium) {
+          font-size: 20px;
+          font-weight: 500;
+          // color: $white;
+        }
       }
+
       &:hover,
       &.current-menu-item {
-        > a {
+        >a {
           color: $red;
         }
       }
+
       &.current-menu-item {
-        > a {
+        >a {
           font-weight: 600;
         }
       }
     }
   }
 }
+
+
 body {
-  &.menu-opened {
-    overflow: hidden;
-    .site-header {
-      &.header-sticky {
-        height: 100%;
-      }
-      .header-wrapper {
-        .header-right {
-          .hamburger-menu {
-            span {
-              transform-origin: center;
-              opacity: 0;
-              background: $black;
-              &:nth-child(2) {
-                transform: rotate(45deg);
-                opacity: 1;
-              }
-              &:nth-child(3) {
-                transform: rotate(-45deg);
-                opacity: 1;
-              }
+  &.single-services {
+    .main-navigation {
+      .menu {
+        li {
+          &.menu-services {
+            >a {
+              color: $red;
+              font-weight: 600;
             }
           }
         }
       }
-      .main-navigation {
-        left: 0;
+    }
+  }
+
+  &.single-post {
+    .main-navigation {
+      .menu {
+        li {
+          &.menu-blog {
+            >a {
+              color: $red;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.single-portfolio {
+    .main-navigation {
+      .menu {
+        li {
+          &.menu-portfolio {
+            >a {
+              color: $red;
+              font-weight: 600;
+            }
+          }
+        }
       }
     }
   }
 }
+
 body {
-  &.single-services {
+  .site-header {
+    &.header-sticky {
       .main-navigation {
-          .menu {
-              li {
-                  &.menu-services {
-                      > a {
-                          color: $red;
-                          font-weight: 600;
-                      }
-                  }
-              }
-          }
-      }
-  }
-  &.single-post {
-    .main-navigation {
-        .menu {
-            li {
-                &.menu-blog {
-                    > a {
-                        color: $red;
-                        font-weight: 600;
-                    }
-                }
-            }
+        @include breakpoint(medium) {
+          height: 100vh;
+          top: -100vh;
         }
+      }
     }
   }
-  &.single-portfolio {
-    .main-navigation {
-        .menu {
-            li {
-                &.menu-portfolio {
-                    > a {
-                        color: $red;
-                        font-weight: 600;
-                    }
-                }
-            }
+
+  &.body-menu-opened {
+    overflow: hidden;
+
+    .topbar {
+      display: none;
+    }
+
+    .menu-toggle {
+      span {
+        transform-origin: center;
+        opacity: 0;
+
+        &:nth-child(2) {
+          transform: rotate(45deg);
+          opacity: 1;
         }
+
+        &:nth-child(3) {
+          transform: rotate(-45deg);
+          opacity: 1;
+        }
+      }
+    }
+
+    .site-header {
+      .header-wrapper {
+        .header-right {
+          ul {
+            @include breakpoint(medium) {
+              z-index: 99;
+            }
+          }
+        }
+      }
+      .main-navigation {
+        top: 0px;
+      }
     }
   }
 }

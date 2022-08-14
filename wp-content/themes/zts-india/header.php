@@ -92,12 +92,14 @@
                                     src="<?php echo get_template_directory_uri(); ?>/images/mobile.svg" alt=""></a>
                         </li>
                     </ul>
+                    <div class="mobile-menu-wrap">
+                        <div class="menu-toggle">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div><!-- menu-toggle -->
+                    </div><!-- mobile-menu-wrap -->
                 </div><!-- header-right -->
-                <div class="menu-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div><!-- menu-toggle -->
             </div><!-- header-wrap -->
         </header><!-- #masthead -->
