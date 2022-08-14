@@ -198,6 +198,40 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_62f8c68ab8a13": {
+                    "key": "layout_62f8c68ab8a13",
+                    "name": "about_banner",
+                    "label": "About Banner",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_62f8c6ceb8a15",
+                            "label": "Banner Image",
+                            "name": "banner_image",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_62d413e107809": {
                     "key": "layout_62d413e107809",
                     "name": "banner_with_with_title_and_breadcrumb",
@@ -1966,6 +2000,153 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_62f8cb4f55132": {
+                    "key": "layout_62f8cb4f55132",
+                    "name": "team_section",
+                    "label": "Team Section",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_62f8cb9655134",
+                            "label": "Section Pre Title",
+                            "name": "section_pre_title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_62f8cb7255133",
+                            "label": "Section Title",
+                            "name": "section_title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_62f8cbaa55135",
+                            "label": "Featured Team Members",
+                            "name": "featured_team_members",
+                            "type": "relationship",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "team"
+                            ],
+                            "taxonomy": "",
+                            "filters": [
+                                "search"
+                            ],
+                            "elements": "",
+                            "min": "",
+                            "max": "",
+                            "return_format": "object"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_62f8c75580df8": {
+                    "key": "layout_62f8c75580df8",
+                    "name": "zig_zag_content_module",
+                    "label": "Zig Zag Content Module",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_62f8c7e36ddcd",
+                            "label": "Zig Zag contents",
+                            "name": "zig_zag_contents",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "row",
+                            "button_label": "",
+                            "sub_fields": [
+                                {
+                                    "key": "field_62f8c79380df9",
+                                    "label": "Zig zag Content Image",
+                                    "name": "zig_zag_content_image",
+                                    "type": "image",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "preview_size": "medium",
+                                    "library": "all",
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": ""
+                                },
+                                {
+                                    "key": "field_62f8c79f80dfa",
+                                    "label": "Zig Zag Content Description",
+                                    "name": "zig_zag_content_description",
+                                    "type": "wysiwyg",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "tabs": "all",
+                                    "toolbar": "full",
+                                    "media_upload": 1,
+                                    "delay": 0
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add New Module",
@@ -2000,5 +2181,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1660470505
+    "modified": 1660472536
 }
