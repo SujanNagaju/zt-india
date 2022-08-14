@@ -91,3 +91,47 @@ body {
     }
   }
 }
+body {
+  &.single-services {
+      .main-navigation {
+          .menu {
+              li {
+                  &.menu-services {
+                      > a {
+                          color: $red;
+                          font-weight: 600;
+                      }
+                  }
+              }
+          }
+      }
+  }
+  &.single-post {
+    .main-navigation {
+        .menu {
+            li {
+                &.menu-blog {
+                    > a {
+                        color: $red;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+  }
+  &.single-portfolio {
+    .main-navigation {
+        .menu {
+            li {
+                &.menu-portfolio {
+                    > a {
+                        color: $red;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+  }
+}

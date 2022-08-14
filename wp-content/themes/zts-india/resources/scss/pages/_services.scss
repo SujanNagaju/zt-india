@@ -745,19 +745,3 @@ body {
         }
     }
 }
-body {
-    &.single-services {
-        .main-navigation {
-            .menu {
-                li {
-                    &.menu-services {
-                        > a {
-                            color: $red;
-                            font-weight: 600;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}

@@ -9424,6 +9424,18 @@ body.menu-opened {
   body.menu-opened .site-header .main-navigation {
     left: 0; }
 
+body.single-services .main-navigation .menu li.menu-services > a {
+  color: #be1310;
+  font-weight: 600; }
+
+body.single-post .main-navigation .menu li.menu-blog > a {
+  color: #be1310;
+  font-weight: 600; }
+
+body.single-portfolio .main-navigation .menu li.menu-portfolio > a {
+  color: #be1310;
+  font-weight: 600; }
+
 .hero-banner {
   position: relative;
   padding: 80px 0; }
@@ -10948,10 +10960,6 @@ body.single-services .portfolio-section {
               transform: translateY(-50%) rotate(-90deg);
       right: -60px; }
 
-body.single-services .main-navigation .menu li.menu-services > a {
-  color: #be1310;
-  font-weight: 600; }
-
 .section-page-contact .contact-wrapper .section-title p {
   font-weight: 400; }
 
@@ -10994,6 +11002,38 @@ body.single-services .main-navigation .menu li.menu-services > a {
       color: #777b83;
       font-weight: 400; }
     .section-page-contact .contact-right .info-inner .contact-info ul li:not(:last-child) {
+      margin: 0 0 20px; }
+
+.section-portfolio-detail {
+  padding: 80px 0; }
+  .section-portfolio-detail .image-block img {
+    width: 100%; }
+  .section-portfolio-detail .info-right {
+    padding-left: 20px; }
+    .section-portfolio-detail .info-right h1 {
+      font-size: 40px;
+      margin: 0 0 30px; }
+    .section-portfolio-detail .info-right ul li {
+      color: #131313;
+      font-size: 18px; }
+      .section-portfolio-detail .info-right ul li:not(:last-child) {
+        margin: 0 0 15px; }
+      .section-portfolio-detail .info-right ul li span {
+        color: #767676; }
+  .section-portfolio-detail .portfolio-content {
+    padding-top: 40px; }
+    .section-portfolio-detail .portfolio-content .content-inner h2 {
+      margin: 0 0 20px;
+      color: #131313;
+      font-size: 36px; }
+      .section-portfolio-detail .portfolio-content .content-inner h2 span {
+        font-weight: 400; }
+    .section-portfolio-detail .portfolio-content .content-inner p, .section-portfolio-detail .portfolio-content .content-inner ul li, .section-portfolio-detail .portfolio-content .content-inner ol li {
+      font-size: 18px;
+      line-height: 1.77; }
+    .section-portfolio-detail .portfolio-content .content-inner h3, .section-portfolio-detail .portfolio-content .content-inner h4, .section-portfolio-detail .portfolio-content .content-inner h5 {
+      padding-top: 20px; }
+    .section-portfolio-detail .portfolio-content .content-inner h3 {
       margin: 0 0 20px; }
 
 .section-blog-detail {
