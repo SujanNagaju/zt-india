@@ -11,6 +11,18 @@
 
 ?>
 
+<div class="sticky-contact-form">
+	<div class="sticky-form-wrap">
+		<div class="toggle-button">
+			<span>Let's Connect</span>
+		</div><!-- toggle-button -->
+		<div class="form-block">
+			<h4>Leave a Message</h4>
+			<?php echo do_shortcode('[contact-form-7 id="39" title="Contact Form"]'); ?>
+		</div><!-- form-block -->
+	</div><!-- sticky-form-wrap -->
+</div><!-- 	 -->
+
 <footer id="colophon" class="site-footer pt-40">
 	<div class="container">
 		<div class="row">
@@ -45,6 +57,9 @@
 	?>
 
 </footer><!-- #colophon -->
+<div class="back-to-top" id="back-to-top">
+	<div class="back-to-top-inner"><img src="<?php echo get_template_directory_uri(); ?>/images/arrow-right.svg" class="svg" alt=""><span>To Top</span></div>
+</div><!-- back-to-top -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

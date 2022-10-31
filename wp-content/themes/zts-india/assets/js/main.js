@@ -94,9 +94,11 @@
         var headerHeight = $('.site-header').outerHeight();
         if ($(window).scrollTop() >= headerHeight) {
             $('.site-header').addClass('header-sticky');
+            $('.back-to-top').addClass('show');
         }
         else {
             $('.site-header').removeClass('header-sticky');
+            $('.back-to-top').removeClass('show');
         }
     });
 
@@ -262,7 +264,7 @@
     // clients slider
     $('.clients-slider').slick({
         infinite: true,
-        slidesToShow: 5,
+        slidesToShow: 4,
         slidesToScroll: 1,
         arrows: false,
         autoplay: true,
@@ -301,6 +303,7 @@
         direction: 'left',
         duplicated: true,
         pauseOnHover: true,
+        startVisible: true,
     });
 
     // logo slider
@@ -364,5 +367,17 @@
         $(this).parents('.faq-list').toggleClass('faq-open');
     });
 
+    $("#back-to-top").on('click', function(e) {
+        e.preventDefault();
+        $('html, body').animate({ scrollTop: 0 }
+        ,700);
+    });
+
+    $('.sticky-contact-form .toggle-button').on('click', function(){
+        $(this).parents('.sticky-contact-form').addClass('active');
+    });
+    $(".sticky-contact-form").clickOutside(function () {
+        $(".sticky-contact-form").removeClass("active");
+    });
 
 })(jQuery);

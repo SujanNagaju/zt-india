@@ -16,7 +16,7 @@ if ( $widget_2_content ) :
 
 		if ( $widget_2_content ) :
 			?>
-		<div class="description">
+		<div class="links">
 			<?php echo $widget_2_content; ?>
 		</div><!-- description -->
 		<?php endif; ?>
