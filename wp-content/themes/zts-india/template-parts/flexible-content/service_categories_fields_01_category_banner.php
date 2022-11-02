@@ -8,7 +8,7 @@
 					// Banner sub title.
 					$banner_sub_title = get_sub_field( 'banner_sub_title' );
 					if ( $banner_sub_title ) {
-						echo '<h3>' . $banner_sub_title . '</h3>';
+						echo '<h4>' . $banner_sub_title . '</h4>';
 					}
 					?>
 				</div><!-- content-inner -->

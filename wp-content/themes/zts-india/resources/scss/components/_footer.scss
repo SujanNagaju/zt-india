@@ -5,6 +5,13 @@
     transform: translateY(-50%);
     width: 300px;
     @include transition(0.4s);
+    background: $white;
+    z-index: 99;
+    @include breakpoint(smaller) {
+        width: 255px;
+        right: -255px;
+    }    
+
     &.active {
         right: 0;
     }
@@ -16,35 +23,102 @@
             width: 182px;
             text-align: center;
             cursor: pointer;
-            background: $red;
+            background: $dark_grey;
             top: 40%;
             font-weight: 600;
-            left: -113px;
+            left: -115px;
             border-radius: 3px 3px 0 0;
             transform: rotate(270deg);
             cursor: pointer;
             color: $white;
             line-height: 45px;
             font-size: 18px;
-            z-index: 9999999;
+            z-index: 99;
             text-align: center;
+            @include breakpoint(smaller) {
+                height: 45px;
+                width: 150px;
+                font-size: 15px;
+                left: -97px;
+            }
 
             span {
                 color: $white;
-                font-size: 18px;
             }
         }
 
         .form-block {
             box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+            @media screen and (max-width: 991px) and (orientation: landscape) {
+                height: 100vh;
+                overflow: auto;
+            }
+
             h4 {
-                background: $navy_blue;
+                background: $red;
                 color: $white;
                 padding: 15px 20px;
                 text-align: center;
+                margin: 0;
+                @include breakpoint(smaller) {
+                    padding: 10px 15px;
+                }
             }
+
             form {
                 padding: 20px;
+                height: 350px;
+                overflow: auto;
+                @media screen and (max-width: 991px) and (orientation: landscape) {
+                    height: unset;
+                    overflow: unset;
+                }
+
+                &::-webkit-scrollbar {
+                    width: 4px;
+                    background: #cccccc;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    background: $red;
+                }
+
+                &::-webkit-scrollbar-track {
+                    background: #cccccc;
+                }
+
+                .row {
+                    .col-12 {
+                        &:not(:last-child) {
+                            margin: 0 0 10px;
+                        }
+
+                        input,
+                        select,
+                        textarea,
+                        .form-control {
+                            border-color: #cccccc;
+                        }
+
+                        textarea {
+                            height: 90px;
+                        }
+
+                        input[type=submit] {
+                            height: 45px;
+                            padding: 0 20px;
+                            border: 0;
+
+                            &:not(:hover) {
+                                background: $dark_grey;
+                            }
+                        }
+                    }
+                }
+
+                .wpcf7-spinner {
+                    margin: 0 0 0 10px;
+                }
             }
         }
     }
@@ -54,14 +128,52 @@
     background: $dark_grey;
 
     .row {
-        .col-lg-3 {
+        .col-md-6 {
             @include breakpoint(medium) {
                 margin: 0 0 30px;
+            }
+        }
+
+        .col-lg-5 {
+            @media screen and (max-width: 1199px) and (min-width: 992px) {
+                flex: 0 0 33.33%;
+                max-width: 33.33%;
+            }
+        }
+        .col-md-6 {
+            &:nth-child(2) {
+                @media screen and (max-width: 1199px) and (min-width: 992px) {
+                    flex: 0 0 25%;
+                    max-width: 25%;
+                }
             }
         }
     }
 
     .footer-block {
+        .contact-info-wrap {
+            display: flex;
+            margin: 0 -10px;
+            @include breakpoint(wide) {
+                display: block;
+            }
+
+            .contact-info {
+                flex: 0 1 50%;
+                padding: 0 10px;
+
+                @media screen and (max-width: 1199px) and (min-width: 992px) {
+                    flex: 0 1 100%;
+                }
+
+                &.usa {
+                    @media screen and (min-width: 1200px) {
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+
         h5 {
             color: $white;
             font-weight: 500;
@@ -169,14 +281,15 @@
         padding-bottom: 20px;
 
         .logo {
-            a {
-                display: block;
+            // a {
+            display: block;
 
-                img {
-                    padding: 0 5px;
-                    width: 70px;
-                }
+            img {
+                padding: 0 5px;
+                width: 70px;
             }
+
+            // }
         }
     }
 
@@ -244,13 +357,13 @@
             &:before {
                 background-position: top;
             }
-        }
 
-        ul {
             &:not(:first-of-type) {
-                padding-top: 15px;
+                margin-top: 15px;
             }
         }
+
+        ul {}
     }
 
     &.usa {
@@ -416,6 +529,7 @@
 
     @include breakpoint(smaller) {
         right: -15px;
+        bottom: 50px;
     }
 
     &.show {
@@ -441,11 +555,12 @@
 
             path {
                 @include transition(0.4s);
+                fill: $red;
             }
         }
 
         span {
-            color: $black;
+            color: $red;
             font-weight: 600;
             display: inline-block;
             padding-right: 10px;

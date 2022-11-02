@@ -13,7 +13,9 @@ if ( $footer_logo_gallery ) :
             $attachment_link = get_field( 'attachment_link', $image_id );
             ?>
         <div class="logo">
-            <a href="<?php echo ( $attachment_link ) ? $attachment_link : '#'; ?>" target="_blank"><?php echo wp_get_attachment_image($image_id, 'full' ); ?></a>
+            <!-- <a href="<?php //echo ( $attachment_link ) ? $attachment_link : '#'; ?>" target="_blank"> -->
+                <?php echo wp_get_attachment_image($image_id, 'full' ); ?>
+            <!-- </a> -->
         </div><!-- logo -->
         <?php endforeach; ?>
     </div><!-- footer-logos -->

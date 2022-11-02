@@ -376,8 +376,9 @@
     $('.sticky-contact-form .toggle-button').on('click', function(){
         $(this).parents('.sticky-contact-form').addClass('active');
     });
-    $(".sticky-contact-form").clickOutside(function () {
+    $(".sticky-form-wrap").clickOutside(function () {
         $(".sticky-contact-form").removeClass("active");
+        $('.sticky-contact-form .wpcf7-form').trigger('reset');
     });
 
 })(jQuery);

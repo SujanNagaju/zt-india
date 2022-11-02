@@ -19,7 +19,7 @@ $posts_per_page    = $posts_per_page ? $posts_per_page : 3;
 
 // if ( $recent_posts->have_posts() ) :
 	?>
-    <div class="col-lg-3 col-md-6">
+    <div class="col-lg-2 col-md-6">
         <div class="footer-block">
         <?php echo '<h5>Recent Posts</h5>'; ?>
             <div class="links">
