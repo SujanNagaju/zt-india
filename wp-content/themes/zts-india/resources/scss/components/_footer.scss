@@ -23,7 +23,7 @@
             width: 182px;
             text-align: center;
             cursor: pointer;
-            background: $dark_grey;
+            background: $red;
             top: 40%;
             font-weight: 600;
             left: -115px;
@@ -55,7 +55,7 @@
             }
 
             h4 {
-                background: $red;
+                background: $navy_blue;
                 color: $white;
                 padding: 15px 20px;
                 text-align: center;
@@ -110,7 +110,7 @@
                             border: 0;
 
                             &:not(:hover) {
-                                background: $dark_grey;
+                                background: $red;
                             }
                         }
                     }
@@ -359,7 +359,7 @@
             }
 
             &:not(:first-of-type) {
-                margin-top: 15px;
+                margin-top: 20px;
             }
         }
 
@@ -526,6 +526,7 @@
     pointer-events: none;
     @include transition(0.4s);
     cursor: pointer;
+    mix-blend-mode: difference;
 
     @include breakpoint(smaller) {
         right: -15px;
@@ -555,28 +556,16 @@
 
             path {
                 @include transition(0.4s);
-                fill: $red;
+                fill: $white;
             }
         }
 
         span {
-            color: $red;
+            color: $white;
             font-weight: 600;
             display: inline-block;
             padding-right: 10px;
             @include transition(color 0.4s);
-        }
-
-        &:hover {
-            svg {
-                path {
-                    fill: $red;
-                }
-            }
-
-            span {
-                color: $red;
-            }
-        }
+        }        
     }
 }

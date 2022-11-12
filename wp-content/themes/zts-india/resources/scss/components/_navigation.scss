@@ -112,7 +112,7 @@
       a {
         font-weight: 400;
         color: $color_text;
-        @include transition(0.4s);
+        @include transition(color 0.4s);
         font-size: 18px;
         text-transform: uppercase;
         font-family: $font_roboto;

@@ -1,6 +1,7 @@
 .hero-banner {
 	position: relative;
 	padding: 80px 0;
+
 	.container {
 		@media screen and (min-width: 1600px) {
 			position: relative;
@@ -72,6 +73,7 @@
 		@media screen and (min-width: 1600px) {
 			top: -80px;
 		}
+
 		@media screen and (max-width: 1299px) {
 			width: 45%;
 		}
@@ -288,7 +290,7 @@
 
 		.clients-slider {
 			.client-logo {
-				padding: 0 15px;				
+				padding: 0 15px;
 
 				a {
 					display: block;
@@ -315,7 +317,7 @@
 .home-about-section,
 .left-content-right-image {
 	background-color: rgba($grey, 0.1);
-	padding: 100px 0 60px;
+	padding: 80px 0 40px;
 
 	@include breakpoint(medium) {
 		padding: 80px 0 60px;
@@ -347,6 +349,10 @@
 				font-size: 18px;
 				line-height: 1.55;
 				margin: 0 0 20px;
+
+				@include breakpoint(smaller) {
+					font-size: 16px;
+				}
 			}
 		}
 
@@ -447,7 +453,11 @@
 		}
 	}
 }
-
+body.home {
+	.service-cat-section {
+		padding: 60px 0 30px;
+	}
+}
 .service-cat-section {
 	padding-bottom: 40px;
 
@@ -491,7 +501,8 @@
 			margin: 0 0 20px;
 
 			img {
-				width: 80px;
+				height: 78px;
+				width: auto;
 				margin: 0 auto;
 				display: block;
 				transform: translateY(0px);
@@ -499,6 +510,7 @@
 
 				@include breakpoint(small) {
 					width: 60px;
+					height: auto;
 				}
 			}
 		}
@@ -574,7 +586,7 @@
 
 .why-choose-us,
 .faq-section {
-	padding: 80px 15px;
+	padding: 60px 15px 40px;
 	overflow: hidden;
 
 	@include breakpoint(medium) {
@@ -629,6 +641,10 @@
 						font-size: 20px;
 						color: $navy_blue;
 						margin: 0 0 8px;
+
+						@include breakpoint(smaller) {
+							font-size: 18px;
+						}
 					}
 				}
 			}
@@ -638,6 +654,20 @@
 			font-size: 18px;
 			line-height: 1.55;
 			margin: 0 0 20px;
+
+			@include breakpoint(smaller) {
+				font-size: 16px;
+			}
+
+			&:last-child {
+				margin: 0;
+			}
+
+			br {
+				@include breakpoint(smaller) {
+					display: none;
+				}
+			}
 		}
 	}
 
@@ -657,19 +687,24 @@
 	@media screen and (min-width: 1600px) {
 		padding-bottom: 0;
 	}
+
 	.container-wrapper {
 		padding-right: calc((100vw - 1270px) / 2);
+
 		@media screen and (min-width: 1600px) {
 			padding: 0 15px;
 			max-width: 1270px;
 			margin: 0 auto;
 		}
+
 		@include breakpoint(medium) {
 			padding: 0 15px;
 		}
+
 		@include breakpoint(small) {
 			padding: 0 5px;
 		}
+
 		@include breakpoint(iPhone5) {
 			padding: 0;
 		}
@@ -692,7 +727,7 @@
 	&.image-right {
 		.container-wrapper {
 			padding-right: 0;
-			padding-left: calc((100vw - 1270px) / 2);			
+			padding-left: calc((100vw - 1270px) / 2);
 
 			.row {
 				.col-lg-6 {
@@ -722,6 +757,7 @@
 .faq-section {
 	.container-wrapper {
 		padding-left: calc((100vw - 1270px) / 2);
+
 		@media screen and (min-width: 1600px) {
 			padding: 0 15px;
 			max-width: 1270px;
@@ -1094,6 +1130,7 @@
 			@include breakpoint(medium) {
 				padding-bottom: 30px;
 			}
+
 			.testimonial-block {
 				position: relative;
 				display: block;
@@ -1144,6 +1181,7 @@
 			position: absolute;
 			bottom: 0;
 			right: 10px;
+
 			@include breakpoint(medium) {
 				right: unset;
 				left: 50%;
@@ -1218,6 +1256,7 @@
 					// height: 100%;
 					mix-blend-mode: multiply;
 					@include transition(0.4s);
+					max-width: 300px;
 
 					@include breakpoint(medium) {
 						height: 100%;
@@ -1281,6 +1320,9 @@
 }
 
 .home-contact-section {
+	.section-title {
+		margin: 0 auto 20px;
+	}
 	.row {
 		margin: 0;
 		align-self: center;
