@@ -92,6 +92,25 @@
                     "button_label": "",
                     "sub_fields": [
                         {
+                            "key": "field_636f2239e82f6",
+                            "label": "Social Media Title",
+                            "name": "social_media_title",
+                            "type": "text",
+                            "instructions": "Name of the social media platform. Please don't inclcude space",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
                             "key": "field_629b0fb4ba27b",
                             "label": "Social Media Icon",
                             "name": "social_media_icon",
@@ -172,11 +191,11 @@
             "maxlength": ""
         },
         {
-            "key": "field_629b121efe4b4",
-            "label": "Widget 2 Content",
-            "name": "widget_2_content",
-            "type": "wysiwyg",
-            "instructions": "",
+            "key": "field_636f23d198ace",
+            "label": "Display latest services",
+            "name": "display_latest_services",
+            "type": "true_false",
+            "instructions": "5 latest servies will be displayed",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -184,11 +203,44 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "delay": 0
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_629b121efe4b4",
+            "label": "Featured services",
+            "name": "widget_2_content",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_636f23d198ace",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "services"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search"
+            ],
+            "elements": "",
+            "min": "",
+            "max": "",
+            "return_format": "id"
         },
         {
             "key": "field_629b1279c2afb",
@@ -473,5 +525,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1654331345
+    "modified": 1668229868
 }

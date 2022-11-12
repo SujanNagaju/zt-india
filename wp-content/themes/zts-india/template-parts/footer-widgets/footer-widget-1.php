@@ -31,8 +31,9 @@
                                        foreach ( $social_links as $social_link ) :
                                            $image_url       = $social_link['social_media_icon']['url'];
                                            $social_link_url = $social_link['social_media_link'];
+                                           $social_media_title  = $social_link['social_media_title'];
                                            ?>
-                                       <li>
+                                       <li <?php echo ($social_media_title) ? 'class="'. $social_media_title .'"' : ''; ?>>
                                            <a href="<?php echo esc_url( $social_link_url ); ?>" target="_blank"><img src="<?php echo esc_url( $image_url ); ?>" alt="" class="svg"></a>
                                        </li>
                                        <?php endforeach; ?>
