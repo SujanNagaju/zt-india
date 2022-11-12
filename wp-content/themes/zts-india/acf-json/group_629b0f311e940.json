@@ -244,7 +244,7 @@
         },
         {
             "key": "field_629b1279c2afb",
-            "label": "Footer Widget 3 (Recent Posts)",
+            "label": "Footer Widget 3 (Quick Links)",
             "name": "",
             "type": "accordion",
             "instructions": "",
@@ -280,7 +280,7 @@
         },
         {
             "key": "field_629b12a7c2afd",
-            "label": "Widget 3 ( Recent Posts Settings )",
+            "label": "Widget 3 ( Quick Links Settings )",
             "name": "widget_3_settings",
             "type": "group",
             "instructions": "",
@@ -294,11 +294,11 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_629b12e4c2afe",
-                    "label": "Posts per page",
-                    "name": "posts_per_page",
-                    "type": "number",
-                    "instructions": "Number of recent posts to display.",
+                    "key": "field_636f2dc96a23d",
+                    "label": "Quick Links",
+                    "name": "quick_links",
+                    "type": "relationship",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -306,13 +306,17 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": 3,
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
+                    "post_type": [
+                        "page"
+                    ],
+                    "taxonomy": "",
+                    "filters": [
+                        "search"
+                    ],
+                    "elements": "",
                     "min": "",
                     "max": "",
-                    "step": ""
+                    "return_format": "id"
                 }
             ]
         },
@@ -525,5 +529,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1668229868
+    "modified": 1668230629
 }
