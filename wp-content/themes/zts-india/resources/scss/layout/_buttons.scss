@@ -1,4 +1,5 @@
-.btn {
+.btn,
+.btn-menu-red>a {
     display: inline-block;
     text-align: center;
     padding: 8px 40px;
@@ -6,7 +7,7 @@
     font-weight: 700;
     border-radius: 0;
     color: $color_text;
-    letter-spacing: 0.42px;    
+    letter-spacing: 0.42px;
     position: relative;
     z-index: 2;
     overflow: hidden;
@@ -15,53 +16,66 @@
     font-weight: 500;
     @include transition(all 0.4s ease);
     border: 1px solid transparent;
+
     &.btn-2x {
         padding: 15px 40px;
         font-size: 16px;
     }
+
     &.btn-red {
         background: $red;
         color: $white;
+
         &:hover {
             background: $navy_blue;
         }
     }
+
     &.btn-purple {
         background: $purple;
         color: $white;
+
         &:hover {
             background: $color_text;
         }
     }
+
     &.btn-white {
         background: $white;
         color: $color_text;
+
         &:hover {
             color: $white;
         }
     }
+
     &.btn-white-outline {
         background: transparent;
         border: 2px solid $white;
         color: $white;
+
         &:after {
             content: none;
         }
+
         &:hover {
             color: $navy_blue;
             background: $white;
         }
     }
+
     &.btn-red-outline {
         background: transparent;
         color: $navy_blue;
         border: 1px solid $navy_blue;
+
         &:hover {
             background: $red;
             color: $white;
             border-color: $red;
         }
     }
+
     &.btn-link {
         min-width: unset;
         min-height: unset;
@@ -75,6 +89,7 @@
         border-radius: 0;
         position: relative;
         overflow: unset;
+
         &:before {
             content: '';
             height: 2px;
@@ -85,14 +100,31 @@
             left: 0;
             @include transition(0.4s);
         }
+
         &:after {
             content: none;
         }
+
         &:hover {
             color: $grey;
+
             &:before {
                 background: $grey;
             }
+        }
+    }
+}
+
+.btn-menu-red {
+    >a {
+        background: $red;
+        color: $white !important;
+        font-size: 14px !important;
+        font-weight: 700 !important;
+        padding: 10px 20px;
+
+        &:hover {
+            background: $navy_blue;
         }
     }
 }

@@ -15,10 +15,7 @@
 			display: flex;
 			flex-wrap: wrap;
 			align-items: center;
-
-			@include breakpoint(medium) {
-				justify-content: center;
-			}
+			justify-content: center;
 
 			li {
 				list-style: none;
@@ -155,6 +152,7 @@
 			display: flex;
 			justify-content: flex-end;
 			align-items: center;
+			// position: relative;
 
 			@include breakpoint(wide) {
 				flex: 0 0 calc(100% - 230px);
@@ -168,6 +166,7 @@
 		}
 
 		.header-right {
+			display: none;
 			@include breakpoint(medium) {
 				flex: 0 0 50%;
 				max-width: 50%;

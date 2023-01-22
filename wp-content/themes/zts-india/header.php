@@ -31,36 +31,36 @@
 			?>
         <div class="topbar">
             <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-9">
+                <div class="topbar-content">
+                    <!-- <div class="col-lg-9"> -->
                         <?php if ( $header_contact_information ) : ?>
                         <div class="content-left">
                             <?php echo $header_contact_information; ?>
                         </div>
                         <?php endif; ?>
-                    </div>
-                    <div class="col-lg-3">
-                        <?php if ( $header_social_links ) : ?>
-                        <div class="social-links">
-                            <ul>
-                                <?php if ( $header_social_links['skype'] ) :  ?>
-									<li>
-										<a href="<?php echo $header_social_links['skype']; ?>" target="_blank"><img
-												src="<?php echo get_template_directory_uri(); ?>/images/skype.svg"
-												alt=""></a>
-									</li>
-                                <?php endif; ?>
-                                <?php if ( $header_social_links['whatsapp'] ) : ?>
-									<li>
-										<a href="<?php echo $header_social_links['whatsapp']; ?>" target="_blank"><img
-												src="<?php echo get_template_directory_uri(); ?>/images/whatsapp.svg"
-												alt=""></a>
-									</li>
-                                <?php endif; ?>
-                            </ul>
-                        </div>
-                        <?php endif; ?>
-                    </div>
+                    <!-- </div> -->
+                    <!-- <div class="col-lg-3"> -->
+                        <?php //if ( $header_social_links ) : ?>
+                        <!-- <div class="social-links"> -->
+                            <!-- <ul> -->
+                                <?php //if ( $header_social_links['skype'] ) :  ?>
+									<!-- <li> -->
+										<!-- <a href="<?php //echo $header_social_links['skype']; ?>" target="_blank"><img
+												src="<?php //echo get_template_directory_uri(); ?>/images/skype.svg"
+												alt=""></a> -->
+									<!-- </li> -->
+                                <?php //endif; ?>
+                                <?php //if ( $header_social_links['whatsapp'] ) : ?>
+									<!-- <li> -->
+										<!-- <a href="<?php //echo $header_social_links['whatsapp']; ?>" target="_blank"><img
+												src="<?php //echo get_template_directory_uri(); ?>/images/whatsapp.svg"
+												alt=""></a> -->
+									<!-- </li> -->
+                                <?php //endif; ?>
+                            <!-- </ul> -->
+                        <!-- </div> -->
+                        <?php //endif; ?>
+                    <!-- </div> -->
                 </div>
             </div>
         </div>
@@ -82,16 +82,9 @@
 					?>
                 </nav><!-- #site-navigation -->
                 <div class="header-right">
-                    <ul>
-                        <li>
-                            <a href="#" class="header-search"><img
-                                    src="<?php echo get_template_directory_uri(); ?>/images/search.svg" alt=""></a>
-                        </li>
-                        <li>
-                            <a href="#" class="header-phone"><img
-                                    src="<?php echo get_template_directory_uri(); ?>/images/mobile.svg" alt=""></a>
-                        </li>
-                    </ul>
+                    <div class="button-wrap">
+                        <a href="javascript:void(0);" class="btn btn-red">Quick Enquiry</a>
+                    </div><!-- button-wrap -->
                     <div class="mobile-menu-wrap">
                         <div class="menu-toggle">
                             <span></span>
