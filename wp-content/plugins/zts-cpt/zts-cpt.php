@@ -52,7 +52,7 @@ if ( ! function_exists( 'zts_cpts' ) ) :
 				'has_archive'   => true,
 			),
 
-
+			// team
 			array(
 				'slug'          => 'team',
 				'singular_name' => 'Our Team',
@@ -63,6 +63,19 @@ if ( ! function_exists( 'zts_cpts' ) ) :
 				'has_single'    => false,
 				'has_archive'   => false,
 				'publicly_queryable' => false,
+			),
+
+			// Careers
+			array(
+				'slug'          => 'career',
+				'singular_name' => 'Career',
+				'plural_name'   => 'Careers',
+				'post_type'     => 'career',
+				'post_icon'     => 'dashicons-megaphone',
+				'supports'      => array( 'title', 'thumbnail', 'editor' ),
+				'has_single'    => true,
+				'has_archive'   => false,
+				'publicly_queryable' => true,
 			),
 
 		);

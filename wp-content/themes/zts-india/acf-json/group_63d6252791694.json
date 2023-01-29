@@ -1,0 +1,65 @@
+{
+    "key": "group_63d6252791694",
+    "title": "Career field groups",
+    "fields": [
+        {
+            "key": "field_63d625355b4df",
+            "label": "Additional Job Descriptions",
+            "name": "additional_job_descriptions",
+            "type": "repeater",
+            "instructions": "Use a new block for each description.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "row",
+            "button_label": "Add Job Description",
+            "sub_fields": [
+                {
+                    "key": "field_63d6254e5b4e0",
+                    "label": "Additional Job info",
+                    "name": "additional_job_info",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "career"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1674978738
+}
