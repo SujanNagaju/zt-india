@@ -25,7 +25,7 @@ h1 {
         font-size: 36px;
     }
 }
-h2 {
+h2, .title-head {
     font-size: 48px;
     @include breakpoint(wide) {
         font-size: 38px;

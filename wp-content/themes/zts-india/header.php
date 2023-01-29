@@ -82,9 +82,6 @@
 					?>
                 </nav><!-- #site-navigation -->
                 <div class="header-right">
-                    <div class="button-wrap">
-                        <a href="javascript:void(0);" class="btn btn-red">Quick Enquiry</a>
-                    </div><!-- button-wrap -->
                     <div class="mobile-menu-wrap">
                         <div class="menu-toggle">
                             <span></span>

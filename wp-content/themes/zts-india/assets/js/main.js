@@ -381,4 +381,18 @@
         $('.sticky-contact-form .wpcf7-form').trigger('reset');
     });
 
+    // file upload custom
+    // change upload file name
+    $(document).on("change", ".job-apply-file-upload", function () {
+        var myImageText = this.files[0],
+            $this = $(this),
+            $label = $this.closest("label");
+        // remove filename when no file is selected.
+        if (typeof (myImageText) != 'object') {
+            $('.career-benefits-section .career-inner form.wpcf7-form .file-attachment span').html('Upload Resume*');
+            return;
+        }
+        $label.find(".file-attachment span").html(myImageText.name);
+    });
+
 })(jQuery);

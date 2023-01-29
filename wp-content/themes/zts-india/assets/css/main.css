@@ -8494,19 +8494,19 @@ h1 {
     h1 {
       font-size: 36px; } }
 
-h2 {
+h2, .title-head {
   font-size: 48px;
   /* Large Devices, Wide Screens */
   /* Large Devices, Wide Screens */ }
   @media (max-width: 1199px) {
-    h2 {
+    h2, .title-head {
       font-size: 38px;
       line-height: 1.16; } }
   @media (max-width: 767px) {
-    h2 {
+    h2, .title-head {
       font-size: 30px; } }
   @media screen and (max-width: 299px) {
-    h2 {
+    h2, .title-head {
       font-size: 26px; } }
 
 h3 {
@@ -8725,6 +8725,40 @@ ul {
   margin: 0; }
   ul li {
     list-style: none; }
+
+.testimonial-block {
+  position: relative;
+  display: block; }
+  .testimonial-block .content {
+    padding-top: 30px; }
+    .testimonial-block .content p {
+      font-size: 26px;
+      color: #002a52;
+      font-weight: 400;
+      line-height: 1.77;
+      margin: 0;
+      /* Large Devices, Wide Screens */
+      /* Large Devices, Wide Screens */ }
+      @media (max-width: 767px) {
+        .testimonial-block .content p {
+          font-size: 22px; } }
+      @media (max-width: 479px) {
+        .testimonial-block .content p {
+          font-size: 18px; } }
+  .testimonial-block .client-info {
+    padding-top: 35px;
+    /* Large Devices, Wide Screens */ }
+    @media (max-width: 991px) {
+      .testimonial-block .client-info {
+        max-width: 80%; } }
+    .testimonial-block .client-info h4 {
+      color: #be1310;
+      margin: 0;
+      font-weight: 700; }
+    .testimonial-block .client-info span {
+      font-weight: 500;
+      color: #131313;
+      display: block; }
 
 .social-links ul {
   display: -webkit-box;
@@ -8980,7 +9014,10 @@ ul {
   .btn-menu-red > a:hover {
     background: #002a52; }
 
-input, select, textarea, .form-control {
+input,
+select,
+textarea,
+.form-control {
   width: 100%;
   height: auto;
   border: none;
@@ -8991,13 +9028,25 @@ input, select, textarea, .form-control {
   background-color: #ffffff;
   outline: none;
   border: 1px solid #eee; }
-  input::-webkit-input-placeholder, select::-webkit-input-placeholder, textarea::-webkit-input-placeholder, .form-control::-webkit-input-placeholder {
+  input::-webkit-input-placeholder,
+  select::-webkit-input-placeholder,
+  textarea::-webkit-input-placeholder,
+  .form-control::-webkit-input-placeholder {
     color: #131313; }
-  input::-moz-placeholder, select::-moz-placeholder, textarea::-moz-placeholder, .form-control::-moz-placeholder {
+  input::-moz-placeholder,
+  select::-moz-placeholder,
+  textarea::-moz-placeholder,
+  .form-control::-moz-placeholder {
     color: #131313; }
-  input:-ms-input-placeholder, select:-ms-input-placeholder, textarea:-ms-input-placeholder, .form-control:-ms-input-placeholder {
+  input:-ms-input-placeholder,
+  select:-ms-input-placeholder,
+  textarea:-ms-input-placeholder,
+  .form-control:-ms-input-placeholder {
     color: #131313; }
-  input:-moz-placeholder, select:-moz-placeholder, textarea:-moz-placeholder, .form-control:-moz-placeholder {
+  input:-moz-placeholder,
+  select:-moz-placeholder,
+  textarea:-moz-placeholder,
+  .form-control:-moz-placeholder {
     color: #131313; }
 
 textarea {
@@ -9059,6 +9108,40 @@ form.wpcf7-form.invalid .wpcf7-response-output, form.wpcf7-form.failed .wpcf7-re
 form.wpcf7-form.sent .wpcf7-response-output {
   background: #008e0d;
   border: 1px solid #008e0d; }
+
+label input[type=file] {
+  display: none; }
+
+label .file-attachment {
+  cursor: pointer;
+  height: 56px; }
+  label .file-attachment span {
+    display: inline-block;
+    width: 100%;
+    height: 56px;
+    background-color: #ffffff;
+    color: #131313;
+    font-weight: 700;
+    padding: 17px 45px 17px 20px;
+    position: relative;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical; }
+    label .file-attachment span:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      right: 15px;
+      height: 17px;
+      width: 17px;
+      background-image: url(../../images/file-upload.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      pointer-events: none; }
 
 /**
  * WordPress Generated Classes
@@ -11281,39 +11364,6 @@ body.home .service-cat-section {
     @media (max-width: 991px) {
       .testimonial-section .testimonial-wrapper .testimonial-slider {
         padding-bottom: 30px; } }
-    .testimonial-section .testimonial-wrapper .testimonial-slider .testimonial-block {
-      position: relative;
-      display: block; }
-      .testimonial-section .testimonial-wrapper .testimonial-slider .testimonial-block .content {
-        padding-top: 30px; }
-        .testimonial-section .testimonial-wrapper .testimonial-slider .testimonial-block .content p {
-          font-size: 26px;
-          color: #002a52;
-          font-weight: 400;
-          line-height: 1.77;
-          margin: 0;
-          /* Large Devices, Wide Screens */
-          /* Large Devices, Wide Screens */ }
-          @media (max-width: 767px) {
-            .testimonial-section .testimonial-wrapper .testimonial-slider .testimonial-block .content p {
-              font-size: 22px; } }
-          @media (max-width: 479px) {
-            .testimonial-section .testimonial-wrapper .testimonial-slider .testimonial-block .content p {
-              font-size: 18px; } }
-      .testimonial-section .testimonial-wrapper .testimonial-slider .testimonial-block .client-info {
-        padding-top: 35px;
-        /* Large Devices, Wide Screens */ }
-        @media (max-width: 991px) {
-          .testimonial-section .testimonial-wrapper .testimonial-slider .testimonial-block .client-info {
-            max-width: 80%; } }
-        .testimonial-section .testimonial-wrapper .testimonial-slider .testimonial-block .client-info h4 {
-          color: #be1310;
-          margin: 0;
-          font-weight: 700; }
-        .testimonial-section .testimonial-wrapper .testimonial-slider .testimonial-block .client-info span {
-          font-weight: 500;
-          color: #131313;
-          display: block; }
   .testimonial-section .testimonial-wrapper .slick-dots {
     position: absolute;
     bottom: 0;
@@ -11639,6 +11689,21 @@ body.home .service-cat-section {
             color: #ffffff; }
       .home-contact-section .row .contact-form-right .form-inner .wpcf7-not-valid-tip {
         color: #2e005a; }
+
+.section-all-testimonials .row .col-12:not(:last-child) .testimonial-block {
+  border-bottom: 1px solid rgba(35, 35, 35, 0.2);
+  margin-bottom: 40px; }
+
+.section-all-testimonials .row .col-12 .testimonial-block {
+  padding-bottom: 40px; }
+  .section-all-testimonials .row .col-12 .testimonial-block .content {
+    padding-top: 0; }
+    @media screen and (min-width: 1200px) {
+      .section-all-testimonials .row .col-12 .testimonial-block .content p {
+        line-height: 1.5;
+        font-size: 24px; } }
+  .section-all-testimonials .row .col-12 .testimonial-block .client-info {
+    padding-top: 20px; }
 
 .service-banner {
   background-size: cover;
@@ -12606,6 +12671,57 @@ body.single-services .portfolio-section {
       padding-top: 20px; }
     .section-portfolio-detail .portfolio-content .content-inner h3 {
       margin: 0 0 20px; }
+
+.section-career-banner .banner-image {
+  max-height: 500px;
+  overflow: hidden;
+  border-radius: 5px; }
+  .section-career-banner .banner-image img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover; }
+
+.section-careers-listing {
+  padding-bottom: 60px; }
+  .section-careers-listing .career-post-title {
+    margin: 25px 0 0; }
+    .section-careers-listing .career-post-title h1 {
+      margin: 0 0 20px; }
+  .section-careers-listing .content p, .section-careers-listing .content ul li, .section-careers-listing .content ol li {
+    font-size: 18px;
+    color: #333333; }
+  .section-careers-listing .content p, .section-careers-listing .content ul, .section-careers-listing .content ol {
+    margin: 0 0 30px; }
+  .section-careers-listing .content ul, .section-careers-listing .content ol {
+    padding: 0 0 0 18px; }
+    .section-careers-listing .content ul li, .section-careers-listing .content ol li {
+      list-style: disc;
+      margin: 0 0 10px; }
+  .section-careers-listing .career-content-block {
+    padding-top: 20px; }
+    .section-careers-listing .career-content-block h3 {
+      margin: 0 0 30px; }
+
+.apply-contact-form {
+  max-width: 990px;
+  margin: 0 auto;
+  padding-top: 60px; }
+  .apply-contact-form .title h3 {
+    margin: 0 0 30px; }
+  .apply-contact-form .form-wrap {
+    background: #eeeeee;
+    padding: 30px; }
+    .apply-contact-form .form-wrap .row .col-12,
+    .apply-contact-form .form-wrap .row .col-md-6 {
+      margin: 0 0 20px; }
+    .apply-contact-form .form-wrap .wpcf7-form input:not([type=submit]), .apply-contact-form .form-wrap .wpcf7-form select {
+      height: 56px;
+      background: #ffffff; }
+    .apply-contact-form .form-wrap .wpcf7-form textarea {
+      padding-top: 15px; }
+    .apply-contact-form .form-wrap .wpcf7-form .input-file-label {
+      width: 100%; }
 
 .section-blog-detail {
   padding: 80px 0; }

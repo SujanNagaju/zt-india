@@ -1,4 +1,7 @@
-input, select, textarea, .form-control {
+input,
+select,
+textarea,
+.form-control {
     width: 100%;
     height: auto;
     border: none;
@@ -9,22 +12,28 @@ input, select, textarea, .form-control {
     background-color: $white;
     outline: none;
     border: 1px solid #eee;
+
     &::-webkit-input-placeholder {
         color: $color_text;
     }
+
     &::-moz-placeholder {
         color: $color_text;
     }
+
     &:-ms-input-placeholder {
         color: $color_text;
     }
+
     &:-moz-placeholder {
         color: $color_text;
     }
 }
+
 textarea {
     height: 130px;
 }
+
 select {
     appearance: none;
     background-image: url('../../images/icons/arrow-down.svg');
@@ -32,6 +41,7 @@ select {
     background-repeat: no-repeat;
     background-position: calc(100% - 15px) 50%;
 }
+
 input[type=submit] {
     height: 55px;
     width: auto;
@@ -43,6 +53,7 @@ input[type=submit] {
     align-items: center;
     justify-content: center;
     padding: 0 40px 2px;
+
     &:hover {
         background: $color_text;
     }
@@ -54,6 +65,7 @@ input[type=submit] {
         line-height: 1;
     }
 }
+
 .wpcf7-not-valid-tip {
     margin-top: 8px;
     font-size: 13px;
@@ -68,6 +80,7 @@ form {
             text-align: center;
             font-size: 13px;
         }
+
         &.invalid,
         &.failed {
             .wpcf7-response-output {
@@ -75,10 +88,51 @@ form {
                 background: #dc3232;
             }
         }
+
         &.sent {
             .wpcf7-response-output {
                 background: #008e0d;
                 border: 1px solid #008e0d;
+            }
+        }
+    }
+}
+
+label {
+    input[type=file] {
+        display: none;
+    }
+    .file-attachment {
+        cursor: pointer;
+        height: 56px;
+    
+        span {
+            display: inline-block;
+            width: 100%;
+            height: 56px;
+            background-color: $white;
+            color: $color_text;
+            font-weight: 700;
+            padding: 17px 45px 17px 20px;
+            position: relative;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            &:after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
+                right: 15px;
+                height: 17px;
+                width: 17px;
+                background-image: url(../../images/file-upload.svg);
+                background-size: contain;
+                background-repeat: no-repeat;
+                pointer-events: none;
             }
         }
     }

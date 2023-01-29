@@ -24,7 +24,6 @@ while( have_posts() ): the_post();
                 }
             }
             ?>
-
             <div class="col-lg-6">
                 <div class="info-right">
                     <h1><?php the_title(); ?></h1>
@@ -33,6 +32,12 @@ while( have_posts() ): the_post();
                             <li>Client: <span><?php echo $client; ?></span></li>
                         <?php endif; ?>
                         <li>Date: <span><?php echo get_the_date(); ?></span></li>
+                        <?php if( $client = get_field( 'project_budget' ) ): ?>
+                            <li>Project Budget: <span><?php echo $client; ?></span></li>
+                        <?php endif; ?>
+                        <?php if( $client = get_field( 'project_duration' ) ): ?>
+                            <li>Project Duration: <span><?php echo $client; ?></span></li>
+                        <?php endif; ?>
                         <?php if( $cat_names ):  ?>
                             <li>Category: <span><?php echo implode( ', ', $cat_names ); ?></span></li>
                         <?php endif; ?>

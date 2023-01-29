@@ -170,6 +170,53 @@ ul {
         list-style: none;
     }
 }
+
+// testimonial-block
+.testimonial-block {
+    position: relative;
+    display: block;
+
+    .content {
+        padding-top: 30px;
+
+        p {
+            font-size: 26px;
+            color: $navy_blue;
+            font-weight: 400;
+            line-height: 1.77;
+            margin: 0;
+
+            @include breakpoint(small) {
+                font-size: 22px;
+            }
+
+            @include breakpoint(extrasmall) {
+                font-size: 18px;
+            }
+        }
+    }
+
+    .client-info {
+        padding-top: 35px;
+
+        @include breakpoint(medium) {
+            max-width: 80%;
+        }
+
+        h4 {
+            color: $red;
+            margin: 0;
+            font-weight: 700;
+        }
+
+        span {
+            font-weight: 500;
+            color: $color_text;
+            display: block;
+        }
+    }
+}
+
 .social-links {
     ul {
         display: flex;
